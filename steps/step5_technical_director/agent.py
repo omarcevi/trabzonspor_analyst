@@ -25,6 +25,13 @@ TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when aske
 
 
 def build_technical_director(name: str = "technical_director") -> LlmAgent:
+    # Each team becomes a tool: the director calls it like a function and gets its answer back.
+    teams = [
+        AgentTool(build_scout(description=SCOUT)),
+        AgentTool(build_match_prep(description=MATCH_PREP)),
+        AgentTool(build_scouting_department(description=SCOUTING_DEPT)),
+        AgentTool(build_tribun(description=TRIBUN)),
+    ]
     return LlmAgent(
         name=name,
         model=MODEL,
@@ -40,15 +47,7 @@ calls that answer the question, then write the answer yourself.
   write one briefing with four sections: Opponent, Game plan, XI, Risks.
 When you call a team, write the request in English and include every detail it needs.
 """ + HOUSE_RULES,
-        tools=[
-            AgentTool(build_scout(description=SCOUT)),
-            AgentTool(build_match_prep(description=MATCH_PREP)),
-            AgentTool(build_scouting_department(description=SCOUTING_DEPT)),
-            AgentTool(build_tribun(description=TRIBUN)),
-            get_fixtures,
-            get_standings,
-            project_table,
-        ],
+        tools=[*teams, get_fixtures, get_standings, project_table],
     )
 
 

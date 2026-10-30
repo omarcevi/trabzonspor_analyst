@@ -341,15 +341,13 @@ TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when aske
 
 <!-- source: steps/step5_technical_director/agent.py -->
 ```python
-        tools=[
-            AgentTool(build_scout(description=SCOUT)),
-            AgentTool(build_match_prep(description=MATCH_PREP)),
-            AgentTool(build_scouting_department(description=SCOUTING_DEPT)),
-            AgentTool(build_tribun(description=TRIBUN)),
-            get_fixtures,
-            get_standings,
-            project_table,
-        ],
+    # Each team becomes a tool: the director calls it like a function and gets its answer back.
+    teams = [
+        AgentTool(build_scout(description=SCOUT)),
+        AgentTool(build_match_prep(description=MATCH_PREP)),
+        AgentTool(build_scouting_department(description=SCOUTING_DEPT)),
+        AgentTool(build_tribun(description=TRIBUN)),
+    ]
 ```
 
 Three questions show the range. First: *"Should we rest Salah for Freiburg on Thursday?"*

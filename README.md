@@ -13,7 +13,7 @@ DevFest Trabzon 2026 workshop (90 minutes). You build the five core agent patter
 ## Setup (3 steps)
 
 1. **Install uv:** `curl -LsSf https://astral.sh/uv/install.sh | sh` (Windows: `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`).
-2. **Get a free Gemini API key** at [aistudio.google.com/apikey](https://aistudio.google.com/apikey), then `cp .env.example .env` and paste it into `.env`.
+2. **Get a free Gemini API key** at [aistudio.google.com/apikey](https://aistudio.google.com/apikey), then run `uv run python scripts/set_key.py`. It asks for the key and saves it in `.env`.
 3. **Run it:** `uv sync && uv run adk web --reload_agents steps`, open http://localhost:8000 and pick a step from the dropdown.
 
 **Or use Cloud Shell, with nothing to install.** It copies the repo and opens a tutorial panel next to the editor. Its links open each file and select each BLANK for you. In the dialog, select **Trust repo**, then **Confirm**:

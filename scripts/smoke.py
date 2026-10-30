@@ -98,7 +98,7 @@ async def main() -> int:
     if unknown := [a for a in apps if a not in DEMOS]:
         parser.error(f"unknown step(s): {', '.join(unknown)}")
     if not os.getenv("GOOGLE_API_KEY") and os.getenv("GOOGLE_GENAI_USE_VERTEXAI", "").lower() not in ("true", "1"):
-        print("GOOGLE_API_KEY is not set. Copy .env.example to .env and paste your key.", file=sys.stderr)
+        print("GOOGLE_API_KEY is not set. Run `uv run python scripts/set_key.py` to save your key in .env.", file=sys.stderr)
         return 1
     OUT.mkdir(exist_ok=True)
     failed = False

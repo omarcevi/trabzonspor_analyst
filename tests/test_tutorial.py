@@ -24,7 +24,7 @@ def test_tutorial_is_up_to_date():
 def test_every_file_link_opens_a_file_in_the_repo():
     paths = re.findall(r'<walkthrough-editor-open-file filePath="([^"]+)">', TUTORIAL)
     assert paths
-    missing = [p for p in paths if p != ".env" and not (ROOT / p).exists()]   # cp .env.example .env makes .env
+    missing = [p for p in paths if p != ".env" and not (ROOT / p).exists()]   # scripts/set_key.py makes .env
     assert not missing
 
 
@@ -54,6 +54,19 @@ def test_prompts_are_the_smoke_test_prompts():
     """Participants send the same questions that scripts/smoke.py checks."""
     prompts = re.findall(r"```text\n(.*?)\n```", TUTORIAL)
     assert prompts == [p for app, demos in smoke.DEMOS.items() if app != "bonus_live_mcp" for p in demos]
+
+
+def test_cloud_shell_can_paste_every_command():
+    """Cloud Shell refused to paste a command with | ^ and * into the terminal."""
+    commands = re.findall(r"```bash\n(.*?)\n *```", TUTORIAL, re.S)
+    assert commands
+    assert not [c for c in commands if re.search(r"[|^*]", c)]
+
+
+def test_every_run_it_shows_the_dev_ui_command():
+    run_its = TUTORIAL.split("### Run it")[1:]
+    assert len(run_its) == 5
+    assert all(f"```bash\n{build_tutorial.ADK_WEB}\n```" in r.split("```text")[0] for r in run_its)
 
 
 def test_open_in_cloud_shell_links_open_this_tutorial():

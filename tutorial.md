@@ -39,39 +39,24 @@ the full explanations and the diagrams: [omarcevi.dev/workshops/match-day-agents
 
 ## Set up
 
-1. Install the Python packages (about 1 minute):
+1. Install uv, the Python package manager. If Cloud Shell already has uv, the script only shows
+   its version:
+   ```bash
+   source scripts/install_uv.sh
+   ```
+2. Install the Python packages (about 1 minute):
    ```bash
    uv sync
    ```
-   If the terminal shows `uv: command not found`, install uv with this command. Then
-   run `uv sync` again:
+3. Get a free Gemini API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
+4. Save the key. The script asks for the key. The key does not show on the screen when you paste
+   it:
    ```bash
-   curl -LsSf https://astral.sh/uv/install.sh | sh && source $HOME/.local/bin/env
+   uv run python scripts/set_key.py
    ```
-2. Get a free Gemini API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
-3. Make your `.env` file:
-   ```bash
-   cp .env.example .env
-   ```
-4. Save your key in it. This command asks for the key and does not show it:
-   ```bash
-   read -s -p "Gemini API key: " KEY && sed -i "s|^GOOGLE_API_KEY=.*|GOOGLE_API_KEY=$KEY|" .env && unset KEY && echo " saved"
-   ```
-   You can also paste the key into <walkthrough-editor-open-file filePath=".env">.env</walkthrough-editor-open-file> in the editor.
-5. Start the ADK dev UI:
-   ```bash
-   uv run adk web --reload_agents --port 8080 --allow_origins "*" steps
-   ```
-   With `--reload_agents`, the dev UI loads a file again when you save it. With
-   `--allow_origins "*"`, the Web Preview page can connect to the dev UI.
-6. Click <walkthrough-web-preview-icon></walkthrough-web-preview-icon> **Web preview**. Then
-   click **Preview on port 8080**. The dev UI opens in a new tab.
-7. Click **+** in the terminal to open a second tab. Use it for all other commands. The dev UI
-   continues to run in the first tab.
+   The script saves the key in <walkthrough-editor-open-file filePath=".env">.env</walkthrough-editor-open-file>.
 
-✅ **Check:** the dropdown at the top left of the dev UI shows six apps, from `bonus_live_mcp` to
-`step5_technical_director`. Until you fill a step, the terminal shows `✏️ BLANK ... paste its code
-over this line` when you select it.
+✅ **Check:** the terminal shows `✅ Key saved in .env`. You start the dev UI in step 1.
 
 ## The data and the tools
 
@@ -136,14 +121,30 @@ root_agent = build_scout()
 
 ### Run it
 
+Start the ADK dev UI in the terminal:
+
+```bash
+uv run adk web --reload_agents --port 8080 --allow_origins https://8080-$WEB_HOST steps
+```
+
+`adk web` loads each folder in `steps/` as an app. With `--reload_agents`, it loads a file again
+when you save it. With `--allow_origins`, the Web Preview page can connect to the dev UI.
+
+1. Click <walkthrough-web-preview-icon></walkthrough-web-preview-icon> **Web preview**. Then click
+   **Preview on port 8080**. The dev UI opens in a new tab.
+2. Click **+** in the terminal to open a second tab. Use it for all other commands. The dev UI
+   continues to run in the first tab.
+
 In the dev UI, select `step1_scout`. Then send this question:
 
 ```text
 Who's in form for us, and who can't play Sunday?
 ```
 
-✅ **Check:** the events panel shows calls to `get_top_players` and `get_availability`. The answer
-gives 8 goals and 5 assists for Salah, and the players who are out or doubtful.
+✅ **Check:** the dropdown at the top left of the dev UI shows six apps. The events panel shows
+calls to `get_top_players` and `get_availability`. The answer gives 8 goals and 5 assists for
+Salah, and the players who are out or doubtful. If you select a step that you did not fill yet,
+the terminal shows `✏️ BLANK ... paste its code over this line`.
 
 **Late?** In your second terminal tab, run this command. It pastes the code for you:
 
@@ -204,6 +205,15 @@ formation, how we attack, how we defend, and what to do in each phase of the mat
 
 ### Run it
 
+The dev UI from step 1 continues to run this command in the first terminal tab:
+
+```bash
+uv run adk web --reload_agents --port 8080 --allow_origins https://8080-$WEB_HOST steps
+```
+
+When you save a file, the dev UI loads it again. You do not have to start it again. If the dev UI
+stopped, run the command again in the first terminal tab.
+
 In the dev UI, select `step2_match_prep`. Then send this question:
 
 ```text
@@ -257,6 +267,15 @@ Use only facts from the reports; if they disagree, say so.""" + HOUSE_RULES,
 **Paste and save.** Press Ctrl+V (⌘V on a Mac) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
 
 ### Run it
+
+The dev UI from step 1 continues to run this command in the first terminal tab:
+
+```bash
+uv run adk web --reload_agents --port 8080 --allow_origins https://8080-$WEB_HOST steps
+```
+
+When you save a file, the dev UI loads it again. You do not have to start it again. If the dev UI
+stopped, run the command again in the first terminal tab.
 
 In the dev UI, select `step3_scouting_dept`. Then send this question:
 
@@ -322,6 +341,15 @@ Don't invent new demands each round: approve as soon as the checks pass.
 **Paste and save.** Press Ctrl+V (⌘V on a Mac) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
 
 ### Run it
+
+The dev UI from step 1 continues to run this command in the first terminal tab:
+
+```bash
+uv run adk web --reload_agents --port 8080 --allow_origins https://8080-$WEB_HOST steps
+```
+
+When you save a file, the dev UI loads it again. You do not have to start it again. If the dev UI
+stopped, run the command again in the first terminal tab.
 
 In the dev UI, select `step4_tribun`. Then send this question:
 
@@ -391,6 +419,15 @@ TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when aske
 **Paste and save.** Press Ctrl+V (⌘V on a Mac) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
 
 ### Run it
+
+The dev UI from step 1 continues to run this command in the first terminal tab:
+
+```bash
+uv run adk web --reload_agents --port 8080 --allow_origins https://8080-$WEB_HOST steps
+```
+
+When you save a file, the dev UI loads it again. You do not have to start it again. If the dev UI
+stopped, run the command again in the first terminal tab.
 
 In the dev UI, select `step5_technical_director`. Then send these three questions, one at a time:
 

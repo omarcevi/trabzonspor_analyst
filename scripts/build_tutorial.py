@@ -31,22 +31,26 @@ def diagram(name: str, alt: str) -> str:
 
 
 def fill_blank(blank_id: str, where: str) -> str:
-    """Select the BLANK line, copy the code, paste, save."""
+    """Copy the code, select the BLANK line, paste, save.
+
+    Copy comes first: the copy button takes the focus away from the editor, and the select link gives it back.
+    """
     b = blanks.guide_blanks()[blank_id]
     step = b["path"].split("/")[1].split("_")[0].removeprefix("step")
     select = (f'<walkthrough-editor-select-regex filePath="{b["path"]}" regex="{blanks.select_regex(blank_id)}">'
               f'BLANK {blank_id} in {b["path"]}</walkthrough-editor-select-regex>')
     return f"""### ✏️ BLANK {blank_id} · {where}
 
-**Select the blank.** Click {select}. The editor opens the file and selects the BLANK line.
-
-**Copy the code.** Select the code below and press Ctrl+C (⌘C on a Mac). You can also use the copy button in the [guide]({SITE}step-{step}/#blank-{blank_id}).
+**Copy the code.** Click the copy button at the top right of the code below. The
+[guide]({SITE}step-{step}/#blank-{blank_id}) explains each line.
 
 ```python
 {b["code"]}
 ```
 
-**Paste and save.** In the editor, press Ctrl+V (⌘V) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
+**Select the blank.** Click {select}. The editor opens the file and selects the BLANK line.
+
+**Paste and save.** Press Ctrl+V (⌘V on a Mac) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
 """
 
 

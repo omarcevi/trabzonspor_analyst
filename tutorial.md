@@ -59,12 +59,12 @@ Select a project that has billing. The agents call Gemini through Vertex AI in t
    ```bash
    uv run adk web --reload_agents --port 8080 --allow_origins "*" steps
    ```
-   `--reload_agents` loads a file again when you save it. `--allow_origins "*"` lets the Web
-   Preview page talk to the dev UI.
-4. Click <walkthrough-web-preview-icon></walkthrough-web-preview-icon> **Web preview**, then
-   **Preview on port 8080**. The dev UI opens in a new tab.
+   With `--reload_agents`, the dev UI loads a file again when you save it. With
+   `--allow_origins "*"`, the Web Preview page can connect to the dev UI.
+4. Click <walkthrough-web-preview-icon></walkthrough-web-preview-icon> **Web preview**. Then
+   click **Preview on port 8080**. The dev UI opens in a new tab.
 5. Click **+** in the terminal to open a second tab. Use it for all other commands. The dev UI
-   keeps running in the first tab.
+   continues to run in the first tab.
 
 ✅ **Check:** the script ends with `✅ Ready`. The dropdown at the top left of the dev UI shows six
 apps, from `bonus_live_mcp` to `step5_technical_director`. Until you fill a step, the terminal
@@ -133,9 +133,11 @@ root_agent = build_scout()
 
 ### Run it
 
-In the dev UI, select `step1_scout`. Ask:
+In the dev UI, select `step1_scout`. Then send this question:
 
-`Who's in form for us, and who can't play Sunday?`
+```text
+Who's in form for us, and who can't play Sunday?
+```
 
 ✅ **Check:** the events panel shows calls to `get_top_players` and `get_availability`. The answer
 gives 8 goals and 5 assists for Salah, and the players who are out or doubtful.
@@ -199,9 +201,11 @@ formation, how we attack, how we defend, and what to do in each phase of the mat
 
 ### Run it
 
-In the dev UI, select `step2_match_prep`. Ask:
+In the dev UI, select `step2_match_prep`. Then send this question:
 
-`Prepare Sunday's game plan.`
+```text
+Prepare Sunday's game plan.
+```
 
 ✅ **Check:** three agents answer in order (about two minutes). The **State** tab shows
 `opponent_report`, `game_plan` and `lineup`. The XI has no player who is out or doubtful.
@@ -251,9 +255,11 @@ Use only facts from the reports; if they disagree, say so.""" + HOUSE_RULES,
 
 ### Run it
 
-In the dev UI, select `step3_scouting_dept`. Ask:
+In the dev UI, select `step3_scouting_dept`. Then send this question:
 
-`Scout Gaziantep for us.`
+```text
+Scout Gaziantep for us.
+```
 
 ✅ **Check:** the three scouts call their tools at the same time. The brief has four sections and
 says that Gaziantep conceded 10 of 15 goals (67%) in the second half.
@@ -271,7 +277,7 @@ More about this step: [Step 3 · Scouting Department](https://omarcevi.dev/works
 A `LoopAgent` runs a lineup picker and a critic again and again. The critic is the Tribün, the home
 crowd. When it agrees with the lineup, it calls `exit_loop`. `max_iterations=3` is the safety
 limit. Open <walkthrough-editor-open-file filePath="steps/step4_tribun/agent.py">steps/step4_tribun/agent.py</walkthrough-editor-open-file>: the lineup picker is already there. Its
-instruction reads `{tribun_feedback?}`. The `?` lets round one start without feedback.
+instruction reads `{tribun_feedback?}`. With the `?`, round one can start without feedback.
 
 ![Step 4: the Tribün loop](https://omarcevi.dev/workshops/match-day-agents/diagrams/step4-tribun.svg)
 
@@ -314,9 +320,11 @@ Don't invent new demands each round: approve as soon as the checks pass.
 
 ### Run it
 
-In the dev UI, select `step4_tribun`. Ask:
+In the dev UI, select `step4_tribun`. Then send this question:
 
-`Pick the XI for Sunday.`
+```text
+Pick the XI for Sunday.
+```
 
 ✅ **Check:** the Tribün objects in round one, with numbers from its tools. The lineup picker fixes
 the XI. Then the Tribün calls `exit_loop` and cheers. The tool `exit_loop` is in
@@ -381,13 +389,19 @@ TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when aske
 
 ### Run it
 
-In the dev UI, select `step5_technical_director`. Ask these three questions:
+In the dev UI, select `step5_technical_director`. Then send these three questions, one at a time:
 
-`Should we rest Salah for Freiburg on Thursday?`
+```text
+Should we rest Salah for Freiburg on Thursday?
+```
 
-`If we win 2-0, where do we stand?`
+```text
+If we win 2-0, where do we stand?
+```
 
-`Bizi pazara hazırla`
+```text
+Bizi pazara hazırla
+```
 
 ✅ **Check:** the first answer uses the scout and `get_fixtures`. The second uses only
 `project_table`: Trabzonspor go from 3rd to 1st. The third calls the scouting department and match

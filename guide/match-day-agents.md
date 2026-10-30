@@ -132,6 +132,7 @@ The scout called `get_availability` once and `get_top_players` three times (goal
 <!-- SCREENSHOT: adk web, step1_scout, the events panel showing the get_top_players and get_availability calls -->
 
 **Use it when** one job needs a handful of tools and some judgement: a support bot, a data assistant, a code helper.
+
 **Avoid it when** the instruction grows into a long list of "first do this, then that". That's a workflow, and step 2 is for that.
 
 **The gotcha: tools do the maths.** Every number an agent states should come out of a tool. Give the model computed answers (`pct_of_goals_conceded: 33`), not raw rows to add up. My smoke script flags any number in an answer that appears in no tool result; step 5 shows what happens when you skip this.
@@ -185,6 +186,7 @@ In an earlier run the lineup picker tried two names from its own memory that are
 <!-- SCREENSHOT: adk web, step2_match_prep, the State tab showing opponent_report, game_plan and lineup -->
 
 **Use it when** the steps are always the same and each needs the previous one's output: research, plan, act.
+
 **Avoid it when** the steps are independent (step 3 is faster) or the next step depends on what happened.
 
 **The gotcha: `output_key` and placeholders are a contract.** A `{placeholder}` with no value in state raises a `KeyError` before the model is called. Keep the names identical, and make sure the writer runs before the reader.
@@ -231,6 +233,7 @@ The three scouts made ten tool calls between them, all at once, and the writer m
 > 1. **Exploit the decimated backline:** Gaziantep's defensive anchor Myenty Abena is suspended, while starting goalkeeper Kacper Tobiasz and three central defenders (Meleke, Kızıldağ, Sangaré) are doubtful with muscle injuries. …
 
 **Use it when** you have independent questions about the same thing: three searches, three reviewers, three data sources.
+
 **Avoid it when** one task needs another's answer, or when the parallel work writes to the same state key.
 
 **The gotcha: something has to merge the results.** A `ParallelAgent` gives you three answers in whatever order they finished, not one. Give every parallel agent its own `output_key`, then add a step that reads them all. Parallel also means more requests per second, which is where a free key starts hitting rate limits.
@@ -309,6 +312,7 @@ Then the crowd called `exit_loop` and signed off:
 <!-- SCREENSHOT: adk web, step4_tribun, the events panel showing two rounds and the exit_loop call -->
 
 **Use it when** quality improves with feedback and you can say when it's good enough: a draft and an editor, code and a test runner, a plan and a reviewer.
+
 **Avoid it when** you can't write a clear stop condition, or when one good prompt would do. Every round costs two or more model calls.
 
 **The gotcha: a loop needs an explicit stop and a safety net.** The stop is `exit_loop`, which sets `escalate = True`. The safety net is `max_iterations=3`: without it, a critic that's never satisfied loops until your quota runs out. And keep the `?` in `{tribun_feedback?}`: on round one the key doesn't exist, and without it ADK raises a `KeyError`.
@@ -379,6 +383,7 @@ And the big one: *"Bizi pazara hazırla"* ("get us ready for Sunday"). The direc
 <!-- SCREENSHOT: adk web, step5_technical_director, the trace view of "Bizi pazara hazırla" with the scouting_department and match_prep tool calls -->
 
 **Use it when** questions vary and different questions need different specialists, and you want one voice to answer.
+
 **Avoid it when** the route is always the same (use a workflow agent, it's cheaper and predictable) or when a single agent with a few more tools would do.
 
 **The gotchas: three of them, plus a lesson.**

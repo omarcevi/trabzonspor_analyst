@@ -1,6 +1,6 @@
 ---
 title: "Building Trabzonspor's AI Analysis Room"
-description: "Agent recipes with Google's Agent Development Kit. Build a football analysis staff out of one agent, a sequential team, a parallel team, a review loop and an orchestrator, all working on real Trabzonspor data."
+description: "Agent recipes with Google's Agent Development Kit. You build a football analysis staff from one agent, a sequential team, a parallel team, a review loop and an orchestrator. All of them use real Trabzonspor data."
 date: 2026-10-31
 tags: [adk, agents, gemini, python, multi-agent, devfest]
 repo: "https://github.com/omarcevi/trabzonspor_analyst"
@@ -8,25 +8,25 @@ repo: "https://github.com/omarcevi/trabzonspor_analyst"
 
 # Building Trabzonspor's AI Analysis Room
 
-It's Saturday night. Trabzonspor host Gaziantep FK tomorrow, Sunday 1 November 2026, 16:00 Istanbul time, in Round 10 of the Süper Lig. You're the club's new analysis staff, and the coaches want a briefing by morning: who the opponent is, how we play them, who starts, and what could go wrong.
+It is Saturday night. Tomorrow, Sunday 1 November 2026, Trabzonspor play Gaziantep FK at home. Kick-off is at 16:00, Istanbul time, in Round 10 of the Süper Lig. You are the new analysis staff of the club. The coaches want a briefing by the morning. It must tell them who the opponent is, how we play them, who starts, and what can go wrong.
 
-You're going to build that staff out of agents. Each step adds one staff member, and each one is an agent pattern you'll keep using long after this match:
+You will build this staff from agents. Each step adds one staff member. Each staff member is an agent pattern that you can use again after this match:
 
 1. **The Scout:** one agent with tools.
 2. **Match Prep:** agents that run in a fixed order.
 3. **Scouting Department:** agents that run at the same time.
-4. **Tribün:** two agents in a loop, one proposing, one criticising.
+4. **Tribün:** two agents in a loop: one proposes, one criticises.
 5. **Technical Director:** an agent that delegates to all the others.
 
-It all runs on Google's [Agent Development Kit](https://adk.dev) (ADK) for Python, a free Gemini API key, and real data from both teams' last ten matches. I ran this as a workshop at DevFest Trabzon 2026; this guide is for everyone who wasn't in the room.
+Everything runs on Google's [Agent Development Kit](https://adk.dev) (ADK) for Python and a free Gemini API key. The data comes from the last ten matches of both teams. I gave this workshop at DevFest Trabzon 2026. This guide is for the people who were not in the room.
 
 [![The whole staff: the Technical Director calls four teams as tools; every team calls plain Python tools that read the data](images/overview.svg)](images/overview.svg "Open full size")
 
-*The whole staff you'll have by the end. Every box with the ADK logo is an agent. Tap to open full size.*
+*The full staff at the end of the guide. Each box with the ADK logo is an agent. Tap to open full size.*
 
 ## Setup
 
-You need Python 3.11 or newer, [uv](https://docs.astral.sh/uv/), and a Gemini API key. The key is free at [aistudio.google.com/apikey](https://aistudio.google.com/apikey), no credit card needed.
+You need Python 3.11 or newer, [uv](https://docs.astral.sh/uv/), and a Gemini API key. You can get a free key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey). You do not need a credit card.
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh     # installs uv
@@ -37,11 +37,11 @@ uv sync
 uv run adk web --reload_agents steps
 ```
 
-Open http://localhost:8000, pick a step from the dropdown and ask it something. The events panel shows every tool call and hand-off, and `--reload_agents` picks up a file as soon as you save it.
+Open http://localhost:8000. Select a step in the dropdown and ask it a question. The events panel shows each tool call and each hand-off. With `--reload_agents`, ADK loads a file again when you save it.
 
 <!-- SCREENSHOT: adk web with the app dropdown open, showing the six step folders -->
 
-The `.env` file holds your key, `GOOGLE_GENAI_USE_VERTEXAI=FALSE` (the free Gemini API, not Vertex AI) and `MODEL=gemini-3.8-flash`. The model is set in one place, `matchday/config.py`:
+The `.env` file holds three values: your key, `GOOGLE_GENAI_USE_VERTEXAI=FALSE` and `MODEL=gemini-3.8-flash`. The second value selects the free Gemini API, not Vertex AI. The model name is in one place only, `matchday/config.py`:
 
 <!-- source: matchday/config.py -->
 ```python
@@ -54,27 +54,35 @@ MODEL = Gemini(
 )
 ```
 
-The retries matter more than they look: one question to step 5 can mean a few dozen model calls, and on a free key that hits a `429` now and then. If your laptop won't cooperate, `notebook/match_day_agents.ipynb` runs the same files in Colab, one cell per step.
+The retries are important. One question to step 5 can cause a few dozen model calls. On a free key, this sometimes causes a `429` error. If the setup does not work on your laptop, use `notebook/match_day_agents.ipynb` in Colab. It runs the same files, with one cell for each step.
 
-**How the blanks work.** On the repo's `main` branch, each step's key code is missing. In its place is a two-line ✏️ BLANK marker. When this guide shows a code block labelled ✏️ BLANK, select both marker lines in that file, paste the block over them, save, and run the step. Fell behind? `uv run python scripts/blanks.py fill 2a` pastes a blank for you, and the `demo` branch (`git switch demo`) has the whole team finished.
+**How to fill a blank.** On the `main` branch, the key code of each step is missing. A two-line ✏️ BLANK marker is in its place. When the guide shows a code block with a ✏️ BLANK label, do these steps:
+
+1. Copy the code block with its copy button.
+2. In the file, select the two marker lines.
+3. Paste the code over them.
+4. Save the file.
+5. Run the step.
+
+If you are late, run `uv run python scripts/blanks.py fill 2a`. This command pastes the code for BLANK 2a. The `demo` branch has the full agent team. To see it, run `git switch demo`.
 
 ## The data
 
-The `data/` folder is a snapshot I took on 30 October 2026 from FotMob, ESPN and Turkish match reports: the fixture and the referee (`match.json`), both squads with each player's availability for Sunday and last-ten-match stats (`squad.json`, `opponent.json`), every match with goals, cards and xG (`results.json`), and the league table and next fixtures.
+The `data/` folder is a snapshot that I made on 30 October 2026. The sources are FotMob, ESPN and Turkish match reports. `match.json` has the fixture and the referee. `squad.json` and `opponent.json` have the two squads, with the availability of each player for Sunday and the statistics of the last ten matches. `results.json` has each match with goals, cards and xG. Two more files have the league table and the next fixtures.
 
-There are real stories in there. Trabzonspor won all four home matches in the sample, 13–0 on aggregate. Gaziantep concede late: a third of their goals against came after the 75th minute. Gaziantep's most-used player is suspended. Salah has 8 goals and 5 assists in ten matches, and Franculino, the second-best scorer, is doubtful. On Thursday, four days after this match, Trabzonspor play Freiburg in Europe.
+The data tells real stories. Trabzonspor won all four home matches in the sample, with a total score of 13–0. Gaziantep concede late: a third of their goals against came after minute 75. The Gaziantep player with the most minutes is suspended. Salah has 8 goals and 5 assists in ten matches. Franculino, the second-best scorer, is doubtful. On Thursday, four days after this match, Trabzonspor play Freiburg in Europe.
 
-Two rules shape every tool. **First, `null` means "not shown on the source", never zero.** There's no xG for Gaziantep's cup game, and a model handed `None` may read it as zero, so every tool says `"not available"` instead (a test checks that no `None` leaks out). **Second, tools return small, computed answers, not raw files.** Paste `results.json` (126 KB) into a prompt and the model gets most of it right. "Most" is the problem. So, as the header of `matchday/tools.py` puts it: LLMs interpret, tools count.
+Two rules apply to each tool. **First, `null` means "not shown on the source". It does not mean zero.** For example, the data has no xG for the Gaziantep cup match. A model can read `None` as zero. So each tool returns `"not available"`, and a test makes sure that no `None` gets out. **Second, tools return small, calculated answers, not raw files.** If you paste `results.json` (126 KB) into a prompt, the model gets most of it correct. "Most" is the problem. The header of `matchday/tools.py` gives the rule: LLMs interpret, tools count.
 
 ## Step 1 · The Scout
 
-**The pattern:** a single `LlmAgent` is an instruction (who it is, how it works) plus tools (plain Python functions it can call).
+**The pattern:** one `LlmAgent` has an instruction and tools. The instruction tells the agent who it is and how to work. The tools are Python functions that the agent can call.
 
 [![Step 1: the scout LlmAgent sends its instruction and tool schemas to Gemini, calls Python tools that read data, and answers with their numbers](images/step1-scout.svg)](images/step1-scout.svg "Open full size")
 
-*One agent, five tools. Gemini decides which tool to call; Python does the work. Tap to open full size.*
+*One agent with five tools. Gemini selects the tool to call. Python does the work. Tap to open full size.*
 
-Here's the whole agent. ✏️ **BLANK 1** · paste it into `steps/step1_scout/agent.py`:
+This is the full agent. ✏️ **BLANK 1** · paste it into `steps/step1_scout/agent.py`:
 
 <!-- source: steps/step1_scout/agent.py blank: 1 -->
 ```python
@@ -104,9 +112,9 @@ How you work:
 root_agent = build_scout()
 ```
 
-`HOUSE_RULES` comes from `config.py` and goes into every agent: answer in the user's language, and only use numbers from a tool. Type in Turkish and you get Turkish back. The agent is built by a function, `build_scout()`, which pays off in step 5.
+`HOUSE_RULES` comes from `config.py`. Each agent gets these rules: answer in the language of the user, and use only numbers from a tool. If you write in Turkish, the agent answers in Turkish. A function, `build_scout()`, makes the agent. Step 5 shows why this is useful.
 
-ADK turns each tool's type hints and docstring into the schema the model sees, so the docstring is written for the model: it's all it knows about the tool. Inside, the tools do the counting, like the share of goals per 15-minute window:
+ADK makes the tool schema from the type hints and the docstring of each tool. The model sees only this schema, so write the docstring for the model. Inside the tools, Python does all the calculations. For example, this code calculates the share of goals in each 15-minute window:
 
 <!-- source: matchday/tools.py -->
 ```python
@@ -120,11 +128,11 @@ ADK turns each tool's type hints and docstring into the schema the model sees, s
     }
 ```
 
-Name matching ignores Turkish and Polish letters (`simsir` finds Aral Şimşir), and bad input returns an error with suggestions instead of raising.
+The tools find names without Turkish or Polish letters: `simsir` finds Aral Şimşir. For bad input, a tool returns an error with suggestions. It does not raise an exception.
 
-**Run it:** save, pick `step1_scout` in the dev UI and ask *"Who's in form for us, and who can't play Sunday?"*
+**Run it:** Save the file. In the dev UI, select `step1_scout`. Ask *"Who's in form for us, and who can't play Sunday?"*
 
-In my run, the scout called `get_availability` once and `get_top_players` three times (goals, assists, avg_rating), then answered in 12 seconds. Trimmed:
+In my run, the scout called `get_availability` one time and `get_top_players` three times (goals, assists, avg_rating). It answered in 12 seconds. A part of the answer:
 
 > **In Form (Last 10 Matches)**
 > - **Mohamed Salah** (Available): 8 goals, 5 assists, and an 8.03 average rating in 10 matches (802 minutes).
@@ -133,21 +141,21 @@ In my run, the scout called `get_availability` once and `get_top_players` three 
 
 <!-- SCREENSHOT: adk web, step1_scout, the events panel showing the get_top_players and get_availability calls -->
 
-**Use it when** one job needs a handful of tools and some judgement: a support bot, a data assistant, a code helper.
+**Use it when** one job needs a small number of tools and some judgement. Examples: a support bot, a data assistant, a code helper.
 
-**Avoid it when** the instruction grows into a long list of "first do this, then that". That's a workflow, and step 2 is for that.
+**Do not use it when** the instruction becomes a long list of "first do this, then do that". That is a workflow. Step 2 shows workflows.
 
-**The gotcha: tools do the maths.** Every number an agent states should come out of a tool. Give the model computed answers (`pct_of_goals_conceded: 33`), not raw rows to add up. My smoke script flags any number in an answer that appears in no tool result; step 5 shows what happens when you skip this.
+**The gotcha: tools do the calculations.** Each number from an agent must come from a tool. Give the model calculated answers (`pct_of_goals_conceded: 33`), not raw rows. My smoke script finds each number in an answer that is not in a tool result. Step 5 shows what happens when you ignore this rule.
 
 ## Step 2 · Match Prep
 
-**The pattern:** a `SequentialAgent` runs its sub-agents in a fixed order, every time, with no model of its own. They hand work over through session state.
+**The pattern:** a `SequentialAgent` runs its sub-agents in a fixed order, each time. It has no model. Each sub-agent gives its work to the next one through session state.
 
 [![Step 2: opponent_analyst, tactician and lineup_picker run in order inside a SequentialAgent, passing opponent_report and game_plan through session state](images/step2-match-prep.svg)](images/step2-match-prep.svg "Open full size")
 
-*Three agents in a row. Each saves its answer with output_key; the next reads it with a placeholder. Tap to open full size.*
+*Three agents in a row. Each agent saves its answer with output_key. The next agent reads it with a placeholder. Tap to open full size.*
 
-The opponent analyst studies Gaziantep and writes a report. The tactician turns the report into a game plan. The lineup picker turns the plan into an XI. You write the middle one, and the line that chains them. ✏️ **BLANK 2a** · `steps/step2_match_prep/agent.py`:
+The opponent analyst studies Gaziantep and writes a report. The tactician makes a game plan from the report. The lineup picker makes an XI from the plan. You write the tactician and the line that connects the three agents. ✏️ **BLANK 2a** · `steps/step2_match_prep/agent.py`:
 
 <!-- source: steps/step2_match_prep/agent.py blank: 2a -->
 ```python
@@ -166,44 +174,44 @@ formation, how we attack, how we defend, and what to do in each phase of the mat
     )
 ```
 
-✏️ **BLANK 2b** · same file, at the end of `build_match_prep`:
+✏️ **BLANK 2b** · the same file, at the end of `build_match_prep`:
 
 <!-- source: steps/step2_match_prep/agent.py blank: 2b -->
 ```python
     return SequentialAgent(name=name, description=description, sub_agents=[opponent_analyst, tactician, lineup_picker])
 ```
 
-`output_key="opponent_report"` saves the analyst's final answer in session state. `{opponent_report}` in the tactician's instruction pastes it in before the tactician's model call. No glue code.
+`output_key="opponent_report"` saves the final answer of the analyst in session state. Before the tactician calls the model, ADK puts this value into `{opponent_report}` in its instruction. You do not write code to connect the agents.
 
-**Run it:** pick `step2_match_prep` and ask *"Prepare Sunday's game plan."*
+**Run it:** In the dev UI, select `step2_match_prep`. Ask *"Prepare Sunday's game plan."*
 
-Three agents in a row, about two minutes. The tactician, using the analyst's report:
+The three agents run in a row. This takes about two minutes. The tactician uses the report of the analyst:
 
 > **Exploit High Conceding Windows:** Gaziantep FK have conceded 67% of their goals in the second half (10 of 15 goals in their last 10 matches). Increase tempo immediately after half-time.
 
-And the lineup picker, after checking availability:
+The lineup picker checks the availability and then selects the XI:
 
 > **Formation: 4-1-4-1** · André Onana; Wagner Pina, Stefan Savić, Chibuike Nwaiwu, Mustafa Eskihellaç; Fabinho; Mohamed Salah, Melih Kabasakal, Ernest Muçi, Noah Saviolo; Aral Şimşir.
 
-In an earlier run the lineup picker tried two names from its own memory that aren't in this squad. `get_player` answered `{"error": "No player called 'Destan' in either squad.", ...}` and it moved on to real players: the error-instead-of-exception rule paying off.
+In an earlier run, the lineup picker tried two player names from its memory. These players are not in this squad. `get_player` answered `{"error": "No player called 'Destan' in either squad.", ...}`. Then the agent used real players. This is why the tools return errors and do not raise exceptions.
 
 <!-- SCREENSHOT: adk web, step2_match_prep, the State tab showing opponent_report, game_plan and lineup -->
 
-**Use it when** the steps are always the same and each needs the previous one's output: research, plan, act.
+**Use it when** the steps are always the same and each step needs the output of the step before it. Example: research, plan, act.
 
-**Avoid it when** the steps are independent (step 3 is faster) or the next step depends on what happened.
+**Do not use it when** the steps are independent. For independent steps, step 3 is faster. Also do not use it when the next step depends on a result.
 
-**The gotcha: `output_key` and placeholders are a contract.** A `{placeholder}` with no value in state raises a `KeyError` before the model is called. Keep the names identical, and make sure the writer runs before the reader.
+**The gotcha: `output_key` and placeholders must agree.** If a `{placeholder}` has no value in state, ADK raises a `KeyError` before the model call. Use the same names. Make sure that the agent that writes a value runs before the agent that reads it.
 
 ## Step 3 · Scouting Department
 
-**The pattern:** a `ParallelAgent` starts its sub-agents at the same time, each writing its own state key. A `SequentialAgent` around it lets a report writer merge the results afterwards.
+**The pattern:** a `ParallelAgent` starts its sub-agents at the same time. Each sub-agent writes its own state key. A `SequentialAgent` contains the `ParallelAgent`, so a report writer can merge the results after the parallel work.
 
 [![Step 3: inside a SequentialAgent, a ParallelAgent runs attack_scout, defense_scout and discipline_scout at once, then report_writer merges attack_report, defense_report and discipline_report](images/step3-scouting-dept.svg)](images/step3-scouting-dept.svg "Open full size")
 
-*Three scouts at once, one writer after. Tap to open full size.*
+*Three scouts at the same time, then one writer. Tap to open full size.*
 
-One scout covers Gaziantep's attack, one their defence, one cards and the referee. None needs the others' work, so there's no reason to wait. The scouts are already in the file; you add the writer and wire them up. ✏️ **BLANK 3** · `steps/step3_scouting_dept/agent.py`:
+One scout studies the attack of Gaziantep. One scout studies their defence. One scout studies cards and the referee. No scout needs the work of the other scouts, so they do not wait. The scouts are already in the file. You add the writer and connect the agents. ✏️ **BLANK 3** · `steps/step3_scouting_dept/agent.py`:
 
 <!-- source: steps/step3_scouting_dept/agent.py blank: 3 -->
 ```python
@@ -222,11 +230,11 @@ Use only facts from the reports; if they disagree, say so.""" + HOUSE_RULES,
     return SequentialAgent(name=name, description=description, sub_agents=[scouts, report_writer])
 ```
 
-The scouts' instructions don't name the opponent; each starts with `get_match_info` to find out. No instruction in this repo hardcodes a fact from the data, so a new fixture is just new JSON.
+The instructions of the scouts do not name the opponent. Each scout calls `get_match_info` first to find it. No instruction in this repo contains a fact from the data. For a new fixture, you only change the JSON files.
 
-**Run it:** pick `step3_scouting_dept` and ask *"Scout Gaziantep for us."*
+**Run it:** In the dev UI, select `step3_scouting_dept`. Ask *"Scout Gaziantep for us."*
 
-The three scouts made ten tool calls between them, all at once, and the writer merged their reports in 43 seconds. From the brief, trimmed:
+The three scouts made ten tool calls at the same time. Then the writer merged their reports. The full run took 43 seconds. A part of the brief:
 
 > **Weaknesses to Attack**
 > - **Second-half defensive collapse** (last 10 matches – 15 goals conceded, 1.5 avg, 1.63 avg xGA across 9 matches with xG data):
@@ -236,21 +244,21 @@ The three scouts made ten tool calls between them, all at once, and the writer m
 > **Three Key Takeaways**
 > 1. **Exploit the decimated backline:** Gaziantep's defensive anchor Myenty Abena is suspended, while starting goalkeeper Kacper Tobiasz and three central defenders (Meleke, Kızıldağ, Sangaré) are doubtful with muscle injuries. …
 
-**Use it when** you have independent questions about the same thing: three searches, three reviewers, three data sources.
+**Use it when** you have independent questions about the same thing. Examples: three searches, three reviewers, three data sources.
 
-**Avoid it when** one task needs another's answer, or when the parallel work writes to the same state key.
+**Do not use it when** one task needs the answer of another task. Also do not use it when the parallel agents write to the same state key.
 
-**The gotcha: something has to merge the results.** A `ParallelAgent` gives you three answers in whatever order they finished, not one. Give every parallel agent its own `output_key`, then add a step that reads them all. Parallel also means more requests per second, which is where a free key starts hitting rate limits.
+**The gotcha: an agent must merge the results.** A `ParallelAgent` gives you three answers, not one. The answers come in the order in which the agents finish. Give each parallel agent its own `output_key`. Then add a step that reads all the keys. Parallel agents also send more requests each second. On a free key, this can cause rate limit errors.
 
 ## Step 4 · Tribün
 
-**The pattern:** a `LoopAgent` runs its sub-agents again and again until one of them says stop, or until it hits `max_iterations`. Here it's a proposer and a critic.
+**The pattern:** a `LoopAgent` runs its sub-agents again and again. It stops when a sub-agent tells it to stop, or at `max_iterations`. Here, one agent proposes and one agent criticises.
 
 [![Step 4: in a LoopAgent, lineup_picker writes lineup, tribun reads it and either writes tribun_feedback, which loops back, or calls exit_loop, which ends the loop](images/step4-tribun.svg)](images/step4-tribun.svg "Open full size")
 
-*Propose, criticise, repeat. exit_loop ends it; max_iterations=3 is the safety net. Tap to open full size.*
+*Propose, criticise, repeat. exit_loop stops the loop. max_iterations=3 is the safety limit. Tap to open full size.*
 
-In Turkish football the *tribün* is the stand, and the people in it, who have opinions about your team sheet. So the critic here is the home crowd. ✏️ **BLANK 4** · `steps/step4_tribun/agent.py`:
+In Turkish football, the *tribün* is the stand and the people in it. These people have strong opinions about the team sheet. The critic in this step is the home crowd. ✏️ **BLANK 4** · `steps/step4_tribun/agent.py`:
 
 <!-- source: steps/step4_tribun/agent.py blank: 4 -->
 ```python
@@ -279,7 +287,7 @@ Don't invent new demands each round: approve as soon as the checks pass.
     return LoopAgent(name=name, description=description, sub_agents=[lineup_picker, tribun], max_iterations=3)
 ```
 
-The crowd checks the picker's claims with its own tools instead of trusting them. When it's happy, it calls `exit_loop`:
+The crowd does not trust the numbers of the lineup picker. It checks them with its own tools. When the crowd agrees with the lineup, it calls `exit_loop`:
 
 <!-- source: matchday/tools.py -->
 ```python
@@ -289,7 +297,7 @@ def exit_loop(tool_context: ToolContext) -> dict:
     return {"status": "approved"}
 ```
 
-The picker reads the objections on the next round. On round one there are none yet, hence the `?`:
+In the next round, the lineup picker reads the objections. In round one, there are no objections. That is why the placeholder has a `?`:
 
 <!-- source: steps/step4_tribun/agent.py -->
 ```python
@@ -297,39 +305,39 @@ The Tribün's last verdict (empty on the first round): {tribun_feedback?}
 If it lists objections, fix every one and say in one line what you changed.
 ```
 
-**Run it:** pick `step4_tribun` and ask *"Pick the XI for Sunday."*
+**Run it:** In the dev UI, select `step4_tribun`. Ask *"Pick the XI for Sunday."*
 
-Round one: the picker proposed a 4-2-3-1 with Melih Kabasakal in midfield. The crowd checked it with `get_team_trends` and `get_discipline` and answered (trimmed):
+In round one, the lineup picker proposed a 4-2-3-1 with Melih Kabasakal in midfield. The crowd checked the lineup with `get_team_trends` and `get_discipline`. A part of its answer:
 
 > 1. **Unleash the Storm at Home (Attacking Intent Needed):** … our home record is absolute perfection: **4 matches, 4 wins, 0 draws, 0 losses**, with **13 goals scored and 0 conceded** …
 > 2. **Discipline Plan Required for High Card-Risk Starters:** **Melih Kabasakal:** Picked up **1 red card** (straight red) and **1 yellow card** in his last 8 matches …
 
-Round two, the picker:
+In round two, the lineup picker changed the XI:
 
 > **What I changed:** Replaced Melih Kabasakal with the card-free Ozan Tufan in midfield to cut disciplinary risk, and deployed an aggressive high-pressing 4-2-3-1 setup to attack from the opening whistle.
 
-Then the crowd called `exit_loop` and signed off:
+Then the crowd called `exit_loop` and gave its approval:
 
 > Bordo-Mavi storm is brewing, Papara Park is ready to roar from minute one!
 > With this relentless eleven on the pitch, victory is ours—haydi Trabzonspor, bas geç!
 
 <!-- SCREENSHOT: adk web, step4_tribun, the events panel showing two rounds and the exit_loop call -->
 
-**Use it when** quality improves with feedback and you can say when it's good enough: a draft and an editor, code and a test runner, a plan and a reviewer.
+**Use it when** feedback makes the result better, and you can tell when the result is good enough. Examples: a draft and an editor, code and a test runner, a plan and a reviewer.
 
-**Avoid it when** you can't write a clear stop condition, or when one good prompt would do. Every round costs two or more model calls.
+**Do not use it when** you cannot write a clear stop condition, or when one good prompt is sufficient. Each round costs two or more model calls.
 
-**The gotcha: a loop needs an explicit stop and a safety net.** The stop is `exit_loop`, which sets `escalate = True`. The safety net is `max_iterations=3`: without it, a critic that's never satisfied loops until your quota runs out. And keep the `?` in `{tribun_feedback?}`: on round one the key doesn't exist, and without it ADK raises a `KeyError`.
+**The gotcha: a loop needs a clear stop and a safety limit.** `exit_loop` is the stop: it sets `escalate = True`. `max_iterations=3` is the safety limit. Without it, a critic that never agrees can use all of your quota. Also keep the `?` in `{tribun_feedback?}`. In round one, the key does not exist. Without the `?`, ADK raises a `KeyError`.
 
 ## Step 5 · Technical Director
 
-**The pattern:** an orchestrator is an `LlmAgent` whose tools include other agents. It picks which team to call and writes the final answer itself.
+**The pattern:** an orchestrator is an `LlmAgent` that has other agents as tools. It selects the team to call. Then it writes the final answer.
 
 [![Step 5: technical_director calls four teams wrapped in AgentTool, scout, match_prep, scouting_department and tribun_review, picking each by its description, plus three direct data tools](images/step5-technical-director.svg)](images/step5-technical-director.svg "Open full size")
 
-*The director chooses a team by its description, calls it like a function and gets its answer back. Tap to open full size.*
+*The director selects a team by its description. It calls the team like a function and gets the answer back. Tap to open full size.*
 
-The director's tools are the teams from steps 1 to 4, each wrapped in an `AgentTool`, plus three data tools. ✏️ **BLANK 5a** · the descriptions, in `steps/step5_technical_director/agent.py`:
+The tools of the director are the teams from steps 1 to 4. Each team is in an `AgentTool`. The director also has three data tools. ✏️ **BLANK 5a** · the descriptions, in `steps/step5_technical_director/agent.py`:
 
 <!-- source: steps/step5_technical_director/agent.py blank: 5a -->
 ```python
@@ -343,7 +351,7 @@ TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when aske
 # SCOUTING_DEPT = "Also helps with football."
 ```
 
-✏️ **BLANK 5b** · same file, at the top of `build_technical_director`:
+✏️ **BLANK 5b** · the same file, at the start of `build_technical_director`:
 
 <!-- source: steps/step5_technical_director/agent.py blank: 5b -->
 ```python
@@ -356,16 +364,16 @@ TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when aske
     ]
 ```
 
-**Run it:** pick `step5_technical_director` and try three questions that show the range. First: *"Should we rest Salah for Freiburg on Thursday?"*
+**Run it:** In the dev UI, select `step5_technical_director`. Ask three different questions. The first question is *"Should we rest Salah for Freiburg on Thursday?"*
 
-The director called the scout and `get_fixtures`, then wrote (trimmed):
+The director called the scout and `get_fixtures`. A part of its answer:
 
 > - **4 days of rest** between Gaziantep FK and Freiburg (H, Nov 5).
 > - **Verdict:** A full benching on Sunday is unnecessary given the 4-day recovery window ahead of Thursday's match. … start Salah against Gaziantep FK and withdraw him around the 60-minute mark once the match is secured.
 
-Then: *"If we win 2-0, where do we stand?"*
+The second question is *"If we win 2-0, where do we stand?"*
 
-One `project_table` call, no team needed:
+The director called `project_table` one time. It did not need a team:
 
 > - **Trabzonspor Position:** Moves from **3rd to 1st**
 > - **Points:** Increases from **19 to 22**
@@ -374,7 +382,7 @@ One `project_table` call, no team needed:
 > 1. **Trabzonspor:** 22 pts (+16 GD, 10 played)
 > 2. **Galatasaray:** 22 pts (+7 GD, 9 played)
 
-And the big one: *"Bizi pazara hazırla"* ("get us ready for Sunday"). The director called `scouting_department`, then `match_prep` (seven agents in all), and answered in Turkish after 222 seconds:
+The third question asks for the full briefing: *"Bizi pazara hazırla"* ("get us ready for Sunday"). The director called `scouting_department` and then `match_prep`. Seven agents worked on the answer. The director answered in Turkish after 222 seconds:
 
 > **Zafiyetler**
 > - **İkinci Yarı Savunma Düşüşü:** Son 10 maçta 15 gol yediler (maç başına 1.50 gol; …). 15 golün 10'u (%67) ikinci yarıda yendi.
@@ -382,29 +390,29 @@ And the big one: *"Bizi pazara hazırla"* ("get us ready for Sunday"). The direc
 > **Forvet**
 > - **ST:** **Mohamed Salah** (Lig sezonu: 9 maç, 8 gol, 3 asist, 8.01 FotMob reytingi; son 10 maç: 10 maç, 802 dakika, 8 gol, 5 asist)
 
-"10 of their 15 goals conceded (67%) came in the second half", and Salah's league-season and last-10 numbers kept apart. Both lines come from a fix; more on that below.
+The answer gives the correct number: 10 of their 15 goals conceded (67%) came in the second half. It also keeps the league-season numbers of Salah apart from his last-10 numbers. Both results come from a fix. The lesson below explains it.
 
 <!-- SCREENSHOT: adk web, step5_technical_director, the trace view of "Bizi pazara hazırla" with the scouting_department and match_prep tool calls -->
 
-**Use it when** questions vary and different questions need different specialists, and you want one voice to answer.
+**Use it when** the questions are different and need different specialists, and you want one voice to answer.
 
-**Avoid it when** the route is always the same (use a workflow agent, it's cheaper and predictable) or when a single agent with a few more tools would do.
+**Do not use it when** the route is always the same. For a fixed route, a workflow agent is cheaper and more predictable. Also do not use it when one agent with more tools is sufficient.
 
-**The gotchas: three of them, plus a lesson.**
+**The gotchas: three gotchas and one lesson.**
 
-- **Descriptions drive routing.** The director never sees a team's instructions or code, only its name and `description`. Uncomment the two vague descriptions in the file, ask the same questions, and watch it pick the wrong team. A good description says what the team does and when to use it.
-- **One parent per agent.** An ADK agent instance can have only one parent, so step 5 can't reuse step 1's `scout` object. That's why every step exposes a `build_*()` factory that returns fresh instances.
-- **`AgentTool` vs `sub_agents`.** In `sub_agents`, the director *transfers* the conversation: the team answers the user and the director is out of the loop. With `AgentTool`, the director *calls* the team, gets its final answer back as a tool result, and stays in charge. For a briefing that combines teams, you want `AgentTool`.
+- **Descriptions control the routing.** The director does not see the instructions or the code of a team. It sees only the name and the `description`. Remove the `#` from the two vague descriptions in the file, and ask the same questions again. The director selects the wrong team. A good description tells what the team does and when to use it.
+- **One parent for each agent.** In ADK, an agent instance can have only one parent. Thus, step 5 cannot use the `scout` object from step 1 again. For this reason, each step has a `build_*()` function that makes new instances.
+- **`AgentTool` or `sub_agents`.** With `sub_agents`, the director *transfers* the conversation. The team answers the user, and the director does not see the answer. With `AgentTool`, the director *calls* the team. It gets the final answer as a tool result and stays in control. For a briefing that combines teams, use `AgentTool`.
 
-And a lesson from my first run. The scouts wrote "60% of goals conceded come in two windows, 46–60' and 76–90'". The director, summarising the summary, turned that into "60% come in the second half". Wrong: it's 10 of 15, so 67%. I didn't fix it with a sterner prompt but in the tool: `get_team_trends` now returns per-half totals, so nobody adds windows up. Give an orchestrator computed numbers to quote, not pieces to reassemble.
+The lesson comes from my first run. The scouts wrote "60% of goals conceded come in two windows, 46–60' and 76–90'". The director made a summary of this summary and wrote "60% come in the second half". This is wrong: the correct number is 10 of 15, or 67%. I did not fix this with a stricter prompt. I fixed the tool: `get_team_trends` now also returns the totals for each half. Now no agent adds windows together. Give an orchestrator calculated numbers to quote, not parts to put together.
 
 ## Bonus · Live data over MCP
 
-Everything so far runs on a snapshot. The bonus swaps the data source: the same scout from step 1, with a live football server instead of local JSON.
+All the steps so far use a snapshot. The bonus changes the data source. It uses the same scout from step 1, but with a live football server instead of local JSON.
 
 [![Bonus: the same build_scout factory gets either the five local tools over the JSON snapshot, or an McpToolset that talks to livescoremcp.com over SSE](images/bonus-live-mcp.svg)](images/bonus-live-mcp.svg "Open full size")
 
-*Same agent, different tools. The instruction and the model don't change. Tap to open full size.*
+*The same agent with different tools. The instruction and the model do not change. Tap to open full size.*
 
 <!-- source: steps/bonus_live_mcp/agent.py -->
 ```python
@@ -417,17 +425,17 @@ live_football = McpToolset(
 root_agent = build_scout(name="live_scout", tools=[live_football])
 ```
 
-[MCP](https://modelcontextprotocol.io) (Model Context Protocol) is a standard way for a server to offer tools to any agent. ADK fetches the server's tool list and hands the tools to the model like Python functions; `tool_filter` keeps six of the sixteen. MCP support is the optional `google-adk[mcp]` extra, already in this repo's dependencies.
+[MCP](https://modelcontextprotocol.io) (Model Context Protocol) is a standard way for a server to give tools to an agent. ADK gets the tool list from the server. It gives these tools to the model like Python functions. `tool_filter` keeps six of the sixteen tools. MCP support is in the optional `google-adk[mcp]` extra, and this repo includes it.
 
 I asked: *"What were Trabzonspor's last three results, and who scored?"*
 
-The scout made four calls to the live server (`get_team`, then `get_match` three times) and answered in 18 seconds:
+The scout made four calls to the live server: `get_team` one time and `get_match` three times. It answered in 18 seconds:
 
 > - **26/10/2026 · Süper Lig: Rizespor 3 - 4 Trabzonspor** · Our scorers: Melih Kabasakal (49'), Aral Şimşir (51'), Franculino (57', 83')
 > - **22/10/2026 · UEFA Europa Conference League: Trabzonspor 2 - 0 Heart of Midlothian** · Our scorers: Mohamed Salah (32' pen.), Franculino (58')
 > - **19/10/2026 · Süper Lig: Trabzonspor 2 - 0 Beşiktaş J.K.** · Our scorers: Ozan Tufan (21'), Mohamed Salah (71')
 
-Same results as the snapshot, from a different source, with no change to the agent. The server is free but allows 30 requests per minute per IP, and a room on one Wi-Fi shares that limit, so at the workshop only I ran it.
+The results are the same as in the snapshot, but they come from a different source. The agent code did not change. The server is free, but it accepts only 30 requests per minute from each IP address. All the people in one room share one Wi-Fi network, so they share this limit. For this reason, only I ran this step at the workshop.
 
 ## Which recipe when
 
@@ -435,17 +443,17 @@ Same results as the snapshot, from a different source, with no change to the age
 |---|---|---|
 | One job, a few tools, some judgement | `LlmAgent` with tools | Step 1 · Scout |
 | Fixed steps, each using the last one's output | `SequentialAgent` + `output_key` + `{placeholders}` | Step 2 · Match Prep |
-| Independent work on the same input, faster | `ParallelAgent`, then a merge step | Step 3 · Scouting Department |
-| Refine until good enough | `LoopAgent` + a critic + `exit_loop` + `max_iterations` | Step 4 · Tribün |
+| Independent work on the same input, in less time | `ParallelAgent`, then a merge step | Step 3 · Scouting Department |
+| A better result after each review | `LoopAgent` + a critic + `exit_loop` + `max_iterations` | Step 4 · Tribün |
 | Different questions need different specialists | `LlmAgent` orchestrator + `AgentTool` + clear descriptions | Step 5 · Technical Director |
 | The same agent on another data source | `McpToolset` instead of local tools | Bonus · live MCP |
 
-And the habits that held across all of them: let tools do the counting, return small dicts with "not available" instead of `null`, build agents with factory functions, and keep the model name in one place.
+Some rules apply to all the patterns. Let tools do the calculations. Return small dicts, with "not available" instead of `null`. Make agents with factory functions. Keep the model name in one place.
 
 ## Try it yourself
 
-Add a `compare_players` tool to the scout and ask *"Salah mı Franculino mu daha formda?"* Give the scouting department a fourth scout. Make the Tribün stricter and count the rounds, then set `max_iterations=1`. Swap in the vague descriptions and watch the director stumble. The repo README has one challenge per step.
+Try these changes. Add a `compare_players` tool to the scout, and ask *"Salah mı Franculino mu daha formda?"* Give the scouting department a fourth scout. Make the Tribün stricter and count the rounds. Then set `max_iterations=1`. Use the vague descriptions and see how the director fails. The README of the repo has one challenge for each step.
 
-Code, data, Colab notebook and tests: [github.com/omarcevi/trabzonspor_analyst](https://github.com/omarcevi/trabzonspor_analyst). The data is a FotMob and ESPN snapshot from 30 October 2026, so injury news may have moved on.
+The code, the data, the Colab notebook and the tests are at [github.com/omarcevi/trabzonspor_analyst](https://github.com/omarcevi/trabzonspor_analyst). The data is a FotMob and ESPN snapshot from 30 October 2026. The injury news can be different now.
 
-Thanks to GDG Trabzon for hosting DevFest Trabzon 2026, and to everyone who spent part of their Saturday building a football staff out of agents with me.
+Thank you to GDG Trabzon for DevFest Trabzon 2026. Thank you also to all the people who built a football staff from agents with me on that Saturday.

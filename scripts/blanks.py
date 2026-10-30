@@ -34,9 +34,9 @@ def guide_blanks(guide: str | None = None) -> dict[str, dict]:
 
 def marker(blank_id: str, blank: dict) -> str:
     indent = re.match(r"[ ]*", blank["code"]).group()
-    where = f"the guide, {blank['section']}"
-    return (f"{indent}# ✏️ BLANK {blank_id} · paste the code from {where} over these two lines\n"
-            f'{indent}raise NotImplementedError("BLANK {blank_id} is still empty: paste the code from {where}")\n')
+    step = blank["section"]
+    return (f"{indent}# ✏️ BLANK {blank_id} · in the guide under \"{step}\": paste its code over these two lines\n"
+            f'{indent}raise NotImplementedError("BLANK {blank_id} is still empty. Paste its code from the guide ({step}).")\n')
 
 
 def fill(text: str, blanks: dict[str, dict], ids: set[str] | None = None) -> str:

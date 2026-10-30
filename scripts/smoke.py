@@ -3,7 +3,7 @@
     uv run python scripts/smoke.py                      # every step
     uv run python scripts/smoke.py step1_scout step4_tribun
 
-Needs GOOGLE_API_KEY (in .env or the environment). Each transcript is also saved to
+Needs a .env from `bash scripts/setup.sh` (Gemini on Vertex AI in your project). Each transcript is also saved to
 scripts/smoke_output/<step>.md. After each answer the script lists any number in the agents'
 text that appears in no tool result: a quick way to spot invented numbers (review them by hand;
 formations and list counts show up there too).
@@ -97,8 +97,9 @@ async def main() -> int:
     apps = parser.parse_args().steps or list(DEMOS)
     if unknown := [a for a in apps if a not in DEMOS]:
         parser.error(f"unknown step(s): {', '.join(unknown)}")
-    if not os.getenv("GOOGLE_API_KEY") and os.getenv("GOOGLE_GENAI_USE_VERTEXAI", "").lower() not in ("true", "1"):
-        print("GOOGLE_API_KEY is not set. Copy .env.example to .env and paste your key.", file=sys.stderr)
+    vertex = os.getenv("GOOGLE_GENAI_USE_VERTEXAI", "").lower() in ("true", "1") and os.getenv("GOOGLE_CLOUD_PROJECT")
+    if not vertex and not os.getenv("GOOGLE_API_KEY"):
+        print("No Gemini settings. Run `bash scripts/setup.sh` to write .env for your project.", file=sys.stderr)
         return 1
     OUT.mkdir(exist_ok=True)
     failed = False

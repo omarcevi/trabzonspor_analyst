@@ -54,6 +54,38 @@ def fill_blank(blank_id: str, where: str) -> str:
 """
 
 
+# Every Run it shows this command. No | ^ or * in a command: Cloud Shell refuses to paste it.
+ADK_WEB = "uv run adk web --reload_agents --port 8080 --allow_origins https://8080-$WEB_HOST steps"
+
+
+def dev_ui(first: bool = False) -> str:
+    """The command that serves every step: started in step 1, still running in the later steps."""
+    if first:
+        return f"""Start the ADK dev UI in the terminal:
+
+```bash
+{ADK_WEB}
+```
+
+`adk web` loads each folder in `steps/` as an app. With `--reload_agents`, it loads a file again
+when you save it. With `--allow_origins`, the Web Preview page can connect to the dev UI.
+
+1. Click <walkthrough-web-preview-icon></walkthrough-web-preview-icon> **Web preview**. Then click
+   **Preview on port 8080**. The dev UI opens in a new tab.
+2. Click **+** in the terminal to open a second tab. Use it for all other commands. The dev UI
+   continues to run in the first tab.
+"""
+    return f"""The dev UI from step 1 continues to run this command in the first terminal tab:
+
+```bash
+{ADK_WEB}
+```
+
+When you save a file, the dev UI loads it again. You do not have to start it again. If the dev UI
+stopped, run the command again in the first terminal tab.
+"""
+
+
 def ask(app: str, *prompts: str) -> str:
     """Each prompt in its own block: the tutorial panel gives a block a copy button."""
     what = "this question" if len(prompts) == 1 else "these three questions, one at a time"
@@ -95,39 +127,24 @@ the full explanations and the diagrams: [omarcevi.dev/workshops/match-day-agents
 """,
     f"""## Set up
 
-1. Install the Python packages (about 1 minute):
+1. Install uv, the Python package manager. If Cloud Shell already has uv, the script only shows
+   its version:
+   ```bash
+   source scripts/install_uv.sh
+   ```
+2. Install the Python packages (about 1 minute):
    ```bash
    uv sync
    ```
-   If the terminal shows `uv: command not found`, install uv with this command. Then
-   run `uv sync` again:
+3. Get a free Gemini API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
+4. Save the key. The script asks for the key. The key does not show on the screen when you paste
+   it:
    ```bash
-   curl -LsSf https://astral.sh/uv/install.sh | sh && source $HOME/.local/bin/env
+   uv run python scripts/set_key.py
    ```
-2. Get a free Gemini API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
-3. Make your `.env` file:
-   ```bash
-   cp .env.example .env
-   ```
-4. Save your key in it. This command asks for the key and does not show it:
-   ```bash
-   read -s -p "Gemini API key: " KEY && sed -i "s|^GOOGLE_API_KEY=.*|GOOGLE_API_KEY=$KEY|" .env && unset KEY && echo " saved"
-   ```
-   You can also paste the key into {open_file(".env")} in the editor.
-5. Start the ADK dev UI:
-   ```bash
-   uv run adk web --reload_agents --port 8080 --allow_origins "*" steps
-   ```
-   With `--reload_agents`, the dev UI loads a file again when you save it. With
-   `--allow_origins "*"`, the Web Preview page can connect to the dev UI.
-6. Click <walkthrough-web-preview-icon></walkthrough-web-preview-icon> **Web preview**. Then
-   click **Preview on port 8080**. The dev UI opens in a new tab.
-7. Click **+** in the terminal to open a second tab. Use it for all other commands. The dev UI
-   continues to run in the first tab.
+   The script saves the key in {open_file(".env")}.
 
-✅ **Check:** the dropdown at the top left of the dev UI shows six apps, from `bonus_live_mcp` to
-`step5_technical_director`. Until you fill a step, the terminal shows `✏️ BLANK ... paste its code
-over this line` when you select it.
+✅ **Check:** the terminal shows `✅ Key saved in .env`. You start the dev UI in step 1.
 """,
     f"""## The data and the tools
 
@@ -154,9 +171,12 @@ work. The tools are Python functions that the agent can call.
 {fill_blank("1", "the whole agent")}
 ### Run it
 
+{dev_ui(first=True)}
 {ask("step1_scout", "Who's in form for us, and who can't play Sunday?")}
-✅ **Check:** the events panel shows calls to `get_top_players` and `get_availability`. The answer
-gives 8 goals and 5 assists for Salah, and the players who are out or doubtful.
+✅ **Check:** the dropdown at the top left of the dev UI shows six apps. The events panel shows
+calls to `get_top_players` and `get_availability`. The answer gives 8 goals and 5 assists for
+Salah, and the players who are out or doubtful. If you select a step that you did not fill yet,
+the terminal shows `✏️ BLANK ... paste its code over this line`.
 
 {late("1")}
 More about this step: [Step 1 · The Scout]({SITE}step-1/).
@@ -173,6 +193,7 @@ already there. You add the tactician and the line that connects the three agents
 {fill_blank("2b", "the SequentialAgent")}
 ### Run it
 
+{dev_ui()}
 {ask("step2_match_prep", "Prepare Sunday's game plan.")}
 ✅ **Check:** three agents answer in order (about two minutes). The **State** tab shows
 `opponent_report`, `game_plan` and `lineup`. The XI has no player who is out or doubtful.
@@ -190,6 +211,7 @@ a report writer merges the three reports. Open
 {fill_blank("3", "the report writer")}
 ### Run it
 
+{dev_ui()}
 {ask("step3_scouting_dept", "Scout Gaziantep for us.")}
 ✅ **Check:** the three scouts call their tools at the same time. The brief has four sections and
 says that Gaziantep conceded 10 of 15 goals (67%) in the second half.
@@ -208,6 +230,7 @@ instruction reads `{{tribun_feedback?}}`. With the `?`, round one can start with
 {fill_blank("4", "the Tribün")}
 ### Run it
 
+{dev_ui()}
 {ask("step4_tribun", "Pick the XI for Sunday.")}
 ✅ **Check:** the Tribün objects in round one, with numbers from its tools. The lineup picker fixes
 the XI. Then the Tribün calls `exit_loop` and cheers. The tool `exit_loop` is in
@@ -227,6 +250,7 @@ an `AgentTool`. The director selects a team by its **description**. Open
 {fill_blank("5b", "the teams")}
 ### Run it
 
+{dev_ui()}
 {ask("step5_technical_director", "Should we rest Salah for Freiburg on Thursday?",
     "If we win 2-0, where do we stand?", "Bizi pazara hazırla")}
 ✅ **Check:** the first answer uses the scout and `get_fixtures`. The second uses only

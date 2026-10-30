@@ -32,14 +32,11 @@ You need Python 3.11 or newer, [uv](https://docs.astral.sh/uv/), and a Gemini AP
 curl -LsSf https://astral.sh/uv/install.sh | sh     # installs uv
 git clone https://github.com/omarcevi/trabzonspor_analyst
 cd trabzonspor_analyst
-cp .env.example .env                                 # paste your key into .env
 uv sync
-uv run adk web --reload_agents steps
+uv run python scripts/set_key.py                     # asks for your key and saves it in .env
 ```
 
-Open http://localhost:8000. Select a step in the dropdown and ask it a question. The events panel shows each tool call and each hand-off. With `--reload_agents`, ADK loads a file again when you save it.
-
-<!-- SCREENSHOT: adk web with the app dropdown open, showing the six step folders -->
+You start the ADK dev UI in step 1.
 
 **Cloud Shell.** You can also do the workshop in your browser, with nothing to install. Click [Open in Cloud Shell](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/omarcevi/trabzonspor_analyst.git&cloudshell_git_branch=main&cloudshell_tutorial=tutorial.md&cloudshell_workspace=.&show=ide%2Cterminal). In the dialog, select **Trust repo** and click **Confirm**. Cloud Shell copies the repo and opens a tutorial panel next to the editor. The tutorial shows each step, and its links open the files and select each BLANK for you.
 
@@ -132,7 +129,17 @@ ADK makes the tool schema from the type hints and the docstring of each tool. Th
 
 The tools find names without Turkish or Polish letters: `simsir` finds Aral Şimşir. For bad input, a tool returns an error with suggestions. It does not raise an exception.
 
-**Run it:** Save the file. In the dev UI, select `step1_scout`. Ask *"Who's in form for us, and who can't play Sunday?"*
+**Run it:** Save the file. Start the ADK dev UI:
+
+```bash
+uv run adk web --reload_agents steps
+```
+
+Open http://localhost:8000. The dropdown shows the six folders in `steps/`. The events panel shows each tool call and each hand-off. With `--reload_agents`, ADK loads a file again when you save it. Thus you start the dev UI only one time.
+
+<!-- SCREENSHOT: adk web with the app dropdown open, showing the six step folders -->
+
+In the dev UI, select `step1_scout`. Ask *"Who's in form for us, and who can't play Sunday?"*
 
 In my run, the scout called `get_availability` one time and `get_top_players` three times (goals, assists, avg_rating). It answered in 12 seconds. A part of the answer:
 
@@ -185,7 +192,13 @@ formation, how we attack, how we defend, and what to do in each phase of the mat
 
 `output_key="opponent_report"` saves the final answer of the analyst in session state. Before the tactician calls the model, ADK puts this value into `{opponent_report}` in its instruction. You do not write code to connect the agents.
 
-**Run it:** In the dev UI, select `step2_match_prep`. Ask *"Prepare Sunday's game plan."*
+**Run it:** Save the file. The dev UI from step 1 still runs this command. It loads the saved file again. If it stopped, start it again:
+
+```bash
+uv run adk web --reload_agents steps
+```
+
+In the dev UI, select `step2_match_prep`. Ask *"Prepare Sunday's game plan."*
 
 The three agents run in a row. This takes about two minutes. The tactician uses the report of the analyst:
 
@@ -234,7 +247,13 @@ Use only facts from the reports; if they disagree, say so.""" + HOUSE_RULES,
 
 The instructions of the scouts do not name the opponent. Each scout calls `get_match_info` first to find it. No instruction in this repo contains a fact from the data. For a new fixture, you only change the JSON files.
 
-**Run it:** In the dev UI, select `step3_scouting_dept`. Ask *"Scout Gaziantep for us."*
+**Run it:** Save the file. The dev UI from step 1 still runs this command. It loads the saved file again. If it stopped, start it again:
+
+```bash
+uv run adk web --reload_agents steps
+```
+
+In the dev UI, select `step3_scouting_dept`. Ask *"Scout Gaziantep for us."*
 
 The three scouts made ten tool calls at the same time. Then the writer merged their reports. The full run took 43 seconds. A part of the brief:
 
@@ -307,7 +326,13 @@ The Tribün's last verdict (empty on the first round): {tribun_feedback?}
 If it lists objections, fix every one and say in one line what you changed.
 ```
 
-**Run it:** In the dev UI, select `step4_tribun`. Ask *"Pick the XI for Sunday."*
+**Run it:** Save the file. The dev UI from step 1 still runs this command. It loads the saved file again. If it stopped, start it again:
+
+```bash
+uv run adk web --reload_agents steps
+```
+
+In the dev UI, select `step4_tribun`. Ask *"Pick the XI for Sunday."*
 
 In round one, the lineup picker proposed a 4-2-3-1 with Melih Kabasakal in midfield. The crowd checked the lineup with `get_team_trends` and `get_discipline`. A part of its answer:
 
@@ -366,7 +391,13 @@ TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when aske
     ]
 ```
 
-**Run it:** In the dev UI, select `step5_technical_director`. Ask three different questions. The first question is *"Should we rest Salah for Freiburg on Thursday?"*
+**Run it:** Save the file. The dev UI from step 1 still runs this command. It loads the saved file again. If it stopped, start it again:
+
+```bash
+uv run adk web --reload_agents steps
+```
+
+In the dev UI, select `step5_technical_director`. Ask three different questions. The first question is *"Should we rest Salah for Freiburg on Thursday?"*
 
 The director called the scout and `get_fixtures`. A part of its answer:
 

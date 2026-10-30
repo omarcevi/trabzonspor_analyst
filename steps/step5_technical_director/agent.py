@@ -14,13 +14,11 @@ from steps.step2_match_prep.agent import build_match_prep
 from steps.step3_scouting_dept.agent import build_scouting_department
 from steps.step4_tribun.agent import build_tribun
 
-# ✏️ BLANK 5a · in the guide under "Step 5 · Technical Director": paste its code over these two lines
-raise NotImplementedError("BLANK 5a is still empty. Paste its code from the guide (Step 5 · Technical Director).")
+raise NotImplementedError("✏️ BLANK 5a · Step 5 · Technical Director in the guide: paste its code over this line")
 
 
 def build_technical_director(name: str = "technical_director") -> LlmAgent:
-    # ✏️ BLANK 5b · in the guide under "Step 5 · Technical Director": paste its code over these two lines
-    raise NotImplementedError("BLANK 5b is still empty. Paste its code from the guide (Step 5 · Technical Director).")
+    raise NotImplementedError("✏️ BLANK 5b · Step 5 · Technical Director in the guide: paste its code over this line")
     return LlmAgent(
         name=name,
         model=MODEL,

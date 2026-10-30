@@ -30,8 +30,7 @@ Reply with the formation, the eleven players by position line, and three substit
         tools=[get_availability, get_player, get_top_players],
         output_key="lineup",
     )
-    # ✏️ BLANK 4 · in the guide under "Step 4 · Tribün": paste its code over these two lines
-    raise NotImplementedError("BLANK 4 is still empty. Paste its code from the guide (Step 4 · Tribün).")
+    raise NotImplementedError("✏️ BLANK 4 · Step 4 · Tribün in the guide: paste its code over this line")
 
 
 root_agent = build_tribun()

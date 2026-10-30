@@ -42,8 +42,7 @@ players on each side, and every red card in the last 10 matches.""" + HOUSE_RULE
         tools=[get_match_info, get_discipline],
         output_key="discipline_report",
     )
-    # ✏️ BLANK 3 · in the guide under "Step 3 · Scouting Department": paste its code over these two lines
-    raise NotImplementedError("BLANK 3 is still empty. Paste its code from the guide (Step 3 · Scouting Department).")
+    raise NotImplementedError("✏️ BLANK 3 · Step 3 · Scouting Department in the guide: paste its code over this line")
 
 
 root_agent = build_scouting_department()

@@ -12,5 +12,4 @@ from matchday.tools import get_availability, get_matches, get_player, get_team_t
 SCOUT_TOOLS = [get_player, get_availability, get_team_trends, get_top_players, get_matches]
 
 
-# ✏️ BLANK 1 · in the guide under "Step 1 · The Scout": paste its code over these two lines
-raise NotImplementedError("BLANK 1 is still empty. Paste its code from the guide (Step 1 · The Scout).")
+raise NotImplementedError("✏️ BLANK 1 · Step 1 · The Scout in the guide: paste its code over this line")

@@ -1,0 +1,9 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.adk/
+*.egg-info/
+scripts/smoke_output/
+scripts/diagram_previews/

@@ -1,0 +1,66 @@
+{
+  "sources": [
+    "https://www.fotmob.com/teams/9752/fixtures/trabzonspor",
+    "https://www.fotmob.com/teams/4081/fixtures/gaziantep-fk",
+    "https://www.fotmob.com/matches/freiburg-vs-trabzonspor/2pn6yh#6112501",
+    "https://www.fotmob.com/matches/alanyaspor-vs-trabzonspor/1pzurt#5904796",
+    "https://www.fotmob.com/matches/eyupspor-vs-trabzonspor/1q0s6h#5904803",
+    "https://www.fotmob.com/matches/gaziantep-fk-vs-kasmpasa/mvp4e#5904794",
+    "https://www.fotmob.com/matches/gaziantep-fk-vs-genclerbirligi/1611rp#5904807"
+  ],
+  "retrieved": "2026-10-30",
+  "trabzonspor_next": [
+    {
+      "date": "2026-11-05",
+      "kickoff_utc": "2026-11-05T17:45:00Z",
+      "competition": "UEFA Conference League",
+      "round": "Round 3",
+      "home": "Trabzonspor",
+      "away": "Freiburg",
+      "venue": "Papara Park, Trabzon",
+      "home_away": "H"
+    },
+    {
+      "date": "2026-11-08",
+      "kickoff_utc": "2026-11-08T15:30:00Z",
+      "competition": "Süper Lig",
+      "round": "Round 11",
+      "home": "Alanyaspor",
+      "away": "Trabzonspor",
+      "venue": "GAIN Park Stadium, Antalya",
+      "home_away": "A"
+    },
+    {
+      "date": "2026-11-22",
+      "kickoff_utc": "2026-11-22T16:00:00Z",
+      "competition": "Süper Lig",
+      "round": "Round 12",
+      "home": "Trabzonspor",
+      "away": "Eyüpspor",
+      "venue": "Papara Park",
+      "home_away": "H"
+    }
+  ],
+  "gaziantep_next": [
+    {
+      "date": "2026-11-06",
+      "kickoff_utc": "2026-11-06T17:00:00Z",
+      "competition": "Süper Lig",
+      "round": "Round 11",
+      "home": "Gaziantep FK",
+      "away": "Kasımpaşa",
+      "venue": "Gaziantep Stadyumu, Gaziantep",
+      "home_away": "H"
+    },
+    {
+      "date": "2026-11-21",
+      "kickoff_utc": "2026-11-21T10:30:00Z",
+      "competition": "Süper Lig",
+      "round": "Round 12",
+      "home": "Gençlerbirliği",
+      "away": "Gaziantep FK",
+      "venue": "Eryaman Stadyumu, Ankara",
+      "home_away": "A"
+    }
+  ]
+}

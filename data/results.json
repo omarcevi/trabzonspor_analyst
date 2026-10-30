@@ -1,0 +1,4475 @@
+{
+  "retrieved": "2026-10-30",
+  "notes": [
+    "Oldest first. Stats columns: 'home'/'away' refer to home_team/away_team.",
+    "null = not shown on the source page, not zero."
+  ],
+  "Trabzonspor": [
+    {
+      "match_id": "5987967",
+      "date": "2026-08-27",
+      "kickoff_utc": "18:30",
+      "competition": "UEFA Europa League Qualification",
+      "round": "Qualification Final (second leg)",
+      "venue": "Groupama Aréna, Budapest",
+      "home_team": "Ferencváros",
+      "away_team": "Trabzonspor",
+      "focus_team": "Trabzonspor",
+      "focus_side": "away",
+      "opponent": "Ferencváros",
+      "score": {
+        "ht": null,
+        "ft": [
+          4,
+          0
+        ]
+      },
+      "result": "L",
+      "goals": [
+        {
+          "minute": 14,
+          "team": "Ferencváros",
+          "scorer": "Callum O'Dowda",
+          "assist": "Ádám Nagy",
+          "type": null
+        },
+        {
+          "minute": 54,
+          "team": "Ferencváros",
+          "scorer": "Márius Corbu",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 59,
+          "team": "Ferencváros",
+          "scorer": "Bamidele Yusuf",
+          "assist": null,
+          "type": "penalty"
+        },
+        {
+          "minute": 83,
+          "team": "Ferencváros",
+          "scorer": "Krisztián Lisztes",
+          "assist": "Olivér Nagy",
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 13,
+          "team": "Trabzonspor",
+          "player": "Ruslan Malinovsky",
+          "card": "red"
+        },
+        {
+          "minute": 14,
+          "team": "Trabzonspor",
+          "player": "Stefan Savić",
+          "card": "yellow"
+        },
+        {
+          "minute": 32,
+          "team": "Trabzonspor",
+          "player": "Sidny Lopes Cabral",
+          "card": "yellow"
+        },
+        {
+          "minute": 57,
+          "team": "Trabzonspor",
+          "player": "Sidny Lopes Cabral",
+          "card": "second_yellow"
+        },
+        {
+          "minute": 58,
+          "team": "Trabzonspor",
+          "player": "André Onana",
+          "card": "yellow"
+        },
+        {
+          "minute": 86,
+          "team": "Ferencváros",
+          "player": "Krisztián Lisztes",
+          "card": "yellow"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 68,
+          "xg": 3.66,
+          "shots": 27,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 32,
+          "xg": 0.45,
+          "shots": 6,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-2-3-1",
+        "away": "4-2-3-1"
+      },
+      "coach": {
+        "home": "Balázs Borbély",
+        "away": "Fatih Tekke"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "André Onana",
+            "number": 24,
+            "rating": 6.3,
+            "subbed_off": null
+          },
+          {
+            "name": "Sidny Lopes Cabral",
+            "number": 55,
+            "rating": 4.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Stefan Savić",
+            "number": 15,
+            "rating": 5.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Cenk Özkacar",
+            "number": 39,
+            "rating": 5.7,
+            "subbed_off": null
+          },
+          {
+            "name": "Mustafa Eskihellaç",
+            "number": 19,
+            "rating": 6.3,
+            "subbed_off": 46
+          },
+          {
+            "name": "Ruslan Malinovsky",
+            "number": 17,
+            "rating": 4.5,
+            "subbed_off": null
+          },
+          {
+            "name": "Melih Kabasakal",
+            "number": 57,
+            "rating": 6.3,
+            "subbed_off": null
+          },
+          {
+            "name": "Mohamed Salah",
+            "number": 10,
+            "rating": 5.9,
+            "subbed_off": 64
+          },
+          {
+            "name": "Ernest Muçi",
+            "number": 7,
+            "rating": 6.1,
+            "subbed_off": 46
+          },
+          {
+            "name": "Noah Saviolo",
+            "number": 70,
+            "rating": 6.3,
+            "subbed_off": 64
+          },
+          {
+            "name": "Paul Onuachu",
+            "number": 30,
+            "rating": 5.8,
+            "subbed_off": 46
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Wagner Pina",
+            "number": 20,
+            "on": 46,
+            "replaced": "Mustafa Eskihellaç",
+            "rating": 5.9
+          },
+          {
+            "name": "Benjamin Bouchouari",
+            "number": 8,
+            "on": 46,
+            "replaced": "Ernest Muçi",
+            "rating": 5.9
+          },
+          {
+            "name": "Aral Şimşir",
+            "number": 58,
+            "on": 46,
+            "replaced": "Paul Onuachu",
+            "rating": 6.0
+          },
+          {
+            "name": "Samet Akaydin",
+            "number": 4,
+            "on": 64,
+            "replaced": "Noah Saviolo",
+            "rating": 6.2
+          },
+          {
+            "name": "Ozan Tufan",
+            "number": 11,
+            "on": 64,
+            "replaced": "Mohamed Salah",
+            "rating": 5.8
+          }
+        ]
+      },
+      "unavailable_focus": [],
+      "player_of_match": "Márius Corbu",
+      "source_urls": [
+        "https://www.fotmob.com/matches/ferencvaros-vs-trabzonspor/2o6llx#5987967"
+      ],
+      "notes": "Verified page shows the 27 Aug second leg (4-0, aggregate 5-0), not the 20 Aug first leg. Page label 'Qualification Final'. Goal minutes conflict on page: O'Dowda 14' (event timeline) vs 19' (goal summary); Lisztes 83' (timeline) vs 86' (summary); timeline values used. HT score not shown (timeline implies 1-0). Malinovsky red is a straight red (13'); Cabral sent off 57' on second yellow; red-carded players have subbed_off null. Coaches not labeled per team; assigned by page order (home first) and cross-page consistency (Tekke appears for Trabzonspor on match 2 too). Shirt numbers/ratings parsed from concatenated text. No injury/suspension list on page -> unavailable_focus empty (unknown, not confirmed none). FotMob stat columns are unlabeled; assumed left = home team (consistent with xG vs goals). FotMob page shows only possession, xG, total shots (and touches in opp. box); shots on target, corners, fouls, big chances not shown -> null. Goal 'type' set only when the page marks a penalty; otherwise null. Stoppage-time events: 'minute' is the base minute and 'added_time' the extra minutes."
+    },
+    {
+      "match_id": "5904725",
+      "date": "2026-08-31",
+      "kickoff_utc": "18:30",
+      "competition": "Süper Lig",
+      "round": "Round 3",
+      "venue": "Diyarbakır Stadyumu, Diyarbakır",
+      "home_team": "Amed Sportif",
+      "away_team": "Trabzonspor",
+      "focus_team": "Trabzonspor",
+      "focus_side": "away",
+      "opponent": "Amed Sportif",
+      "score": {
+        "ht": null,
+        "ft": [
+          2,
+          1
+        ]
+      },
+      "result": "L",
+      "goals": [
+        {
+          "minute": 11,
+          "team": "Trabzonspor",
+          "scorer": "Mohamed Salah",
+          "assist": "Ernest Muçi",
+          "type": null
+        },
+        {
+          "minute": 45,
+          "team": "Amed Sportif",
+          "scorer": "Collins Sor",
+          "assist": null,
+          "type": null,
+          "added_time": 5
+        },
+        {
+          "minute": 85,
+          "team": "Amed Sportif",
+          "scorer": "Gift Orban",
+          "assist": "Mehmet Yesil",
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 39,
+          "team": "Trabzonspor",
+          "player": "Sidny Lopes Cabral",
+          "card": "yellow"
+        },
+        {
+          "minute": 44,
+          "team": "Trabzonspor",
+          "player": "Chibuike Nwaiwu",
+          "card": "yellow"
+        },
+        {
+          "minute": null,
+          "team": "Amed Sportif",
+          "player": "Samuel Ballet",
+          "card": "yellow"
+        },
+        {
+          "minute": 79,
+          "team": "Amed Sportif",
+          "player": "Umut Meras",
+          "card": "yellow"
+        },
+        {
+          "minute": 84,
+          "team": "Amed Sportif",
+          "player": "Furkan Soyalp",
+          "card": "yellow"
+        },
+        {
+          "minute": 90,
+          "team": "Amed Sportif",
+          "player": "Gift Orban",
+          "card": "yellow"
+        },
+        {
+          "minute": 90,
+          "team": "Amed Sportif",
+          "player": "Ermal Krasniqi",
+          "card": "yellow",
+          "added_time": 2
+        },
+        {
+          "minute": 90,
+          "team": "Trabzonspor",
+          "player": "Stefan Savić",
+          "card": "yellow",
+          "added_time": 9
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 40,
+          "xg": 2.69,
+          "shots": 17,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 60,
+          "xg": 0.93,
+          "shots": 8,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-2-3-1",
+        "away": "4-2-3-1"
+      },
+      "coach": {
+        "home": "Besnik Hasi",
+        "away": "Fatih Tekke"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "André Onana",
+            "number": 24,
+            "rating": 8.4,
+            "subbed_off": null
+          },
+          {
+            "name": "Sidny Lopes Cabral",
+            "number": 55,
+            "rating": 6.2,
+            "subbed_off": 71
+          },
+          {
+            "name": "Chibuike Nwaiwu",
+            "number": 27,
+            "rating": 6.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Stefan Savić",
+            "number": 15,
+            "rating": 6.2,
+            "subbed_off": null
+          },
+          {
+            "name": "Mustafa Eskihellaç",
+            "number": 19,
+            "rating": 6.3,
+            "subbed_off": null
+          },
+          {
+            "name": "Fabinho",
+            "number": 6,
+            "rating": 6.2,
+            "subbed_off": 59
+          },
+          {
+            "name": "Melih Kabasakal",
+            "number": 57,
+            "rating": 6.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Ernest Muçi",
+            "number": 7,
+            "rating": 7.7,
+            "subbed_off": 71
+          },
+          {
+            "name": "Mohamed Salah",
+            "number": 10,
+            "rating": 7.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Noah Saviolo",
+            "number": 70,
+            "rating": 6.1,
+            "subbed_off": 34
+          },
+          {
+            "name": "Paul Onuachu",
+            "number": 30,
+            "rating": 6.0,
+            "subbed_off": null
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Aral Şimşir",
+            "number": 58,
+            "on": 34,
+            "replaced": "Noah Saviolo",
+            "rating": 6.8
+          },
+          {
+            "name": "Ozan Tufan",
+            "number": 11,
+            "on": 59,
+            "replaced": "Fabinho",
+            "rating": 6.9
+          },
+          {
+            "name": "Metehan Mimaroğlu",
+            "number": 77,
+            "on": 71,
+            "replaced": "Sidny Lopes Cabral",
+            "rating": 5.9
+          },
+          {
+            "name": "Wagner Pina",
+            "number": 20,
+            "on": 71,
+            "replaced": "Ernest Muçi",
+            "rating": 5.2
+          }
+        ]
+      },
+      "unavailable_focus": [],
+      "player_of_match": "André Onana",
+      "source_urls": [
+        "https://www.fotmob.com/matches/trabzonspor-vs-amed-sportif/2lcn8pb#5904725"
+      ],
+      "notes": "Finished-match page (title/meta still says 'predicted lineups'). HT score not shown (timeline implies 1-1 after Sor 45+5'). Samuel Ballet yellow minute not clearly shown -> null. Mbaye Diagne (Amed) missed a penalty at 44'. Some Amed sub minutes differ between events and lineup sections (not focus team). Coaches not explicitly labeled; assigned by page order/cross-page consistency. No injury/suspension list on page. FotMob stat columns are unlabeled; assumed left = home team (consistent with xG vs goals). FotMob page shows only possession, xG, total shots (and touches in opp. box); shots on target, corners, fouls, big chances not shown -> null. Goal 'type' set only when the page marks a penalty; otherwise null. Stoppage-time events: 'minute' is the base minute and 'added_time' the extra minutes."
+    },
+    {
+      "match_id": "5904731",
+      "date": "2026-09-06",
+      "kickoff_utc": "17:00",
+      "competition": "Süper Lig",
+      "round": "Round 4",
+      "venue": "Papara Park, Trabzon",
+      "home_team": "Trabzonspor",
+      "away_team": "Gençlerbirliği",
+      "focus_team": "Trabzonspor",
+      "focus_side": "home",
+      "opponent": "Gençlerbirliği",
+      "score": {
+        "ht": null,
+        "ft": [
+          5,
+          0
+        ]
+      },
+      "result": "W",
+      "goals": [
+        {
+          "minute": 5,
+          "team": "Trabzonspor",
+          "scorer": "Paul Onuachu",
+          "assist": "Aral Şimşir",
+          "type": null
+        },
+        {
+          "minute": 14,
+          "team": "Trabzonspor",
+          "scorer": "Mohamed Salah",
+          "assist": null,
+          "type": "penalty"
+        },
+        {
+          "minute": 22,
+          "team": "Trabzonspor",
+          "scorer": "Paul Onuachu",
+          "assist": "Wagner Pina",
+          "type": null
+        },
+        {
+          "minute": 59,
+          "team": "Trabzonspor",
+          "scorer": "Ernest Muçi",
+          "assist": "Mohamed Salah",
+          "type": null
+        },
+        {
+          "minute": 78,
+          "team": "Trabzonspor",
+          "scorer": "Franculino",
+          "assist": null,
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 3,
+          "team": "Gençlerbirliği",
+          "player": "Ousmane Diabate",
+          "card": "yellow"
+        },
+        {
+          "minute": 19,
+          "team": "Trabzonspor",
+          "player": "Fabinho",
+          "card": "yellow"
+        },
+        {
+          "minute": 35,
+          "team": "Trabzonspor",
+          "player": "Ernest Muçi",
+          "card": "yellow"
+        },
+        {
+          "minute": 72,
+          "team": "Trabzonspor",
+          "player": "Chibuike Nwaiwu",
+          "card": "yellow"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 49,
+          "xg": 3.46,
+          "shots": 23,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 51,
+          "xg": 0.73,
+          "shots": 14,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-3-3",
+        "away": "4-1-4-1"
+      },
+      "coach": {
+        "home": "Hüseyin Cimşir",
+        "away": "Metin Diyadin"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "André Onana",
+            "number": 24,
+            "rating": 8.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Wagner Pina",
+            "number": 20,
+            "rating": 8.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Chibuike Nwaiwu",
+            "number": 27,
+            "rating": 7.8,
+            "subbed_off": 83
+          },
+          {
+            "name": "Stefan Savić",
+            "number": 15,
+            "rating": 7.7,
+            "subbed_off": null
+          },
+          {
+            "name": "Mustafa Eskihellaç",
+            "number": 19,
+            "rating": 7.5,
+            "subbed_off": null
+          },
+          {
+            "name": "Ernest Muçi",
+            "number": 7,
+            "rating": 7.6,
+            "subbed_off": 63
+          },
+          {
+            "name": "Fabinho",
+            "number": 6,
+            "rating": 7.2,
+            "subbed_off": null
+          },
+          {
+            "name": "Ozan Tufan",
+            "number": 11,
+            "rating": 6.6,
+            "subbed_off": 83
+          },
+          {
+            "name": "Mohamed Salah",
+            "number": 10,
+            "rating": 8.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Paul Onuachu",
+            "number": 30,
+            "rating": 8.7,
+            "subbed_off": 44
+          },
+          {
+            "name": "Aral Şimşir",
+            "number": 58,
+            "rating": 8.7,
+            "subbed_off": 63
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Franculino",
+            "number": 9,
+            "on": 44,
+            "replaced": "Paul Onuachu",
+            "rating": 8.0
+          },
+          {
+            "name": "Metehan Mimaroğlu",
+            "number": 77,
+            "on": 63,
+            "replaced": "Aral Şimşir",
+            "rating": 6.7
+          },
+          {
+            "name": "Melih Kabasakal",
+            "number": 57,
+            "on": 63,
+            "replaced": "Ernest Muçi",
+            "rating": 6.3
+          },
+          {
+            "name": "Samet Akaydin",
+            "number": 4,
+            "on": 83,
+            "replaced": "Chibuike Nwaiwu",
+            "rating": null
+          },
+          {
+            "name": "Sidny Lopes Cabral",
+            "number": 55,
+            "on": 83,
+            "replaced": "Ozan Tufan",
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": [],
+      "player_of_match": "Mohamed Salah",
+      "source_urls": [
+        "https://www.fotmob.com/matches/genclerbirligi-vs-trabzonspor/2jpxi8#5904731"
+      ],
+      "notes": "Finished-match page. HT score not shown (timeline implies 3-0). Coach shown as 'Hüseyin Cimsir' (spelled Cimşir on match 4 page); coaches assigned by page order. Akaydin and Cabral sub ratings not shown. Attendance 34,821. No injury/suspension list on page. FotMob stat columns are unlabeled; assumed left = home team (consistent with xG vs goals). FotMob page shows only possession, xG, total shots (and touches in opp. box); shots on target, corners, fouls, big chances not shown -> null. Goal 'type' set only when the page marks a penalty; otherwise null. Stoppage-time events: 'minute' is the base minute and 'added_time' the extra minutes."
+    },
+    {
+      "match_id": "5904745",
+      "date": "2026-09-12",
+      "kickoff_utc": "17:00",
+      "competition": "Süper Lig",
+      "round": "Round 5",
+      "venue": "Medaş Konya Büyükşehir Stadyumu, Konya",
+      "home_team": "Konyaspor",
+      "away_team": "Trabzonspor",
+      "focus_team": "Trabzonspor",
+      "focus_side": "away",
+      "opponent": "Konyaspor",
+      "score": {
+        "ht": null,
+        "ft": [
+          1,
+          0
+        ]
+      },
+      "result": "L",
+      "goals": [
+        {
+          "minute": 2,
+          "team": "Konyaspor",
+          "scorer": "Rajmund Tóth",
+          "assist": "Diogo Gonçalves",
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 45,
+          "team": "Konyaspor",
+          "player": "Deniz Türüc",
+          "card": "yellow",
+          "added_time": 2
+        },
+        {
+          "minute": null,
+          "team": "Trabzonspor",
+          "player": "Aral Şimşir",
+          "card": "yellow"
+        },
+        {
+          "minute": null,
+          "team": "Trabzonspor",
+          "player": "Mustafa Eskihellaç",
+          "card": "yellow"
+        },
+        {
+          "minute": 83,
+          "team": "Trabzonspor",
+          "player": "André Onana",
+          "card": "yellow"
+        },
+        {
+          "minute": 84,
+          "team": "Konyaspor",
+          "player": "Melih İbrahimoğlu",
+          "card": "yellow"
+        },
+        {
+          "minute": 85,
+          "team": "Konyaspor",
+          "player": "Chidozie Awaziem",
+          "card": "yellow"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 29,
+          "xg": 1.04,
+          "shots": 11,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 71,
+          "xg": 0.92,
+          "shots": 15,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-2-3-1",
+        "away": "4-3-3"
+      },
+      "coach": {
+        "home": "İlhan Palut",
+        "away": "Hüseyin Cimşir"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "André Onana",
+            "number": 24,
+            "rating": 7.6,
+            "subbed_off": null
+          },
+          {
+            "name": "Wagner Pina",
+            "number": 20,
+            "rating": 7.4,
+            "subbed_off": null
+          },
+          {
+            "name": "Chibuike Nwaiwu",
+            "number": 27,
+            "rating": 7.4,
+            "subbed_off": null
+          },
+          {
+            "name": "Stefan Savić",
+            "number": 15,
+            "rating": 7.7,
+            "subbed_off": null
+          },
+          {
+            "name": "Mustafa Eskihellaç",
+            "number": 19,
+            "rating": 7.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Ozan Tufan",
+            "number": 11,
+            "rating": 6.3,
+            "subbed_off": 58
+          },
+          {
+            "name": "Fabinho",
+            "number": 6,
+            "rating": 7.2,
+            "subbed_off": null
+          },
+          {
+            "name": "Ernest Muçi",
+            "number": 7,
+            "rating": 6.9,
+            "subbed_off": 69
+          },
+          {
+            "name": "Mohamed Salah",
+            "number": 10,
+            "rating": 6.5,
+            "subbed_off": null
+          },
+          {
+            "name": "Paul Onuachu",
+            "number": 30,
+            "rating": 6.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Aral Şimşir",
+            "number": 58,
+            "rating": 6.5,
+            "subbed_off": 69
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Sidny Lopes Cabral",
+            "number": 55,
+            "on": 58,
+            "replaced": "Ozan Tufan",
+            "rating": 6.0
+          },
+          {
+            "name": "Franculino",
+            "number": 9,
+            "on": 69,
+            "replaced": "Ernest Muçi",
+            "rating": 5.7
+          },
+          {
+            "name": "Noah Saviolo",
+            "number": 70,
+            "on": 69,
+            "replaced": "Aral Şimşir",
+            "rating": 6.4
+          }
+        ]
+      },
+      "unavailable_focus": [],
+      "player_of_match": "Rajmund Tóth",
+      "source_urls": [
+        "https://www.fotmob.com/matches/konyaspor-vs-trabzonspor/2sif0t#5904745"
+      ],
+      "notes": "Finished-match page. HT score not shown (only goal at 2'; implies 1-0). Tóth goal minute shown as 2' in header (one event line reads '22'). Yellow cards of Şimşir and Eskihellaç: a single 59' marker sits between them and cannot be tied to either -> both minutes null (one of them was at 59'). Chidozie Awaziem is a Konyaspor sub (on 83' for Yazğılı); page's sub block mixes teams. Coaches not labeled; assigned by page order and cross-page consistency (Cimşir also Trabzonspor coach on match 3). Şimşir shirt 58 read from rating block. No injury/suspension list on page. FotMob stat columns are unlabeled; assumed left = home team (consistent with xG vs goals). FotMob page shows only possession, xG, total shots (and touches in opp. box); shots on target, corners, fouls, big chances not shown -> null. Goal 'type' set only when the page marks a penalty; otherwise null. Stoppage-time events: 'minute' is the base minute and 'added_time' the extra minutes."
+    },
+    {
+      "match_id": "5904749",
+      "date": "2026-09-19",
+      "kickoff_utc": "17:00",
+      "competition": "Süper Lig",
+      "round": "Round 6",
+      "venue": "Papara Park, Trabzon",
+      "home_team": "Trabzonspor",
+      "away_team": "Galatasaray",
+      "focus_team": "Trabzonspor",
+      "focus_side": "home",
+      "opponent": "Galatasaray",
+      "score": {
+        "ht": null,
+        "ft": [
+          4,
+          0
+        ]
+      },
+      "result": "W",
+      "goals": [
+        {
+          "minute": 4,
+          "team": "Trabzonspor",
+          "scorer": "Mohamed Salah",
+          "assist": "Mustafa Eskihellaç",
+          "type": null
+        },
+        {
+          "minute": 39,
+          "team": "Trabzonspor",
+          "scorer": "Noah Saviolo",
+          "assist": "Mohamed Salah",
+          "type": null
+        },
+        {
+          "minute": 44,
+          "team": "Trabzonspor",
+          "scorer": "Mohamed Salah",
+          "assist": "Franculino",
+          "type": null
+        },
+        {
+          "minute": 80,
+          "team": "Trabzonspor",
+          "scorer": "Mohamed Salah",
+          "assist": "Ozan Tufan",
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 48,
+          "team": "Trabzonspor",
+          "player": "Ernest Muçi",
+          "card": "yellow"
+        },
+        {
+          "minute": 71,
+          "team": "Trabzonspor",
+          "player": "Stefan Savić",
+          "card": "yellow"
+        },
+        {
+          "minute": 82,
+          "team": "Trabzonspor",
+          "player": "Mohamed Salah",
+          "card": "yellow"
+        },
+        {
+          "minute": 82,
+          "team": "Trabzonspor",
+          "player": "André Onana",
+          "card": "yellow"
+        },
+        {
+          "minute": 87,
+          "team": "Galatasaray",
+          "player": "Lesley Ugochukwu",
+          "card": "red"
+        },
+        {
+          "minute": 90,
+          "team": "Galatasaray",
+          "player": "Leroy Sané",
+          "card": "yellow",
+          "added_time": 3
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 46,
+          "xg": 2.2,
+          "shots": 7,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 54,
+          "xg": 0.96,
+          "shots": 13,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-2-3-1",
+        "away": "4-2-3-1"
+      },
+      "coach": {
+        "home": "Thomas Reis",
+        "away": "Okan Buruk"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "André Onana",
+            "number": 24,
+            "rating": 8.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Wagner Pina",
+            "number": 20,
+            "rating": 7.3,
+            "subbed_off": null
+          },
+          {
+            "name": "Chibuike Nwaiwu",
+            "number": 27,
+            "rating": 7.3,
+            "subbed_off": null
+          },
+          {
+            "name": "Stefan Savić",
+            "number": 15,
+            "rating": 6.9,
+            "subbed_off": 89
+          },
+          {
+            "name": "Mustafa Eskihellaç",
+            "number": 19,
+            "rating": 8.2,
+            "subbed_off": null
+          },
+          {
+            "name": "Melih Kabasakal",
+            "number": 57,
+            "rating": 6.6,
+            "subbed_off": null
+          },
+          {
+            "name": "Fabinho",
+            "number": 6,
+            "rating": 8.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Mohamed Salah",
+            "number": 10,
+            "rating": 9.8,
+            "subbed_off": 89
+          },
+          {
+            "name": "Ernest Muçi",
+            "number": 7,
+            "rating": 7.0,
+            "subbed_off": 59
+          },
+          {
+            "name": "Noah Saviolo",
+            "number": 70,
+            "rating": 7.6,
+            "subbed_off": 73
+          },
+          {
+            "name": "Franculino",
+            "number": 9,
+            "rating": 7.8,
+            "subbed_off": 59
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Paul Onuachu",
+            "number": 30,
+            "on": 59,
+            "replaced": "Franculino",
+            "rating": 6.3
+          },
+          {
+            "name": "Ozan Tufan",
+            "number": 11,
+            "on": 59,
+            "replaced": "Ernest Muçi",
+            "rating": 7.3
+          },
+          {
+            "name": "Sidny Lopes Cabral",
+            "number": 55,
+            "on": 73,
+            "replaced": "Noah Saviolo",
+            "rating": 6.5
+          },
+          {
+            "name": "Aral Şimşir",
+            "number": 58,
+            "on": 89,
+            "replaced": "Mohamed Salah",
+            "rating": null
+          },
+          {
+            "name": "Cenk Özkacar",
+            "number": 39,
+            "on": 89,
+            "replaced": "Stefan Savić",
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": [],
+      "player_of_match": "Mohamed Salah",
+      "source_urls": [
+        "https://www.fotmob.com/matches/galatasaray-vs-trabzonspor/2sobrz#5904749"
+      ],
+      "notes": "Finished-match page (URL slug lists galatasaray first but Trabzonspor is home). HT score not shown (timeline implies 3-0). Ugochukwu red listed as red (came on 68'). Coaches not labeled per team; Reis assigned to Trabzonspor (he is Trabzonspor coach on matches 6-10 and named so by NTV). First match under Thomas Reis in this dataset (Tekke on matches 1-2, Cimşir on 3-4). xG 2.20 from 7 shots for 4 goals. No injury/suspension list on page. FotMob stat columns are unlabeled; assumed left = home team (consistent with xG vs goals). FotMob page shows only possession, xG, total shots (and touches in opp. box); shots on target, corners, fouls, big chances not shown -> null. Goal 'type' set only when the page marks a penalty; otherwise null. Stoppage-time events: 'minute' is the base minute and 'added_time' the extra minutes."
+    },
+    {
+      "match_id": "5904766",
+      "date": "2026-10-10",
+      "kickoff_utc": "13:00",
+      "competition": "Süper Lig",
+      "round": "Round 7",
+      "venue": "Samsun Yeni 19 Mayıs Stadyumu, Samsun",
+      "home_team": "Samsunspor",
+      "away_team": "Trabzonspor",
+      "focus_team": "Trabzonspor",
+      "focus_side": "away",
+      "opponent": "Samsunspor",
+      "score": {
+        "ht": [
+          0,
+          3
+        ],
+        "ft": [
+          0,
+          3
+        ]
+      },
+      "result": "W",
+      "goals": [
+        {
+          "minute": 28,
+          "team": "Trabzonspor",
+          "scorer": "Ernest Muçi",
+          "assist": "Mustafa Eskihellaç",
+          "type": null
+        },
+        {
+          "minute": 39,
+          "team": "Trabzonspor",
+          "scorer": "Chibuike Nwaiwu",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 40,
+          "team": "Trabzonspor",
+          "scorer": "Franculino",
+          "assist": "Mohamed Salah",
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 7,
+          "team": "Samsunspor",
+          "player": "Logi Tomasson",
+          "card": "yellow"
+        },
+        {
+          "minute": 43,
+          "team": "Trabzonspor",
+          "player": "Melih Kabasakal",
+          "card": "red"
+        },
+        {
+          "minute": 44,
+          "team": "Samsunspor",
+          "player": "Elliot Watt",
+          "card": "yellow"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 52,
+          "xg": 1.04,
+          "shots": 15,
+          "shots_on_target": 5,
+          "corners": 5,
+          "fouls": 18,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 48,
+          "xg": 1.64,
+          "shots": 11,
+          "shots_on_target": 6,
+          "corners": 4,
+          "fouls": 4,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-2-3-1",
+        "away": "4-2-3-1"
+      },
+      "coach": {
+        "home": null,
+        "away": "Thomas Reis"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "André Onana",
+            "number": null,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Stefan Savić",
+            "number": null,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Fabinho",
+            "number": null,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Wagner Pina",
+            "number": null,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Mustafa Eskihellaç",
+            "number": null,
+            "rating": null,
+            "subbed_off": 71
+          },
+          {
+            "name": "Chibuike Nwaiwu",
+            "number": null,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Ernest Muçi",
+            "number": null,
+            "rating": null,
+            "subbed_off": 46
+          },
+          {
+            "name": "Mohamed Salah",
+            "number": null,
+            "rating": null,
+            "subbed_off": 77
+          },
+          {
+            "name": "Franculino",
+            "number": null,
+            "rating": null,
+            "subbed_off": 71
+          },
+          {
+            "name": "Aral Şimşir",
+            "number": null,
+            "rating": null,
+            "subbed_off": 84
+          },
+          {
+            "name": "Melih Kabasakal",
+            "number": null,
+            "rating": null,
+            "subbed_off": null
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Ozan Tufan",
+            "number": null,
+            "on": 46,
+            "replaced": "Ernest Muçi",
+            "rating": null
+          },
+          {
+            "name": "Sidny Lopes Cabral",
+            "number": null,
+            "on": 71,
+            "replaced": "Mustafa Eskihellaç",
+            "rating": null
+          },
+          {
+            "name": "Cenk Özkacar",
+            "number": null,
+            "on": 71,
+            "replaced": "Franculino",
+            "rating": null
+          },
+          {
+            "name": "Paul Onuachu",
+            "number": null,
+            "on": 77,
+            "replaced": "Mohamed Salah",
+            "rating": null
+          },
+          {
+            "name": "Tim Jabol-Folcarelli",
+            "number": null,
+            "on": 84,
+            "replaced": "Aral Şimşir",
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": [
+        {
+          "name": "Ruslan Malinovsky",
+          "reason": "injury"
+        },
+        {
+          "name": "Mehmet Umut Nayir",
+          "reason": "injury"
+        },
+        {
+          "name": "Okay Yokuşlu",
+          "reason": "injury"
+        },
+        {
+          "name": "Arseniy Batagov",
+          "reason": "injury"
+        }
+      ],
+      "player_of_match": null,
+      "source_urls": [
+        "https://www.fotmob.com/matches/samsunspor-vs-trabzonspor/358aj5#5904766",
+        "https://futboltotal.futbol/partido/samsunspor-vs-trabzonspor-super-lig-2026-10-10",
+        "https://ntv.com.tr/sporskor/trabzonspora-45-dakika-yetti-samsunspor-direkleri-gecemedi-1745716",
+        "https://www.evrensel.net/haber/6004350/samsunspor-trabzonspor-0-3",
+        "https://www.timeturk.com/12-dakikada-3-gol-samsunspor-0-trabzonspor-3"
+      ],
+      "notes": "FotMob page is a stale pre-match preview (no result); used only for match_id, kickoff 13:00 UTC, round and venue. Result, HT 0-3 (stated by NTV and Evrensel), goals, cards, stats, formations, XI and subs from futboltotal.futbol (aggregator; stats NOT from FotMob, so xG model may differ from other rows), cross-checked with NTV/Evrensel/Timeturk. Minute discrepancies: Muçi 28' (futboltotal, Timeturk) vs 27' (NTV, Evrensel); Nwaiwu 39' (futboltotal) vs 38' (NTV, Evrensel, Timeturk); Kabasakal straight red 43' (futboltotal, Timeturk) vs 42' (NTV) - futboltotal minutes used. Franculino appears as 'Franculino Djú'/'Dju' in these sources. futboltotal also lists a 41' yellow for 'T. Fink' who is in neither squad and is inconsistent with its own stats (2 Samsunspor yellows) -> excluded. Starter order as given by futboltotal (formation 4-2-3-1). Onuachu-for-Salah at 77' per futboltotal (Timeturk listing ambiguous). No shirt numbers or player ratings available -> null; big chances not available; no player of the match found. Samsunspor coach not stated. Unavailable list from NTV report (all 'injury', no body part); FotMob preview lists Nayir as hamstring and Malinovsky as knee but with inconsistent team attribution. Samsunspor hit the woodwork three times (NTV)."
+    },
+    {
+      "match_id": "6112478",
+      "date": "2026-10-15",
+      "kickoff_utc": "16:45",
+      "competition": "UEFA Conference League",
+      "round": "League phase MD1",
+      "venue": "Tammelan stadion, Tampere",
+      "home_team": "KuPS",
+      "away_team": "Trabzonspor",
+      "focus_team": "Trabzonspor",
+      "focus_side": "away",
+      "opponent": "KuPS",
+      "score": {
+        "ht": null,
+        "ft": [
+          2,
+          4
+        ]
+      },
+      "result": "W",
+      "goals": [
+        {
+          "minute": 3,
+          "team": "Trabzonspor",
+          "scorer": "Paul Onuachu",
+          "assist": "Mohamed Salah",
+          "type": null
+        },
+        {
+          "minute": 44,
+          "team": "Trabzonspor",
+          "scorer": "Mohamed Salah",
+          "assist": "Aral Şimşir",
+          "type": null
+        },
+        {
+          "minute": 47,
+          "team": "Trabzonspor",
+          "scorer": "Franculino",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 54,
+          "team": "KuPS",
+          "scorer": "Petteri Pennanen",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 90,
+          "team": "Trabzonspor",
+          "scorer": "Franculino",
+          "assist": "Ernest Muçi",
+          "type": null,
+          "added_time": 1
+        },
+        {
+          "minute": 90,
+          "team": "KuPS",
+          "scorer": "Gustav Engvall",
+          "assist": null,
+          "type": null,
+          "added_time": 6
+        }
+      ],
+      "cards": [
+        {
+          "minute": null,
+          "team": "KuPS",
+          "player": "Julius Eskesen",
+          "card": "yellow"
+        },
+        {
+          "minute": null,
+          "team": "Trabzonspor",
+          "player": "Samet Akaydin",
+          "card": "yellow"
+        },
+        {
+          "minute": null,
+          "team": "KuPS",
+          "player": "Piotr Parzyszek",
+          "card": "yellow"
+        },
+        {
+          "minute": 51,
+          "team": "Trabzonspor",
+          "player": "Batista Mendy",
+          "card": "yellow"
+        },
+        {
+          "minute": null,
+          "team": "KuPS",
+          "player": "Kasim Adams",
+          "card": "yellow"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 46,
+          "xg": 2.4,
+          "shots": 16,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 54,
+          "xg": 3.68,
+          "shots": 22,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-2-3-1",
+        "away": "4-2-3-1"
+      },
+      "coach": {
+        "home": "Miika Nuutinen",
+        "away": "Thomas Reis"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "André Onana",
+            "number": 24,
+            "rating": 8.2,
+            "subbed_off": null
+          },
+          {
+            "name": "Wagner Pina",
+            "number": 20,
+            "rating": 7.3,
+            "subbed_off": null
+          },
+          {
+            "name": "Batista Mendy",
+            "number": 3,
+            "rating": 6.7,
+            "subbed_off": 55
+          },
+          {
+            "name": "Samet Akaydin",
+            "number": 4,
+            "rating": 7.3,
+            "subbed_off": null
+          },
+          {
+            "name": "Cenk Özkacar",
+            "number": 39,
+            "rating": 6.7,
+            "subbed_off": null
+          },
+          {
+            "name": "Melih Kabasakal",
+            "number": 57,
+            "rating": 7.5,
+            "subbed_off": null
+          },
+          {
+            "name": "Ozan Tufan",
+            "number": 11,
+            "rating": 6.7,
+            "subbed_off": 55
+          },
+          {
+            "name": "Mohamed Salah",
+            "number": 10,
+            "rating": 8.7,
+            "subbed_off": 55
+          },
+          {
+            "name": "Benjamin Bouchouari",
+            "number": 8,
+            "rating": 7.2,
+            "subbed_off": null
+          },
+          {
+            "name": "Aral Şimşir",
+            "number": 58,
+            "rating": 6.6,
+            "subbed_off": 74
+          },
+          {
+            "name": "Paul Onuachu",
+            "number": 30,
+            "rating": 7.1,
+            "subbed_off": 10
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Franculino",
+            "number": 9,
+            "on": 10,
+            "replaced": "Paul Onuachu",
+            "rating": 8.9
+          },
+          {
+            "name": "Tim Jabol-Folcarelli",
+            "number": 26,
+            "on": 55,
+            "replaced": "Ozan Tufan",
+            "rating": 6.1
+          },
+          {
+            "name": "Fabinho",
+            "number": 6,
+            "on": 55,
+            "replaced": "Batista Mendy",
+            "rating": 7.2
+          },
+          {
+            "name": "Noah Saviolo",
+            "number": 70,
+            "on": 55,
+            "replaced": "Mohamed Salah",
+            "rating": 6.8
+          },
+          {
+            "name": "Ernest Muçi",
+            "number": 7,
+            "on": 74,
+            "replaced": "Aral Şimşir",
+            "rating": 7.0
+          }
+        ]
+      },
+      "unavailable_focus": [
+        {
+          "name": "Chibuike Nwaiwu",
+          "reason": "suspended"
+        }
+      ],
+      "player_of_match": "Franculino",
+      "source_urls": [
+        "https://www.fotmob.com/matches/kups-vs-trabzonspor/1303fz#6112478"
+      ],
+      "notes": "Finished-match page; FotMob round label 'Round 1' (recorded as League phase MD1). HT score not shown (timeline implies 0-2). Yellow-card minutes for Eskesen (~10'-22'), Akaydin and Parzyszek (~24'-34'), Adams (~74'-85') are not printed -> null; only Mendy 51' is unambiguous. Parzyszek (KuPS) missed a penalty (minute not printed, ~55'-59'). Onuachu off at 10' (reason not shown). Coach mapping inferred from page order. KuPS sub minutes differ between sections (not focus team). Artificial pitch; attendance 7,812. FotMob stat columns are unlabeled; assumed left = home team (consistent with xG vs goals). FotMob page shows only possession, xG, total shots (and touches in opp. box); shots on target, corners, fouls, big chances not shown -> null. Goal 'type' set only when the page marks a penalty; otherwise null. Stoppage-time events: 'minute' is the base minute and 'added_time' the extra minutes."
+    },
+    {
+      "match_id": "5904767",
+      "date": "2026-10-19",
+      "kickoff_utc": "17:00",
+      "competition": "Süper Lig",
+      "round": "Round 8",
+      "venue": "Papara Park, Trabzon",
+      "home_team": "Trabzonspor",
+      "away_team": "Beşiktaş",
+      "focus_team": "Trabzonspor",
+      "focus_side": "home",
+      "opponent": "Beşiktaş",
+      "score": {
+        "ht": null,
+        "ft": [
+          2,
+          0
+        ]
+      },
+      "result": "W",
+      "goals": [
+        {
+          "minute": 21,
+          "team": "Trabzonspor",
+          "scorer": "Ozan Tufan",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 71,
+          "team": "Trabzonspor",
+          "scorer": "Mohamed Salah",
+          "assist": "Franculino",
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 32,
+          "team": "Beşiktaş",
+          "player": "Fabio Miretti",
+          "card": "yellow"
+        },
+        {
+          "minute": 33,
+          "team": "Trabzonspor",
+          "player": "Fabinho",
+          "card": "yellow"
+        },
+        {
+          "minute": 60,
+          "team": "Beşiktaş",
+          "player": "Emirhan Topçu",
+          "card": "yellow"
+        },
+        {
+          "minute": 85,
+          "team": "Beşiktaş",
+          "player": "İlhan Fakılı",
+          "card": "yellow"
+        },
+        {
+          "minute": 90,
+          "team": "Beşiktaş",
+          "player": "Kassoum Ouattara",
+          "card": "yellow"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 38,
+          "xg": 2.41,
+          "shots": 13,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 62,
+          "xg": 1.32,
+          "shots": 19,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-2-3-1",
+        "away": "4-1-4-1"
+      },
+      "coach": {
+        "home": "Thomas Reis",
+        "away": "Vincenzo Italiano"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "André Onana",
+            "number": 24,
+            "rating": 8.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Wagner Pina",
+            "number": 20,
+            "rating": 7.3,
+            "subbed_off": null
+          },
+          {
+            "name": "Chibuike Nwaiwu",
+            "number": 27,
+            "rating": 7.4,
+            "subbed_off": null
+          },
+          {
+            "name": "Stefan Savić",
+            "number": 15,
+            "rating": 7.9,
+            "subbed_off": null
+          },
+          {
+            "name": "Sidny Lopes Cabral",
+            "number": 55,
+            "rating": 7.2,
+            "subbed_off": null
+          },
+          {
+            "name": "Ozan Tufan",
+            "number": 11,
+            "rating": 7.9,
+            "subbed_off": 63
+          },
+          {
+            "name": "Fabinho",
+            "number": 6,
+            "rating": 6.5,
+            "subbed_off": null
+          },
+          {
+            "name": "Mohamed Salah",
+            "number": 10,
+            "rating": 8.4,
+            "subbed_off": null
+          },
+          {
+            "name": "Ernest Muçi",
+            "number": 7,
+            "rating": 7.7,
+            "subbed_off": 89
+          },
+          {
+            "name": "Aral Şimşir",
+            "number": 58,
+            "rating": 7.6,
+            "subbed_off": 81
+          },
+          {
+            "name": "Franculino",
+            "number": 9,
+            "rating": 7.7,
+            "subbed_off": 88
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Tim Jabol-Folcarelli",
+            "number": 26,
+            "on": 63,
+            "replaced": "Ozan Tufan",
+            "rating": 6.3
+          },
+          {
+            "name": "Noah Saviolo",
+            "number": 70,
+            "on": 81,
+            "replaced": "Aral Şimşir",
+            "rating": null
+          },
+          {
+            "name": "Mehmet Umut Nayir",
+            "number": 14,
+            "on": 88,
+            "replaced": "Franculino",
+            "rating": null
+          },
+          {
+            "name": "Cenk Özkacar",
+            "number": 39,
+            "on": 89,
+            "replaced": "Ernest Muçi",
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": [
+        {
+          "name": "Melih Kabasakal",
+          "reason": "suspended"
+        }
+      ],
+      "player_of_match": "André Onana",
+      "source_urls": [
+        "https://www.fotmob.com/matches/trabzonspor-vs-besiktas/3adfo2#5904767"
+      ],
+      "notes": "Finished-match page. HT score not shown (timeline implies 1-0). Card minutes are not printed next to card lines; matched by order: Miretti 32'/Fabinho 33' pairing is ambiguous (could be swapped); Topçu 60', Fakılı 85', Ouattara 90' probable. No assist shown for Tufan's goal. Kabasakal suspension consistent with his red card in match 6. Coaches not labeled; Reis assigned to Trabzonspor by cross-page consistency. Page shows Şimşir created 6 big chances (individual, not team total). FotMob stat columns are unlabeled; assumed left = home team (consistent with xG vs goals). FotMob page shows only possession, xG, total shots (and touches in opp. box); shots on target, corners, fouls, big chances not shown -> null. Goal 'type' set only when the page marks a penalty; otherwise null. Stoppage-time events: 'minute' is the base minute and 'added_time' the extra minutes."
+    },
+    {
+      "match_id": "6112502",
+      "date": "2026-10-22",
+      "kickoff_utc": "16:45",
+      "competition": "UEFA Conference League",
+      "round": "League phase MD2",
+      "venue": "Papara Park, Trabzon",
+      "home_team": "Trabzonspor",
+      "away_team": "Hearts",
+      "focus_team": "Trabzonspor",
+      "focus_side": "home",
+      "opponent": "Hearts",
+      "score": {
+        "ht": null,
+        "ft": [
+          2,
+          0
+        ]
+      },
+      "result": "W",
+      "goals": [
+        {
+          "minute": 32,
+          "team": "Trabzonspor",
+          "scorer": "Mohamed Salah",
+          "assist": null,
+          "type": "penalty"
+        },
+        {
+          "minute": 58,
+          "team": "Trabzonspor",
+          "scorer": "Franculino",
+          "assist": "Mohamed Salah",
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 9,
+          "team": "Trabzonspor",
+          "player": "Sidny Lopes Cabral",
+          "card": "yellow"
+        },
+        {
+          "minute": 20,
+          "team": "Hearts",
+          "player": "Calvin Miller",
+          "card": "yellow"
+        },
+        {
+          "minute": null,
+          "team": "Hearts",
+          "player": "Christian Dahle Borchgrevink",
+          "card": "yellow"
+        },
+        {
+          "minute": 38,
+          "team": "Trabzonspor",
+          "player": "Samet Akaydin",
+          "card": "yellow"
+        },
+        {
+          "minute": 90,
+          "team": "Hearts",
+          "player": "Joshua McPake",
+          "card": "yellow",
+          "added_time": 1
+        },
+        {
+          "minute": 90,
+          "team": "Trabzonspor",
+          "player": "Sidny Lopes Cabral",
+          "card": "second_yellow",
+          "added_time": 5
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 61,
+          "xg": 1.49,
+          "shots": 11,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 39,
+          "xg": 0.66,
+          "shots": 10,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-3-3",
+        "away": "4-4-2"
+      },
+      "coach": {
+        "home": "Thomas Reis",
+        "away": "Wouter Vrancken"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "André Onana",
+            "number": 24,
+            "rating": 7.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Melih Kabasakal",
+            "number": 57,
+            "rating": 7.6,
+            "subbed_off": null
+          },
+          {
+            "name": "Samet Akaydin",
+            "number": 4,
+            "rating": 7.9,
+            "subbed_off": null
+          },
+          {
+            "name": "Cenk Özkacar",
+            "number": 39,
+            "rating": 7.5,
+            "subbed_off": null
+          },
+          {
+            "name": "Sidny Lopes Cabral",
+            "number": 55,
+            "rating": 6.5,
+            "subbed_off": null
+          },
+          {
+            "name": "Tim Jabol-Folcarelli",
+            "number": 26,
+            "rating": 7.9,
+            "subbed_off": 71
+          },
+          {
+            "name": "Batista Mendy",
+            "number": 3,
+            "rating": 7.8,
+            "subbed_off": 87
+          },
+          {
+            "name": "Benjamin Bouchouari",
+            "number": 8,
+            "rating": 7.5,
+            "subbed_off": 71
+          },
+          {
+            "name": "Mohamed Salah",
+            "number": 10,
+            "rating": 8.3,
+            "subbed_off": 71
+          },
+          {
+            "name": "Franculino",
+            "number": 9,
+            "rating": 8.4,
+            "subbed_off": null
+          },
+          {
+            "name": "Noah Saviolo",
+            "number": 70,
+            "rating": 7.3,
+            "subbed_off": 87
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Ozan Tufan",
+            "number": 11,
+            "on": 71,
+            "replaced": "Mohamed Salah",
+            "rating": 6.5
+          },
+          {
+            "name": "Wagner Pina",
+            "number": 20,
+            "on": 71,
+            "replaced": "Benjamin Bouchouari",
+            "rating": 6.4
+          },
+          {
+            "name": "Aral Şimşir",
+            "number": 58,
+            "on": 71,
+            "replaced": "Tim Jabol-Folcarelli",
+            "rating": 6.1
+          },
+          {
+            "name": "Fabinho",
+            "number": 6,
+            "on": 87,
+            "replaced": "Batista Mendy",
+            "rating": 6.0
+          },
+          {
+            "name": "Kuzey Akçay",
+            "number": 81,
+            "on": 87,
+            "replaced": "Noah Saviolo",
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": [],
+      "player_of_match": "Franculino",
+      "source_urls": [
+        "https://www.fotmob.com/matches/trabzonspor-vs-heart-midlothian/36iel6#6112502"
+      ],
+      "notes": "Finished-match page; FotMob round label 'Round 2' (recorded as League phase MD2). HT score not shown (timeline implies 1-0). Borchgrevink yellow minute not printed (between 20' and 32') -> null. An 11' marker has no event text attached. Cabral sent off 90+5' on second yellow (subbed_off null). Attendance 28,096. No injury/suspension list on page. FotMob stat columns are unlabeled; assumed left = home team (consistent with xG vs goals). FotMob page shows only possession, xG, total shots (and touches in opp. box); shots on target, corners, fouls, big chances not shown -> null. Goal 'type' set only when the page marks a penalty; otherwise null. Stoppage-time events: 'minute' is the base minute and 'added_time' the extra minutes."
+    },
+    {
+      "match_id": "5904779",
+      "date": "2026-10-26",
+      "kickoff_utc": "16:00",
+      "competition": "Süper Lig",
+      "round": "Round 9",
+      "venue": "Çaykur Didi Stadyumu, Rize",
+      "home_team": "Çaykur Rizespor",
+      "away_team": "Trabzonspor",
+      "focus_team": "Trabzonspor",
+      "focus_side": "away",
+      "opponent": "Çaykur Rizespor",
+      "score": {
+        "ht": [
+          2,
+          0
+        ],
+        "ft": [
+          3,
+          4
+        ]
+      },
+      "result": "W",
+      "goals": [
+        {
+          "minute": 12,
+          "team": "Çaykur Rizespor",
+          "scorer": "Gennaro Borrelli",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 32,
+          "team": "Çaykur Rizespor",
+          "scorer": "Gennaro Borrelli",
+          "assist": "Adedire Awokoya Mebude",
+          "type": null
+        },
+        {
+          "minute": 49,
+          "team": "Trabzonspor",
+          "scorer": "Melih Kabasakal",
+          "assist": "Ernest Muçi",
+          "type": null
+        },
+        {
+          "minute": 51,
+          "team": "Trabzonspor",
+          "scorer": "Aral Şimşir",
+          "assist": "Ernest Muçi",
+          "type": null
+        },
+        {
+          "minute": 57,
+          "team": "Trabzonspor",
+          "scorer": "Franculino",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 68,
+          "team": "Çaykur Rizespor",
+          "scorer": "Qazim Laçi",
+          "assist": "Adedire Awokoya Mebude",
+          "type": null
+        },
+        {
+          "minute": 83,
+          "team": "Trabzonspor",
+          "scorer": "Franculino",
+          "assist": "Ernest Muçi",
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 14,
+          "team": "Çaykur Rizespor",
+          "player": "Zakaria Ariss",
+          "card": "yellow"
+        },
+        {
+          "minute": 38,
+          "team": "Trabzonspor",
+          "player": "Fabinho",
+          "card": "yellow"
+        },
+        {
+          "minute": 55,
+          "team": "Trabzonspor",
+          "player": "Melih Kabasakal",
+          "card": "yellow"
+        },
+        {
+          "minute": 60,
+          "team": "Çaykur Rizespor",
+          "player": "Gennaro Borrelli",
+          "card": "yellow"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 46,
+          "xg": 1.81,
+          "shots": 9,
+          "shots_on_target": 6,
+          "corners": 2,
+          "fouls": 12,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 54,
+          "xg": 2.63,
+          "shots": 14,
+          "shots_on_target": 7,
+          "corners": 4,
+          "fouls": 13,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-1-4-1",
+        "away": "4-1-4-1"
+      },
+      "coach": {
+        "home": "Recep Uçar",
+        "away": "Thomas Reis"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "André Onana",
+            "number": 24,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Wagner Pina",
+            "number": 20,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Chibuike Nwaiwu",
+            "number": 27,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Stefan Savić",
+            "number": 15,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Mustafa Eskihellaç",
+            "number": 19,
+            "rating": null,
+            "subbed_off": 61
+          },
+          {
+            "name": "Fabinho",
+            "number": 6,
+            "rating": null,
+            "subbed_off": 46
+          },
+          {
+            "name": "Melih Kabasakal",
+            "number": 57,
+            "rating": null,
+            "subbed_off": 61
+          },
+          {
+            "name": "Ernest Muçi",
+            "number": 7,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Mohamed Salah",
+            "number": 10,
+            "rating": null,
+            "subbed_off": 86
+          },
+          {
+            "name": "Aral Şimşir",
+            "number": 58,
+            "rating": null,
+            "subbed_off": 89
+          },
+          {
+            "name": "Franculino",
+            "number": 9,
+            "rating": null,
+            "subbed_off": null
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Tim Jabol-Folcarelli",
+            "number": null,
+            "on": 46,
+            "replaced": "Fabinho",
+            "rating": null
+          },
+          {
+            "name": "Sidny Lopes Cabral",
+            "number": null,
+            "on": 61,
+            "replaced": "Mustafa Eskihellaç",
+            "rating": null
+          },
+          {
+            "name": "Ozan Tufan",
+            "number": null,
+            "on": 61,
+            "replaced": "Melih Kabasakal",
+            "rating": null
+          },
+          {
+            "name": "Noah Saviolo",
+            "number": null,
+            "on": 86,
+            "replaced": "Mohamed Salah",
+            "rating": null
+          },
+          {
+            "name": "Cenk Özkacar",
+            "number": null,
+            "on": 89,
+            "replaced": "Aral Şimşir",
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": [
+        {
+          "name": "Okay Yokuşlu",
+          "reason": "injury"
+        },
+        {
+          "name": "Arseniy Batagov",
+          "reason": "injury: hamstring"
+        },
+        {
+          "name": "Paul Onuachu",
+          "reason": "injury: muscle"
+        },
+        {
+          "name": "Ruslan Malinovsky",
+          "reason": "injury: knee"
+        },
+        {
+          "name": "Batista Mendy",
+          "reason": "not in squad: foreign-player quota"
+        },
+        {
+          "name": "Benjamin Bouchouari",
+          "reason": "not in squad: foreign-player quota"
+        }
+      ],
+      "player_of_match": null,
+      "source_urls": [
+        "https://www.fotmob.com/matches/rizespor-vs-trabzonspor/16aj0h#5904779",
+        "https://futboltotal.futbol/partido/rizespor-vs-trabzonspor-super-lig-2026-10-26",
+        "https://www.ntv.com.tr/sporskor/karadenizde-dev-bulusma-caykur-rizespor-trabzonspor-1748072",
+        "https://www.dailysabah.com/sports/football/trabzonspor-win-goal-fest-against-rizespor-besiktas-defeat-basaksehir",
+        "https://www.sportsdunia.com/football-ratings/rizespor-vs-trabzonspor-player-ratings-super-lig-26th-october-2026"
+      ],
+      "notes": "FotMob page is a stale pre-match preview; used only for match_id, scheduled kickoff (16:00 UTC), round, venue and injury details (body parts). FT 3-4 and HT 2-0 confirmed by NTV and Daily Sabah (HT stated explicitly). Goals, assists, cards, stats, formations, XI (with shirt numbers) and subs from futboltotal.futbol (aggregator; stats NOT from FotMob). Minute discrepancies: Franculino 1st goal 57' (futboltotal, NTV, Sportsdunia) vs 58' (Daily Sabah); Laçi 68' (futboltotal, NTV) vs 69' (Daily Sabah, Sportsdunia); Franculino winner 83' (futboltotal, Sportsdunia) vs 84' (NTV, Daily Sabah) - futboltotal used. Daily Sabah describes Borrelli's 12' goal as from a Mithat Pala cross and Franculino's 57' as a rebound from Muçi's shot (no assist credited by futboltotal). XI consistent with NTV (seven changes from Hearts game; Pina, Nwaiwu, Savić, Eskihellaç, Fabinho, Muçi, Şimşir named). FotMob preview had predicted 4-3-3; futboltotal shows 4-1-4-1. Rizespor coach Recep Uçar was sent to the stands after two yellow cards (NTV; minute not stated; not a player card). No player ratings available for Trabzonspor (Sportsdunia shows Rizespor ratings only, plus Muçi 9.5 in its title and names Muçi its player of the match - not FotMob's award, so player_of_match left null). Sub shirt numbers not shown on sources used -> null. Unavailable: injuries per NTV (body parts from FotMob preview), Mendy and Bouchouari left out for foreign-player quota (NTV). Score 3-4 also confirmed by livesoccertv per caller. Big chances not available."
+    }
+  ],
+  "Gaziantep FK": [
+    {
+      "match_id": "5904704",
+      "date": "2026-08-15",
+      "kickoff_utc": "18:30",
+      "competition": "Süper Lig",
+      "round": "Round 1",
+      "venue": "Gaziantep Stadyumu",
+      "home_team": "Gaziantep FK",
+      "away_team": "Alanyaspor",
+      "focus_team": "Gaziantep FK",
+      "focus_side": "home",
+      "opponent": "Alanyaspor",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          1,
+          1
+        ]
+      },
+      "result": "D",
+      "goals": [
+        {
+          "minute": 20,
+          "team": "Alanyaspor",
+          "scorer": "Ruan",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 61,
+          "team": "Gaziantep FK",
+          "scorer": "Deian Sorescu",
+          "assist": "Juninho Bacuna",
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": null,
+          "team": "Gaziantep FK",
+          "player": "Juninho Bacuna",
+          "card": "yellow"
+        },
+        {
+          "minute": 58,
+          "team": "Alanyaspor",
+          "player": "Fidan Aliti",
+          "card": "yellow"
+        },
+        {
+          "minute": 69,
+          "team": "Alanyaspor",
+          "player": "Gaïus Makouta",
+          "card": "yellow"
+        },
+        {
+          "minute": 78,
+          "team": "Gaziantep FK",
+          "player": "Serdar Dursun",
+          "card": "yellow"
+        },
+        {
+          "minute": 88,
+          "team": "Alanyaspor",
+          "player": "Enes Keskin",
+          "card": "yellow"
+        },
+        {
+          "minute": 88,
+          "team": "Gaziantep FK",
+          "player": "Victor Gidado",
+          "card": "yellow"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 61,
+          "xg": 1.28,
+          "shots": 13,
+          "shots_on_target": 5,
+          "corners": 0,
+          "fouls": 14,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 39,
+          "xg": 1.25,
+          "shots": 11,
+          "shots_on_target": 2,
+          "corners": 4,
+          "fouls": 21,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "3-4-2-1",
+        "away": "3-4-2-1"
+      },
+      "coach": {
+        "home": "Mirel Rădoi",
+        "away": "João Pereira"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "Kacper Tobiasz",
+            "number": 25,
+            "rating": 6.6,
+            "subbed_off": null
+          },
+          {
+            "name": "Luis Pérez",
+            "number": 2,
+            "rating": 7.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Myenty Abena",
+            "number": 14,
+            "rating": 6.7,
+            "subbed_off": null
+          },
+          {
+            "name": "Ulrich Meleke",
+            "number": 6,
+            "rating": 7.0,
+            "subbed_off": 78
+          },
+          {
+            "name": "Deian Sorescu",
+            "number": 18,
+            "rating": 8.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Juninho Bacuna",
+            "number": 7,
+            "rating": 7.6,
+            "subbed_off": 70
+          },
+          {
+            "name": "Alexandru Maxim",
+            "number": 44,
+            "rating": 7.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Florin Ștefan",
+            "number": 96,
+            "rating": 6.6,
+            "subbed_off": null
+          },
+          {
+            "name": "Kacper Kozłowski",
+            "number": 10,
+            "rating": 6.9,
+            "subbed_off": 70
+          },
+          {
+            "name": "Drissa Camara",
+            "number": 3,
+            "rating": 7.6,
+            "subbed_off": null
+          },
+          {
+            "name": "Trivante Stewart",
+            "number": 9,
+            "rating": 6.6,
+            "subbed_off": 70
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Victor Gidado",
+            "number": 8,
+            "on": 70,
+            "replaced": "Juninho Bacuna",
+            "rating": 6.4
+          },
+          {
+            "name": "Halil Dervişoğlu",
+            "number": 28,
+            "on": 70,
+            "replaced": "Kacper Kozłowski",
+            "rating": 6.1
+          },
+          {
+            "name": "Serdar Dursun",
+            "number": 19,
+            "on": 70,
+            "replaced": "Trivante Stewart",
+            "rating": 5.9
+          },
+          {
+            "name": "Arda Kızıldağ",
+            "number": 4,
+            "on": 78,
+            "replaced": "Ulrich Meleke",
+            "rating": 6.2
+          },
+          {
+            "name": "Sabahattin Destici",
+            "number": 77,
+            "on": null,
+            "replaced": "Deian Sorescu",
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": [],
+      "player_of_match": "Deian Sorescu",
+      "source_urls": [
+        "https://www.fotmob.com/teams/4081/fixtures/gaziantep-fk",
+        "https://www.fotmob.com/matches/gaziantep-fk-vs-alanyaspor/mudsa#5904704",
+        "https://africa.espn.com/football/match/_/gameId/401888326/alanyaspor-gaziantep-fk",
+        "https://beinsports.com.tr/haber/gaziantep-fkde-mirel-radoi-donemi-132-gun-surdu"
+      ],
+      "notes": "Possession/xG/shots from FotMob (left column = home; confirmed by ESPN, which labels GAZ 61% possession). shots_on_target/corners/fouls from ESPN 'Shots on Goal'/'Corners Won'/'Fouls Committed' (team-labelled; SoT percentages 5/13=38% and 2/11=18% match FotMob shot totals). big_chances not shown on either page. HT not stated on page; derived from goal minutes (only goal before HT was 20'). Goal types not stated on FotMob (no penalty/own-goal flag) -> null. Card minutes: FotMob timeline separates minute headers from events; Bacuna's yellow minute ambiguous (two reads gave 20' and 53'/58') -> null; Aliti 58', Keskin 88', Gidado 88' assigned by timeline position only. Sorescu off / Destici on minute conflicting within page (86' vs 84') -> null. Coaches: FotMob lists Mirel Radoi and João Pereira without team labels; Radoi assigned to Gaziantep (beIN: Radoi in charge 22 Apr-~1 Sep 2026), Pereira by elimination. FotMob page said no injuries/suspensions listed for either side."
+    },
+    {
+      "match_id": "5904714",
+      "date": "2026-08-23",
+      "kickoff_utc": "16:00",
+      "competition": "Süper Lig",
+      "round": "Round 2",
+      "venue": "Esenyurt Necmi Kadıoğlu Stadyumu",
+      "home_team": "Eyüpspor",
+      "away_team": "Gaziantep FK",
+      "focus_team": "Gaziantep FK",
+      "focus_side": "away",
+      "opponent": "Eyüpspor",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          0,
+          1
+        ]
+      },
+      "result": "W",
+      "goals": [
+        {
+          "minute": 60,
+          "team": "Gaziantep FK",
+          "scorer": "Deian Sorescu",
+          "assist": null,
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 28,
+          "team": "Gaziantep FK",
+          "player": "Myenty Abena",
+          "card": "yellow"
+        },
+        {
+          "minute": 64,
+          "team": "Gaziantep FK",
+          "player": "Juninho Bacuna",
+          "card": "red"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 56,
+          "xg": 0.49,
+          "shots": 12,
+          "shots_on_target": 1,
+          "corners": 4,
+          "fouls": 16,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 44,
+          "xg": 1.16,
+          "shots": 9,
+          "shots_on_target": 2,
+          "corners": 2,
+          "fouls": 17,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-4-1-1",
+        "away": "3-4-2-1"
+      },
+      "coach": {
+        "home": "Özhan Pulat",
+        "away": "Mirel Rădoi"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "Kacper Tobiasz",
+            "number": 25,
+            "rating": 7.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Luis Pérez",
+            "number": 2,
+            "rating": 8.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Ulrich Meleke",
+            "number": 6,
+            "rating": 7.5,
+            "subbed_off": null
+          },
+          {
+            "name": "Myenty Abena",
+            "number": 14,
+            "rating": 7.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Deian Sorescu",
+            "number": 18,
+            "rating": 8.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Juninho Bacuna",
+            "number": 7,
+            "rating": 5.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Alexandru Maxim",
+            "number": 44,
+            "rating": 6.9,
+            "subbed_off": null
+          },
+          {
+            "name": "Florin Ștefan",
+            "number": 96,
+            "rating": 7.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Kacper Kozłowski",
+            "number": 10,
+            "rating": 6.8,
+            "subbed_off": 88
+          },
+          {
+            "name": "Drissa Camara",
+            "number": 3,
+            "rating": 6.6,
+            "subbed_off": 68
+          },
+          {
+            "name": "Trivante Stewart",
+            "number": 9,
+            "rating": 6.7,
+            "subbed_off": 76
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Victor Gidado",
+            "number": 8,
+            "on": 68,
+            "replaced": "Drissa Camara",
+            "rating": 6.0
+          },
+          {
+            "name": "Fuat Bavuk",
+            "number": 97,
+            "on": 76,
+            "replaced": "Trivante Stewart",
+            "rating": 6.3
+          },
+          {
+            "name": "Sontje Hansen",
+            "number": 22,
+            "on": 88,
+            "replaced": "Kacper Kozłowski",
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": [],
+      "player_of_match": "Deian Sorescu",
+      "source_urls": [
+        "https://www.fotmob.com/teams/4081/fixtures/gaziantep-fk",
+        "https://www.fotmob.com/matches/gaziantep-fk-vs-eyupspor/muy2g#5904714",
+        "https://africa.espn.com/football/match/_/gameId/401888318/gaziantep-fk-eyupspor",
+        "https://beinsports.com.tr/haber/gaziantep-fkde-mirel-radoi-donemi-132-gun-surdu"
+      ],
+      "notes": "FotMob URL slug puts Gaziantep first but page lists Eyüpspor first and venue is Eyüpspor's ground (Istanbul); ESPN title 'Eyupspor 0-1 Gaziantep' -> Eyüpspor home. Possession/xG/shots from FotMob (left = home; ESPN EYU 56% confirms). SoT/corners/fouls from ESPN (team-labelled; SoT % 1/12=8%, 2/9=22% match FotMob shots). Attendance 1,043 per FotMob. HT not stated; derived from goal minutes (only goal 60'). Bacuna sent off 64' (straight red per FotMob); ESPN header erroneously lists Bacuna 64' among scorers. FotMob form widget shows an unrelated 'Eyüpspor 3-0 Gaziantep' (different match id 4842588) - ignored. Coaches listed on FotMob without team labels; Radoi assigned to Gaziantep (beIN tenure dates), Pulat by elimination. FotMob states Gaziantep had no unavailable players (Eyüpspor: David Costa suspended)."
+    },
+    {
+      "match_id": "5904722",
+      "date": "2026-08-29",
+      "kickoff_utc": "18:30",
+      "competition": "Süper Lig",
+      "round": "Round 3",
+      "venue": "Gaziantep Stadyumu",
+      "home_team": "Gaziantep FK",
+      "away_team": "Rizespor",
+      "focus_team": "Gaziantep FK",
+      "focus_side": "home",
+      "opponent": "Rizespor",
+      "score": {
+        "ht": [
+          0,
+          2
+        ],
+        "ft": [
+          1,
+          2
+        ]
+      },
+      "result": "L",
+      "goals": [
+        {
+          "minute": 12,
+          "team": "Rizespor",
+          "scorer": "Emrecan Bulut",
+          "assist": "Mithat Pala",
+          "type": null
+        },
+        {
+          "minute": 35,
+          "team": "Rizespor",
+          "scorer": "Ali Sowe",
+          "assist": "Emrecan Bulut",
+          "type": null
+        },
+        {
+          "minute": 90,
+          "team": "Gaziantep FK",
+          "scorer": "Zakaria Ariss",
+          "assist": null,
+          "type": "own_goal",
+          "added_time": 1
+        }
+      ],
+      "cards": [
+        {
+          "minute": 60,
+          "team": "Rizespor",
+          "player": "Attila Mocsi",
+          "card": "yellow"
+        },
+        {
+          "minute": 72,
+          "team": "Gaziantep FK",
+          "player": "Enver Kulašin",
+          "card": "yellow"
+        },
+        {
+          "minute": 90,
+          "team": "Rizespor",
+          "player": "Dal Varešanović",
+          "card": "yellow",
+          "added_time": 2
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 56,
+          "xg": 0.79,
+          "shots": 16,
+          "shots_on_target": 4,
+          "corners": 8,
+          "fouls": 10,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 44,
+          "xg": 1.17,
+          "shots": 10,
+          "shots_on_target": 4,
+          "corners": 0,
+          "fouls": 17,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "5-4-1",
+        "away": "4-1-4-1"
+      },
+      "coach": {
+        "home": "Mirel Rădoi",
+        "away": "Recep Uçar"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "Kacper Tobiasz",
+            "number": 25,
+            "rating": 6.6,
+            "subbed_off": null
+          },
+          {
+            "name": "Luis Pérez",
+            "number": 2,
+            "rating": 6.4,
+            "subbed_off": null
+          },
+          {
+            "name": "Myenty Abena",
+            "number": 14,
+            "rating": 6.3,
+            "subbed_off": null
+          },
+          {
+            "name": "Ulrich Meleke",
+            "number": 6,
+            "rating": 7.4,
+            "subbed_off": null
+          },
+          {
+            "name": "Deian Sorescu",
+            "number": 18,
+            "rating": 6.6,
+            "subbed_off": null
+          },
+          {
+            "name": "Florin Ștefan",
+            "number": 96,
+            "rating": 5.9,
+            "subbed_off": 65
+          },
+          {
+            "name": "Kacper Kozłowski",
+            "number": 10,
+            "rating": 7.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Victor Gidado",
+            "number": 8,
+            "rating": 5.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Alexandru Maxim",
+            "number": 44,
+            "rating": 8.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Sontje Hansen",
+            "number": 22,
+            "rating": 5.5,
+            "subbed_off": 65
+          },
+          {
+            "name": "Fuat Bavuk",
+            "number": 97,
+            "rating": 5.8,
+            "subbed_off": 40
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Serdar Dursun",
+            "number": 19,
+            "on": 40,
+            "replaced": "Fuat Bavuk",
+            "rating": 6.4
+          },
+          {
+            "name": "Kerim Çalhanoğlu",
+            "number": 23,
+            "on": 65,
+            "replaced": "Florin Ștefan",
+            "rating": 6.1
+          },
+          {
+            "name": "Enver Kulašin",
+            "number": 27,
+            "on": 65,
+            "replaced": "Sontje Hansen",
+            "rating": 6.5
+          }
+        ]
+      },
+      "unavailable_focus": [
+        {
+          "name": "Juninho Bacuna",
+          "reason": "suspended"
+        }
+      ],
+      "player_of_match": "Mithat Pala",
+      "source_urls": [
+        "https://www.fotmob.com/teams/4081/fixtures/gaziantep-fk",
+        "https://www.fotmob.com/matches/rizespor-vs-gaziantep-fk/bmdi5#5904722",
+        "https://africa.espn.com/football/match/_/gameId/401888312/caykur-rizespor-gaziantep-fk",
+        "https://beinsports.com.tr/haber/gaziantep-fkde-mirel-radoi-donemi-132-gun-surdu"
+      ],
+      "notes": "FotMob URL slug puts Rizespor first, but page header and venue (Gaziantep Stadyumu) show Gaziantep FK home; ESPN agrees ('Gaziantep 1-2 Caykur Rizespor'). Own goal by Zakaria Ariss (Rizespor) credited to Gaziantep FK. Possession/xG/shots from FotMob (left = home); SoT/corners/fouls from ESPN (team-labelled; SoT % 4/16=25%, 4/10=40% consistent). HT not stated; derived from goal minutes. Goal types other than own goal not stated -> null. Coaches listed on FotMob without team labels; beIN confirms this 2-1 loss to Rizespor was Radoi's last match before leaving by mutual agreement (~1 Sep 2026). Stoppage-time minutes stored as strings ('90+1')."
+    },
+    {
+      "match_id": "5904735",
+      "date": "2026-09-07",
+      "kickoff_utc": "17:00",
+      "competition": "Süper Lig",
+      "round": "Round 4",
+      "venue": "ISONEM Park Gürsel Aksel Stadyumu",
+      "home_team": "Göztepe",
+      "away_team": "Gaziantep FK",
+      "focus_team": "Gaziantep FK",
+      "focus_side": "away",
+      "opponent": "Göztepe",
+      "score": {
+        "ht": [
+          0,
+          4
+        ],
+        "ft": [
+          2,
+          4
+        ]
+      },
+      "result": "W",
+      "goals": [
+        {
+          "minute": 2,
+          "team": "Gaziantep FK",
+          "scorer": "Halil Dervişoğlu",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 10,
+          "team": "Gaziantep FK",
+          "scorer": "Myenty Abena",
+          "assist": "Alexandru Maxim",
+          "type": null
+        },
+        {
+          "minute": 34,
+          "team": "Gaziantep FK",
+          "scorer": "Kacper Kozłowski",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 45,
+          "team": "Gaziantep FK",
+          "scorer": "Kacper Kozłowski",
+          "assist": "Alexandru Maxim",
+          "type": null,
+          "added_time": 1
+        },
+        {
+          "minute": 51,
+          "team": "Göztepe",
+          "scorer": "Juan",
+          "assist": "Janderson",
+          "type": null
+        },
+        {
+          "minute": 90,
+          "team": "Göztepe",
+          "scorer": "Juan",
+          "assist": null,
+          "type": "penalty",
+          "added_time": 3
+        }
+      ],
+      "cards": [
+        {
+          "minute": 51,
+          "team": "Göztepe",
+          "player": "Arda Kurtulan",
+          "card": "yellow"
+        },
+        {
+          "minute": 64,
+          "team": "Göztepe",
+          "player": "Rhaldney",
+          "card": "yellow"
+        },
+        {
+          "minute": null,
+          "team": "Göztepe",
+          "player": "Ogün Bayrak",
+          "card": "red"
+        },
+        {
+          "minute": 75,
+          "team": "Gaziantep FK",
+          "player": "Trivante Stewart",
+          "card": "yellow"
+        },
+        {
+          "minute": 75,
+          "team": "Göztepe",
+          "player": "Sinclair Armstrong",
+          "card": "yellow"
+        },
+        {
+          "minute": 90,
+          "team": "Gaziantep FK",
+          "player": "Drissa Camara",
+          "card": "yellow",
+          "added_time": 1
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 48,
+          "xg": 3.26,
+          "shots": 19,
+          "shots_on_target": 4,
+          "corners": 8,
+          "fouls": 18,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 52,
+          "xg": 1.88,
+          "shots": 13,
+          "shots_on_target": 6,
+          "corners": 3,
+          "fouls": 10,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "3-4-1-2",
+        "away": "4-1-4-1"
+      },
+      "coach": {
+        "home": null,
+        "away": null
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "Kacper Tobiasz",
+            "number": 25,
+            "rating": 8.3,
+            "subbed_off": null
+          },
+          {
+            "name": "Luis Pérez",
+            "number": 2,
+            "rating": 7.2,
+            "subbed_off": null
+          },
+          {
+            "name": "Arda Kızıldağ",
+            "number": 4,
+            "rating": 7.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Myenty Abena",
+            "number": 14,
+            "rating": 7.7,
+            "subbed_off": null
+          },
+          {
+            "name": "Kerim Çalhanoğlu",
+            "number": 23,
+            "rating": 6.9,
+            "subbed_off": 69
+          },
+          {
+            "name": "Ulrich Meleke",
+            "number": 6,
+            "rating": 8.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Deian Sorescu",
+            "number": 18,
+            "rating": 7.3,
+            "subbed_off": 69
+          },
+          {
+            "name": "Kacper Kozłowski",
+            "number": 10,
+            "rating": 8.9,
+            "subbed_off": null
+          },
+          {
+            "name": "Victor Gidado",
+            "number": 8,
+            "rating": 7.2,
+            "subbed_off": 82
+          },
+          {
+            "name": "Alexandru Maxim",
+            "number": 44,
+            "rating": 8.5,
+            "subbed_off": 62
+          },
+          {
+            "name": "Halil Dervişoğlu",
+            "number": 28,
+            "rating": 7.6,
+            "subbed_off": 62
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Drissa Camara",
+            "number": 3,
+            "on": 62,
+            "replaced": "Alexandru Maxim",
+            "rating": 6.2
+          },
+          {
+            "name": "Trivante Stewart",
+            "number": 9,
+            "on": 62,
+            "replaced": "Halil Dervişoğlu",
+            "rating": 6.0
+          },
+          {
+            "name": "Abakar Sylla",
+            "number": 21,
+            "on": 69,
+            "replaced": "Kerim Çalhanoğlu",
+            "rating": 6.3
+          },
+          {
+            "name": "Karamba Gassama",
+            "number": 17,
+            "on": 69,
+            "replaced": "Deian Sorescu",
+            "rating": 6.4
+          },
+          {
+            "name": "Ogün Özçiçek",
+            "number": 61,
+            "on": 82,
+            "replaced": "Victor Gidado",
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": [
+        {
+          "name": "Juninho Bacuna",
+          "reason": "suspended"
+        }
+      ],
+      "player_of_match": "Juan",
+      "source_urls": [
+        "https://www.fotmob.com/teams/4081/fixtures/gaziantep-fk",
+        "https://www.fotmob.com/matches/goztepe-vs-gaziantep-fk/aqq5a#5904735",
+        "https://africa.espn.com/football/match/_/gameId/401888302/gaziantep-fk-goztepe",
+        "https://beinsports.com.tr/haber/gaziantep-fk-ayriligi-resmen-duyurdu",
+        "https://www.beinsports.com.tr/haber/gaziantep-fkde-orhan-ak-donemi"
+      ],
+      "notes": "Göztepe home (FotMob header, Izmir venue; ESPN 'Goztepe 2-4 Gaziantep'). Possession/xG/shots from FotMob (left = home; ESPN GOZ 48% confirms); SoT/corners/fouls from ESPN (team-labelled; SoT % 4/19=21%, 6/13=46% consistent). HT not stated; derived from goal minutes (all four Gaziantep goals at or before 45+1'). Juan 90+3' flagged as penalty on FotMob; other goal types not stated. Göztepe's Novatus Miroshi missed a penalty (minute unclear). Ogün Bayrak red card minute inconsistent on page (69' timeline vs 72' summary) -> null. Göztepe made a half-time GK change (Gugeshashvili -> Arda Özcimen). Coaches: FotMob lists Stanimir Stoilov and Mirel Radoi, but beIN reports Radoi left by mutual agreement on 31 Aug 2026 and Orhan Ak was announced on 4 Sep 2026, so FotMob's coach data looks stale -> both null. Bacuna suspension follows his R2 red card."
+    },
+    {
+      "match_id": "5904740",
+      "date": "2026-09-14",
+      "kickoff_utc": "17:00",
+      "competition": "Süper Lig",
+      "round": "Round 5",
+      "venue": "Gaziantep Stadyumu",
+      "home_team": "Gaziantep FK",
+      "away_team": "Fenerbahçe",
+      "focus_team": "Gaziantep FK",
+      "focus_side": "home",
+      "opponent": "Fenerbahçe",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          0,
+          0
+        ]
+      },
+      "result": "D",
+      "goals": [],
+      "cards": [
+        {
+          "minute": 4,
+          "team": "Gaziantep FK",
+          "player": "Ulrich Meleke",
+          "card": "yellow"
+        },
+        {
+          "minute": 83,
+          "team": "Fenerbahçe",
+          "player": "İrfan Can Kahveci",
+          "card": "yellow"
+        },
+        {
+          "minute": 83,
+          "team": "Gaziantep FK",
+          "player": "Arda Kızıldağ",
+          "card": "yellow"
+        },
+        {
+          "minute": 84,
+          "team": "Fenerbahçe",
+          "player": "Vedat Muriqi",
+          "card": "yellow"
+        },
+        {
+          "minute": 84,
+          "team": "Gaziantep FK",
+          "player": "Myenty Abena",
+          "card": "yellow"
+        },
+        {
+          "minute": 84,
+          "team": "Fenerbahçe",
+          "player": "Oğuz Aydın",
+          "card": "yellow"
+        },
+        {
+          "minute": 90,
+          "team": "Gaziantep FK",
+          "player": "Sontje Hansen",
+          "card": "yellow",
+          "added_time": 2
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 32,
+          "xg": 0.49,
+          "shots": 11,
+          "shots_on_target": 0,
+          "corners": 6,
+          "fouls": 16,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 68,
+          "xg": 1.34,
+          "shots": 15,
+          "shots_on_target": 4,
+          "corners": 6,
+          "fouls": 8,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-1-4-1",
+        "away": "4-3-3"
+      },
+      "coach": {
+        "home": null,
+        "away": null
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "Kacper Tobiasz",
+            "number": 25,
+            "rating": 8.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Luis Pérez",
+            "number": 2,
+            "rating": 6.7,
+            "subbed_off": null
+          },
+          {
+            "name": "Arda Kızıldağ",
+            "number": 4,
+            "rating": 7.4,
+            "subbed_off": null
+          },
+          {
+            "name": "Myenty Abena",
+            "number": 14,
+            "rating": 7.9,
+            "subbed_off": null
+          },
+          {
+            "name": "Kerim Çalhanoğlu",
+            "number": 23,
+            "rating": 7.4,
+            "subbed_off": 82
+          },
+          {
+            "name": "Ulrich Meleke",
+            "number": 6,
+            "rating": 7.2,
+            "subbed_off": null
+          },
+          {
+            "name": "Deian Sorescu",
+            "number": 18,
+            "rating": 6.5,
+            "subbed_off": 69
+          },
+          {
+            "name": "Victor Gidado",
+            "number": 8,
+            "rating": 6.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Alexandru Maxim",
+            "number": 44,
+            "rating": 6.9,
+            "subbed_off": 61
+          },
+          {
+            "name": "Kacper Kozłowski",
+            "number": 10,
+            "rating": 6.6,
+            "subbed_off": 82
+          },
+          {
+            "name": "Halil Dervişoğlu",
+            "number": 28,
+            "rating": 6.3,
+            "subbed_off": 60
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Serdar Dursun",
+            "number": 19,
+            "on": 60,
+            "replaced": "Halil Dervişoğlu",
+            "rating": 6.0
+          },
+          {
+            "name": "Drissa Camara",
+            "number": 3,
+            "on": 61,
+            "replaced": "Alexandru Maxim",
+            "rating": 6.7
+          },
+          {
+            "name": "Karamba Gassama",
+            "number": 17,
+            "on": 69,
+            "replaced": "Deian Sorescu",
+            "rating": 6.2
+          },
+          {
+            "name": "Sontje Hansen",
+            "number": 22,
+            "on": 82,
+            "replaced": "Kacper Kozłowski",
+            "rating": null
+          },
+          {
+            "name": "Abakar Sylla",
+            "number": 21,
+            "on": 82,
+            "replaced": "Kerim Çalhanoğlu",
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": [],
+      "player_of_match": "Kacper Tobiasz",
+      "source_urls": [
+        "https://www.fotmob.com/teams/4081/fixtures/gaziantep-fk",
+        "https://www.fotmob.com/matches/gaziantep-fk-vs-fenerbahce/1clkp7#5904740",
+        "https://africa.espn.com/football/match/_/gameId/401888298/fenerbahce-gaziantep-fk",
+        "https://beinsports.com.tr/haber/gaziantep-fk-ayriligi-resmen-duyurdu",
+        "https://www.beinsports.com.tr/haber/gaziantep-fkde-orhan-ak-donemi"
+      ],
+      "notes": "Possession/xG/shots from FotMob (left = home; ESPN GAZ 32% confirms). SoT/corners/fouls from ESPN (SoT % 0/11=0%, 4/15=27% consistent; Tobiasz saves match FEN SoT). ESPN's xG 0.00 and big chances 0 for both teams are placeholder values and were not used. HT 0-0 (no goals). FotMob 'About' text says Gaziantep had no unavailable players, but an unlabeled 'Bench / Injured and suspended' list on the page includes Juninho Bacuna and Trivante Stewart - status unclear, recorded as []. Coaches: FotMob lists Mirel Radoi and İsmail Kartal unlabelled; Radoi had already left (beIN, 31 Aug) -> both null."
+    },
+    {
+      "match_id": "5904756",
+      "date": "2026-09-19",
+      "kickoff_utc": "14:00",
+      "competition": "Süper Lig",
+      "round": "Round 6",
+      "venue": "Turka Araç Muayene Kocaeli Stadyumu",
+      "home_team": "Kocaelispor",
+      "away_team": "Gaziantep FK",
+      "focus_team": "Gaziantep FK",
+      "focus_side": "away",
+      "opponent": "Kocaelispor",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          2,
+          0
+        ]
+      },
+      "result": "L",
+      "goals": [
+        {
+          "minute": 56,
+          "team": "Kocaelispor",
+          "scorer": "Berkan Kutlu",
+          "assist": "Gonçalo Sousa",
+          "type": null
+        },
+        {
+          "minute": 76,
+          "team": "Kocaelispor",
+          "scorer": "Daniel Agyei",
+          "assist": "Berkan Kutlu",
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 37,
+          "team": "Gaziantep FK",
+          "player": "Halil Dervişoğlu",
+          "card": "yellow"
+        },
+        {
+          "minute": 63,
+          "team": "Gaziantep FK",
+          "player": "Kacper Kozłowski",
+          "card": "yellow"
+        },
+        {
+          "minute": 63,
+          "team": "Kocaelispor",
+          "player": "Gonçalo Sousa",
+          "card": "yellow"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 51,
+          "xg": 1.3,
+          "shots": 19,
+          "shots_on_target": 5,
+          "corners": 1,
+          "fouls": 16,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 49,
+          "xg": 1.03,
+          "shots": 16,
+          "shots_on_target": 3,
+          "corners": 2,
+          "fouls": 12,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-3-3",
+        "away": "4-1-4-1"
+      },
+      "coach": {
+        "home": null,
+        "away": null
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "Kacper Tobiasz",
+            "number": 25,
+            "rating": 4.9,
+            "subbed_off": null
+          },
+          {
+            "name": "Luis Pérez",
+            "number": 2,
+            "rating": 6.9,
+            "subbed_off": 60
+          },
+          {
+            "name": "Arda Kızıldağ",
+            "number": 4,
+            "rating": 7.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Myenty Abena",
+            "number": 14,
+            "rating": 6.6,
+            "subbed_off": null
+          },
+          {
+            "name": "Kerim Çalhanoğlu",
+            "number": 23,
+            "rating": 6.7,
+            "subbed_off": null
+          },
+          {
+            "name": "Ulrich Meleke",
+            "number": 6,
+            "rating": 6.7,
+            "subbed_off": 79
+          },
+          {
+            "name": "Deian Sorescu",
+            "number": 18,
+            "rating": 6.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Victor Gidado",
+            "number": 8,
+            "rating": 6.3,
+            "subbed_off": 60
+          },
+          {
+            "name": "Alexandru Maxim",
+            "number": 44,
+            "rating": 6.9,
+            "subbed_off": 70
+          },
+          {
+            "name": "Kacper Kozłowski",
+            "number": 10,
+            "rating": 7.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Halil Dervişoğlu",
+            "number": 28,
+            "rating": 6.6,
+            "subbed_off": 70
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Drissa Camara",
+            "number": 3,
+            "on": 60,
+            "replaced": "Victor Gidado",
+            "rating": 6.4
+          },
+          {
+            "name": "Sontje Hansen",
+            "number": 22,
+            "on": 60,
+            "replaced": "Luis Pérez",
+            "rating": 6.3
+          },
+          {
+            "name": "Juninho Bacuna",
+            "number": 7,
+            "on": 70,
+            "replaced": "Alexandru Maxim",
+            "rating": 6.0
+          },
+          {
+            "name": "Serdar Dursun",
+            "number": 19,
+            "on": 70,
+            "replaced": "Halil Dervişoğlu",
+            "rating": 6.0
+          },
+          {
+            "name": "Trivante Stewart",
+            "number": 9,
+            "on": 79,
+            "replaced": "Ulrich Meleke",
+            "rating": 5.9
+          }
+        ]
+      },
+      "unavailable_focus": null,
+      "player_of_match": "Berkan Kutlu",
+      "source_urls": [
+        "https://www.fotmob.com/teams/4081/fixtures/gaziantep-fk",
+        "https://www.fotmob.com/matches/kocaelispor-vs-gaziantep-fk/9i93w#5904756",
+        "https://www.espn.com/soccer/match/_/gameId/401888286",
+        "https://beinsports.com.tr/haber/gaziantep-fk-ayriligi-resmen-duyurdu",
+        "https://www.beinsports.com.tr/haber/gaziantep-fkde-orhan-ak-donemi"
+      ],
+      "notes": "Possession/xG/shots from FotMob (left = home; ESPN KOC 51% confirms). SoT/corners/fouls from ESPN (www.espn.com; the africa.espn.com page returned empty). ESPN SoT % 5/19=26%, 3/16=19% consistent with FotMob shots; ESPN also printed total shots '10/4', which contradicts its own percentages and FotMob - ignored. HT not stated; derived from goal minutes. Agyei goal minute: header says 76', timeline places it between 74' and 76'. FotMob rating blocks were jumbled between teams; ratings above are matched by player name and Tobiasz's 4.9 should be spot-checked. Coaches: FotMob lists Selçuk İnan and Mirel Radoi unlabelled; Radoi had already left (beIN) -> both null. Injuries/suspensions not shown -> null."
+    },
+    {
+      "match_id": "5904758",
+      "date": "2026-10-11",
+      "kickoff_utc": "13:00",
+      "competition": "Süper Lig",
+      "round": "Round 7",
+      "venue": "Gaziantep Stadyumu",
+      "home_team": "Gaziantep FK",
+      "away_team": "Çorum FK",
+      "focus_team": "Gaziantep FK",
+      "focus_side": "home",
+      "opponent": "Çorum FK",
+      "score": {
+        "ht": [
+          0,
+          1
+        ],
+        "ft": [
+          0,
+          3
+        ]
+      },
+      "result": "L",
+      "goals": [
+        {
+          "minute": 38,
+          "team": "Çorum FK",
+          "scorer": "Cengiz Ünder",
+          "assist": "Mohamed Diomandé",
+          "type": null
+        },
+        {
+          "minute": 60,
+          "team": "Çorum FK",
+          "scorer": "Alexandros Kyziridis",
+          "assist": "Gökhan Sazdağı",
+          "type": null
+        },
+        {
+          "minute": 82,
+          "team": "Çorum FK",
+          "scorer": "Markus Seehusen Karlsbakk",
+          "assist": "Alexandros Kyziridis",
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 43,
+          "team": "Çorum FK",
+          "player": "Mohamed Diomandé",
+          "card": "yellow"
+        },
+        {
+          "minute": 81,
+          "team": "Çorum FK",
+          "player": "Alexandros Kyziridis",
+          "card": "yellow"
+        },
+        {
+          "minute": 85,
+          "team": "Çorum FK",
+          "player": "Youssoufa Moukoko",
+          "card": "yellow"
+        },
+        {
+          "minute": 85,
+          "team": "Gaziantep FK",
+          "player": "Myenty Abena",
+          "card": "yellow"
+        },
+        {
+          "minute": 90,
+          "team": "Gaziantep FK",
+          "player": "Sontje Hansen",
+          "card": "yellow",
+          "added_time": 6
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 54,
+          "xg": 0.99,
+          "shots": 12,
+          "shots_on_target": 2,
+          "corners": 10,
+          "fouls": 6,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 46,
+          "xg": 2.67,
+          "shots": 13,
+          "shots_on_target": 7,
+          "corners": 5,
+          "fouls": 10,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-1-4-1",
+        "away": "3-4-2-1"
+      },
+      "coach": {
+        "home": "Orhan Ak",
+        "away": "Burak Yılmaz"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "Kacper Tobiasz",
+            "number": 25,
+            "rating": 6.3,
+            "subbed_off": null
+          },
+          {
+            "name": "Luis Pérez",
+            "number": 2,
+            "rating": 5.5,
+            "subbed_off": null
+          },
+          {
+            "name": "Myenty Abena",
+            "number": 14,
+            "rating": 6.6,
+            "subbed_off": null
+          },
+          {
+            "name": "Abakar Sylla",
+            "number": 21,
+            "rating": 7.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Kerim Çalhanoğlu",
+            "number": 23,
+            "rating": 5.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Ogün Özçiçek",
+            "number": 61,
+            "rating": 7.0,
+            "subbed_off": 58
+          },
+          {
+            "name": "Deian Sorescu",
+            "number": 18,
+            "rating": 7.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Victor Gidado",
+            "number": 8,
+            "rating": 6.3,
+            "subbed_off": 73
+          },
+          {
+            "name": "Alexandru Maxim",
+            "number": 44,
+            "rating": 6.2,
+            "subbed_off": null
+          },
+          {
+            "name": "Kacper Kozłowski",
+            "number": 10,
+            "rating": 6.7,
+            "subbed_off": null
+          },
+          {
+            "name": "Halil Dervişoğlu",
+            "number": 28,
+            "rating": 6.2,
+            "subbed_off": 59
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Ulrich Meleke",
+            "number": 6,
+            "on": 58,
+            "replaced": "Ogün Özçiçek",
+            "rating": 6.3
+          },
+          {
+            "name": "Drissa Camara",
+            "number": 3,
+            "on": 59,
+            "replaced": "Halil Dervişoğlu",
+            "rating": 6.6
+          },
+          {
+            "name": "Serdar Dursun",
+            "number": 19,
+            "on": 73,
+            "replaced": "Victor Gidado",
+            "rating": 6.1
+          },
+          {
+            "name": "Sabahattin Destici",
+            "number": 77,
+            "on": null,
+            "replaced": "Luis Pérez",
+            "rating": null
+          },
+          {
+            "name": "Sontje Hansen",
+            "number": 22,
+            "on": null,
+            "replaced": "Alexandru Maxim",
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": null,
+      "player_of_match": "Alexandros Kyziridis",
+      "source_urls": [
+        "https://www.fotmob.com/teams/4081/fixtures/gaziantep-fk",
+        "https://www.fotmob.com/matches/gaziantep-fk-vs-corum-fk/tzrbrsj#5904758",
+        "https://africa.espn.com/football/match/_/gameId/401888380/corum-fk-gaziantep-fk",
+        "https://www.beinsports.com.tr/haber/gaziantep-fkde-orhan-ak-donemi"
+      ],
+      "notes": "Possession/xG/shots from FotMob (left = home; ESPN GAZ 54% confirms). SoT/corners/fouls from ESPN (SoT % 2/12=17%, 7/13=54% consistent; GAZ saves 4 + 3 goals = COR SoT 7). HT not stated; derived from goal minutes (only first-half goal 38'). Destici-for-Pérez and Hansen-for-Maxim substitutions are given as 83'/84' with event list and rating timeline disagreeing -> on/subbed_off null. Coaches: FotMob lists Orhan Ak and Burak Yılmaz unlabelled; Ak assigned to Gaziantep (beIN announced his appointment 4 Sep 2026), Yılmaz by elimination. Injuries/suspensions section empty -> null."
+    },
+    {
+      "match_id": "5904769",
+      "date": "2026-10-18",
+      "kickoff_utc": "16:00",
+      "competition": "Süper Lig",
+      "round": "Round 8",
+      "venue": "Başakşehir Fatih Terim Stadyumu",
+      "home_team": "Başakşehir",
+      "away_team": "Gaziantep FK",
+      "focus_team": "Gaziantep FK",
+      "focus_side": "away",
+      "opponent": "Başakşehir",
+      "score": {
+        "ht": [
+          1,
+          0
+        ],
+        "ft": [
+          2,
+          1
+        ]
+      },
+      "result": "L",
+      "goals": [
+        {
+          "minute": 8,
+          "team": "Başakşehir",
+          "scorer": "Eldor Shomurodov",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 66,
+          "team": "Gaziantep FK",
+          "scorer": "Serdar Dursun",
+          "assist": "Kacper Kozłowski",
+          "type": null
+        },
+        {
+          "minute": 82,
+          "team": "Başakşehir",
+          "scorer": "Umut Güneş",
+          "assist": "Eldor Shomurodov",
+          "type": null
+        }
+      ],
+      "cards": [
+        {
+          "minute": 45,
+          "team": "Başakşehir",
+          "player": "Saba Kharebashvili",
+          "card": "yellow",
+          "added_time": 3
+        },
+        {
+          "minute": 51,
+          "team": "Başakşehir",
+          "player": "Jakub Kałuziński",
+          "card": "yellow"
+        },
+        {
+          "minute": 58,
+          "team": "Gaziantep FK",
+          "player": "Drissa Camara",
+          "card": "yellow"
+        },
+        {
+          "minute": 73,
+          "team": "Başakşehir",
+          "player": "Ousseynou Ba",
+          "card": "yellow"
+        },
+        {
+          "minute": 75,
+          "team": "Başakşehir",
+          "player": "Umut Güneş",
+          "card": "yellow"
+        },
+        {
+          "minute": 81,
+          "team": "Gaziantep FK",
+          "player": "Deian Sorescu",
+          "card": "yellow"
+        },
+        {
+          "minute": 85,
+          "team": "Gaziantep FK",
+          "player": "Kacper Kozłowski",
+          "card": "yellow"
+        },
+        {
+          "minute": 88,
+          "team": "Gaziantep FK",
+          "player": "Serdar Dursun",
+          "card": "yellow"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 50,
+          "xg": 1.95,
+          "shots": 14,
+          "shots_on_target": 6,
+          "corners": 4,
+          "fouls": 28,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 50,
+          "xg": 1.42,
+          "shots": 12,
+          "shots_on_target": 4,
+          "corners": 5,
+          "fouls": 15,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-2-3-1",
+        "away": "4-1-4-1"
+      },
+      "coach": {
+        "home": "Nuri Şahin",
+        "away": "Orhan Ak"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "Kacper Tobiasz",
+            "number": 25,
+            "rating": 7.0,
+            "subbed_off": null
+          },
+          {
+            "name": "Luis Pérez",
+            "number": 2,
+            "rating": 6.0,
+            "subbed_off": 85
+          },
+          {
+            "name": "Arda Kızıldağ",
+            "number": 4,
+            "rating": 5.9,
+            "subbed_off": null
+          },
+          {
+            "name": "Myenty Abena",
+            "number": 14,
+            "rating": 6.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Abakar Sylla",
+            "number": 21,
+            "rating": 6.3,
+            "subbed_off": 46
+          },
+          {
+            "name": "Ogün Özçiçek",
+            "number": 61,
+            "rating": 6.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Deian Sorescu",
+            "number": 18,
+            "rating": 6.9,
+            "subbed_off": null
+          },
+          {
+            "name": "Victor Gidado",
+            "number": 8,
+            "rating": 6.2,
+            "subbed_off": 46
+          },
+          {
+            "name": "Kacper Kozłowski",
+            "number": 10,
+            "rating": 7.6,
+            "subbed_off": null
+          },
+          {
+            "name": "Drissa Camara",
+            "number": 3,
+            "rating": 6.8,
+            "subbed_off": 64
+          },
+          {
+            "name": "Trivante Stewart",
+            "number": 9,
+            "rating": 6.3,
+            "subbed_off": 57
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Kerim Çalhanoğlu",
+            "number": 23,
+            "on": 46,
+            "replaced": "Abakar Sylla",
+            "rating": 6.4
+          },
+          {
+            "name": "Alexandru Maxim",
+            "number": 44,
+            "on": 46,
+            "replaced": "Victor Gidado",
+            "rating": 6.6
+          },
+          {
+            "name": "Serdar Dursun",
+            "number": 19,
+            "on": 57,
+            "replaced": "Trivante Stewart",
+            "rating": 7.8
+          },
+          {
+            "name": "Karamba Gassama",
+            "number": 17,
+            "on": 64,
+            "replaced": "Drissa Camara",
+            "rating": 6.3
+          },
+          {
+            "name": "Sabahattin Destici",
+            "number": 77,
+            "on": 85,
+            "replaced": "Luis Pérez",
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": null,
+      "player_of_match": "Eldor Shomurodov",
+      "source_urls": [
+        "https://www.fotmob.com/teams/4081/fixtures/gaziantep-fk",
+        "https://www.fotmob.com/matches/basaksehir-vs-gaziantep-fk/arr8y#5904769",
+        "https://africa.espn.com/football/match/_/gameId/401888275/gaziantep-fk-istanbul-basaksehir",
+        "https://www.beinsports.com.tr/haber/gaziantep-fkde-orhan-ak-donemi"
+      ],
+      "notes": "Possession/xG/shots from FotMob (left = home; 50/50 possession so orientation checked via ESPN SoT % 6/14=43% IBFK, 4/12=33% GAZ, consistent with FotMob shots 14/12). SoT/corners/fouls from ESPN (team-labelled). HT not stated; derived from goal minutes (only first-half goal 8'). Coaches listed on FotMob without team labels; Ak assigned to Gaziantep (beIN appointment), Şahin by elimination. ESPN big chances 0/0 is a placeholder - not used. Injuries/suspensions not shown -> null."
+    },
+    {
+      "match_id": "5904776",
+      "date": "2026-10-24",
+      "kickoff_utc": "13:00",
+      "competition": "Süper Lig",
+      "round": "Round 9",
+      "venue": "Gaziantep Stadyumu",
+      "home_team": "Gaziantep FK",
+      "away_team": "Erzurumspor FK",
+      "focus_team": "Gaziantep FK",
+      "focus_side": "home",
+      "opponent": "Erzurumspor FK",
+      "score": {
+        "ht": [
+          0,
+          0
+        ],
+        "ft": [
+          1,
+          3
+        ]
+      },
+      "result": "L",
+      "goals": [
+        {
+          "minute": 52,
+          "team": "Erzurumspor FK",
+          "scorer": "Miguel Cardoso",
+          "assist": "Eren Tozlu",
+          "type": null
+        },
+        {
+          "minute": 64,
+          "team": "Erzurumspor FK",
+          "scorer": "Amar Gërxhaliu",
+          "assist": "Orhan Ovacıklı",
+          "type": null
+        },
+        {
+          "minute": 70,
+          "team": "Gaziantep FK",
+          "scorer": "Orhan Ovacıklı",
+          "assist": null,
+          "type": "own_goal"
+        },
+        {
+          "minute": 90,
+          "team": "Erzurumspor FK",
+          "scorer": "Guram Giorbelidze",
+          "assist": "Mustafa Fettahoğlu",
+          "type": null,
+          "added_time": 4
+        }
+      ],
+      "cards": [
+        {
+          "minute": 29,
+          "team": "Gaziantep FK",
+          "player": "Myenty Abena",
+          "card": "yellow"
+        },
+        {
+          "minute": 84,
+          "team": "Gaziantep FK",
+          "player": "Kacper Kozłowski",
+          "card": "yellow"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": 62,
+          "xg": 1.6,
+          "shots": 21,
+          "shots_on_target": 7,
+          "corners": 5,
+          "fouls": 10,
+          "big_chances": null
+        },
+        "away": {
+          "possession": 38,
+          "xg": 1.2,
+          "shots": 10,
+          "shots_on_target": 3,
+          "corners": 2,
+          "fouls": 7,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-1-4-1",
+        "away": "5-3-2"
+      },
+      "coach": {
+        "home": "Orhan Ak",
+        "away": "Serkan Özbalta"
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "Kacper Tobiasz",
+            "number": 25,
+            "rating": 5.3,
+            "subbed_off": null
+          },
+          {
+            "name": "Luis Pérez",
+            "number": 2,
+            "rating": 6.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Myenty Abena",
+            "number": 14,
+            "rating": 6.5,
+            "subbed_off": 41
+          },
+          {
+            "name": "Abakar Sylla",
+            "number": 21,
+            "rating": 6.8,
+            "subbed_off": null
+          },
+          {
+            "name": "Kerim Çalhanoğlu",
+            "number": 23,
+            "rating": 6.7,
+            "subbed_off": null
+          },
+          {
+            "name": "Juninho Bacuna",
+            "number": 7,
+            "rating": 6.9,
+            "subbed_off": 70
+          },
+          {
+            "name": "Deian Sorescu",
+            "number": 18,
+            "rating": 6.4,
+            "subbed_off": null
+          },
+          {
+            "name": "Drissa Camara",
+            "number": 3,
+            "rating": 6.8,
+            "subbed_off": 79
+          },
+          {
+            "name": "Alexandru Maxim",
+            "number": 44,
+            "rating": 7.1,
+            "subbed_off": null
+          },
+          {
+            "name": "Kacper Kozłowski",
+            "number": 10,
+            "rating": 6.2,
+            "subbed_off": null
+          },
+          {
+            "name": "Trivante Stewart",
+            "number": 9,
+            "rating": 6.0,
+            "subbed_off": 46
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Arda Kızıldağ",
+            "number": 4,
+            "on": 41,
+            "replaced": "Myenty Abena",
+            "rating": 6.1
+          },
+          {
+            "name": "Serdar Dursun",
+            "number": 19,
+            "on": 46,
+            "replaced": "Trivante Stewart",
+            "rating": 6.2
+          },
+          {
+            "name": "Sabahattin Destici",
+            "number": 77,
+            "on": 58,
+            "replaced": "Arda Kızıldağ",
+            "rating": 6.2
+          },
+          {
+            "name": "Karamba Gassama",
+            "number": 17,
+            "on": 70,
+            "replaced": "Juninho Bacuna",
+            "rating": 6.1
+          },
+          {
+            "name": "Halil Dervişoğlu",
+            "number": 28,
+            "on": 79,
+            "replaced": "Drissa Camara",
+            "rating": 5.9
+          }
+        ]
+      },
+      "unavailable_focus": [
+        {
+          "name": "Ali Kalın",
+          "reason": "injury: muscle (doubtful)"
+        },
+        {
+          "name": "Nazım Sangaré",
+          "reason": "injury: muscle (doubtful)"
+        },
+        {
+          "name": "Fuat Bavuk",
+          "reason": "injury: thigh (expected return late December 2026)"
+        }
+      ],
+      "player_of_match": "Ertuğrul Taşkıran",
+      "source_urls": [
+        "https://www.fotmob.com/teams/4081/fixtures/gaziantep-fk",
+        "https://www.fotmob.com/matches/gaziantep-fk-vs-erzurumspor-fk/iq8snzj#5904776",
+        "https://africa.espn.com/football/match/_/gameId/401888270/erzurum-bb-gaziantep-fk",
+        "https://www.beinsports.com.tr/haber/gaziantep-fkde-orhan-ak-donemi"
+      ],
+      "notes": "ESPN calls the opponent 'Erzurum BB'. Own goal by Orhan Ovacıklı (Erzurumspor) credited to Gaziantep FK. Possession/xG/shots from FotMob (left = home; ESPN GAZ 62% confirms); SoT/corners/fouls from ESPN (SoT % 7/21=33%, 3/10=30% consistent; ERZ saves 7). HT not stated; derived from goal minutes (first goal 52'). Sub minutes use the FotMob event timeline; the page's rating block shows Abena off 46' (not 41') and Bacuna off 74' (not 70'). Kızıldağ came on 41' and was himself replaced 58'. Coaches listed unlabelled; Ak assigned to Gaziantep (beIN), Özbalta by elimination. Unavailable list attributed to Gaziantep in FotMob's match notes but rendered in a block under Erzurumspor; the same three players appear as Gaziantep unavailable on the 27 Oct cup page, and Bavuk played for Gaziantep in R2/R3."
+    },
+    {
+      "match_id": "6420058",
+      "date": "2026-10-27",
+      "kickoff_utc": "10:30",
+      "competition": "Turkish Cup",
+      "round": "Qualification Round 3",
+      "venue": "Etimesgut Belediyesi Atatürk Stadı",
+      "home_team": "Etimesgut Spor Kulubu",
+      "away_team": "Gaziantep FK",
+      "focus_team": "Gaziantep FK",
+      "focus_side": "away",
+      "opponent": "Etimesgut Spor Kulubu",
+      "score": {
+        "ht": [
+          0,
+          2
+        ],
+        "ft": [
+          0,
+          4
+        ]
+      },
+      "result": "W",
+      "goals": [
+        {
+          "minute": 7,
+          "team": "Gaziantep FK",
+          "scorer": "Enver Kulašin",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 41,
+          "team": "Gaziantep FK",
+          "scorer": "Efe Sarıkaya",
+          "assist": "Mirza Cihan",
+          "type": "set_piece"
+        },
+        {
+          "minute": 74,
+          "team": "Gaziantep FK",
+          "scorer": "Karamba Gassama",
+          "assist": null,
+          "type": null
+        },
+        {
+          "minute": 90,
+          "team": "Gaziantep FK",
+          "scorer": "Halil Dervişoğlu",
+          "assist": null,
+          "type": null,
+          "added_time": 2
+        }
+      ],
+      "cards": [
+        {
+          "minute": 5,
+          "team": "Etimesgut Spor Kulubu",
+          "player": "Mertcan Albayrak",
+          "card": "yellow"
+        },
+        {
+          "minute": 23,
+          "team": "Etimesgut Spor Kulubu",
+          "player": "Hayrullah Erkip",
+          "card": "yellow"
+        },
+        {
+          "minute": 33,
+          "team": "Gaziantep FK",
+          "player": "Juninho Bacuna",
+          "card": "yellow"
+        }
+      ],
+      "stats": {
+        "home": {
+          "possession": null,
+          "xg": null,
+          "shots": null,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        },
+        "away": {
+          "possession": null,
+          "xg": null,
+          "shots": null,
+          "shots_on_target": null,
+          "corners": null,
+          "fouls": null,
+          "big_chances": null
+        }
+      },
+      "formation": {
+        "home": "4-2-3-1",
+        "away": "4-2-3-1"
+      },
+      "coach": {
+        "home": null,
+        "away": null
+      },
+      "focus_lineup": {
+        "starters": [
+          {
+            "name": "Ataberk Dadakdeniz",
+            "number": 35,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Sabahattin Destici",
+            "number": 77,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Efe Sarıkaya",
+            "number": 5,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Myenty Abena",
+            "number": 14,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Enver Kulašin",
+            "number": 27,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Karamba Gassama",
+            "number": 17,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Victor Gidado",
+            "number": 8,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Mehmet Ali Genç",
+            "number": 93,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Juninho Bacuna",
+            "number": 7,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Mirza Cihan",
+            "number": 11,
+            "rating": null,
+            "subbed_off": null
+          },
+          {
+            "name": "Trivante Stewart",
+            "number": 9,
+            "rating": null,
+            "subbed_off": null
+          }
+        ],
+        "subs_used": [
+          {
+            "name": "Halil Dervişoğlu",
+            "number": 28,
+            "on": null,
+            "replaced": null,
+            "rating": null
+          }
+        ]
+      },
+      "unavailable_focus": [
+        {
+          "name": "Ali Kalın",
+          "reason": "injury: muscle (doubtful)"
+        },
+        {
+          "name": "Nazım Sangaré",
+          "reason": "injury: muscle (doubtful)"
+        },
+        {
+          "name": "Fuat Bavuk",
+          "reason": "injury: thigh (expected return late December 2026)"
+        }
+      ],
+      "player_of_match": null,
+      "source_urls": [
+        "https://www.fotmob.com/teams/4081/fixtures/gaziantep-fk",
+        "https://www.fotmob.com/matches/gaziantep-fk-vs-etimesgut-spor-kulubu/kxl7egoy#6420058",
+        "https://beinsports.com.tr/haber/gaziantep-fk-kupada-farkla-turladi",
+        "https://www.politikam.com/etimesgutspor-gaziantep-fk-mac-sonucu-goller-4-0",
+        "https://www.politikam.com/etimesgutspor-gaziantep-fk-maci-ne-zaman-saat-kacta-hangi-kanalda",
+        "https://www.haberkenti.com/etimesgut-sk-ziraat-turkiye-kupasinda-gaziantep-fkya-0-4-yenildi"
+      ],
+      "notes": "Ziraat Türkiye Kupası; FotMob labels it 'Cup Qualification, Round 3', beIN/politikam call it the 3rd qualifying round (3. eleme turu). FotMob page shows result, goals, formations and starting XIs only - no stats, ratings, substitutions, coaches, venue or referee. Date/kickoff: FotMob 27 Oct 10:30 UTC; politikam preview says 27 Oct 2026 13:30 (Turkish time = 10:30 UTC). beIN's report timestamp (27 Oct 13:22 local) is earlier than that kickoff and haberkenti's text says '26 October 2023' - both treated as publisher errors. HT 0-2 stated by beIN. Venue and referee (Melih Aldemir) from politikam report. Cards (none on FotMob) from politikam: Albayrak 5', Erkip 23', Bacuna 33'; haberkenti lists the same three names without minutes. 41' goal: beIN says Sarıkaya headed in a Mirza Cihan corner - assist/set_piece recorded from that description. Dervişoğlu was not in the starting XI but scored 90+2', so he came on as a substitute; minute and replaced player not shown anywhere. Other subs unknown. Unavailable list from FotMob cup page."
+    }
+  ]
+}

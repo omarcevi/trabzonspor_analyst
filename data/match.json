@@ -1,0 +1,77 @@
+{
+  "retrieved": "2026-10-30",
+  "sources": [
+    "https://www.fotmob.com/matches/gaziantep-fk-vs-trabzonspor/1kz0w5#5904785",
+    "https://www.fotmob.com/teams/9752/fixtures/trabzonspor",
+    "https://www.fotmob.com/teams/9752/squad/trabzonspor",
+    "https://www.fotmob.com/teams/4081/squad/gaziantep-fk"
+  ],
+  "home_team": "Trabzonspor",
+  "away_team": "Gaziantep FK",
+  "date": "2026-11-01",
+  "kickoff_utc": "2026-11-01T13:00:00Z",
+  "competition": "Süper Lig",
+  "round": 10,
+  "venue": "Papara Park",
+  "city": "Trabzon",
+  "country": "Türkiye",
+  "capacity": 41513,
+  "surface": "grass",
+  "weather_forecast_temp_c": 19,
+  "referee": {
+    "name": "Abdullah Taşkınsoy",
+    "country": "Türkiye",
+    "yellow_cards_per_match": 3.6,
+    "yellow_cards_label": "Below average",
+    "fouls_per_match": 24.4,
+    "fouls_label": "Below average",
+    "red_cards_per_match": null,
+    "penalties_per_match": null
+  },
+  "coaches": {
+    "Trabzonspor": {
+      "name": "Thomas Reis",
+      "nationality": "Germany",
+      "age": 53
+    },
+    "Gaziantep FK": {
+      "name": "Orhan Ak",
+      "nationality": "Türkiye",
+      "age": 47
+    }
+  },
+  "last_starting_formations": {
+    "Trabzonspor": "4-1-4-1",
+    "Gaziantep FK": "4-2-3-1"
+  },
+  "head_to_head": {
+    "Trabzonspor_wins": 9,
+    "Gaziantep_FK_wins": 0,
+    "draws": 6,
+    "page_text": "Trabzonspor haven't lost to Gaziantep FK in their last 15 meetings (9W, 6D).",
+    "past_meetings": null
+  },
+  "top_players": {
+    "Trabzonspor": {
+      "name": "Mohamed Salah",
+      "goals": 8,
+      "assists": 3,
+      "fotmob_rating": 8.01,
+      "xg": 4.71,
+      "matches": 9,
+      "note": "Page says he is the competition's top scorer (8)."
+    },
+    "Gaziantep FK": {
+      "name": "Kacper Kozłowski",
+      "goals": 2,
+      "assists": 1,
+      "fotmob_rating": 7.1,
+      "xg": 1.62,
+      "matches": 9,
+      "big_chances_created": 6
+    }
+  },
+  "insights": [
+    "Serdar Dursun leads Gaziantep FK in shots on target per match (1.7) but is listed as injured."
+  ]
+}

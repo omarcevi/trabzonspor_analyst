@@ -1,0 +1,1664 @@
+{
+  "retrieved": "2026-10-30",
+  "team": "Trabzonspor",
+  "coach": {
+    "name": "Thomas Reis",
+    "nationality": "Germany",
+    "age": 53
+  },
+  "league_position": {
+    "position": 3,
+    "team": "Trabzonspor",
+    "played": 9,
+    "won": 6,
+    "drawn": 1,
+    "lost": 2,
+    "goals_for": 22,
+    "goals_against": 8,
+    "goal_difference": 14,
+    "points": 19,
+    "form": null
+  },
+  "trends_last10": {
+    "matches": 10,
+    "won": 7,
+    "drawn": 0,
+    "lost": 3,
+    "goals_for": 25,
+    "goals_against": 12,
+    "avg_goals_for": 2.5,
+    "avg_goals_against": 1.2,
+    "clean_sheets": 5,
+    "failed_to_score": 2,
+    "avg_xg_for": 1.98,
+    "avg_xg_against": 1.63,
+    "xg_matches": 10,
+    "home_away": {
+      "home": {
+        "p": 4,
+        "w": 4,
+        "d": 0,
+        "l": 0,
+        "gf": 13,
+        "ga": 0
+      },
+      "away": {
+        "p": 6,
+        "w": 3,
+        "d": 0,
+        "l": 3,
+        "gf": 12,
+        "ga": 12
+      }
+    },
+    "goals_by_15min": {
+      "1-15": {
+        "scored": 5,
+        "conceded": 3
+      },
+      "16-30": {
+        "scored": 3,
+        "conceded": 0
+      },
+      "31-45": {
+        "scored": 6,
+        "conceded": 2
+      },
+      "46-60": {
+        "scored": 6,
+        "conceded": 3
+      },
+      "61-75": {
+        "scored": 1,
+        "conceded": 1
+      },
+      "76-90": {
+        "scored": 4,
+        "conceded": 3
+      }
+    },
+    "form_oldest_to_newest": "LLWLWWWWWW"
+  },
+  "players": [
+    {
+      "name": "Ahmet Yıldırım",
+      "shirt_number": 1,
+      "position": "GK",
+      "position_group": "Goalkeeper",
+      "age": 19,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": null
+    },
+    {
+      "name": "André Onana",
+      "shirt_number": 24,
+      "position": "GK",
+      "position_group": "Goalkeeper",
+      "age": 30,
+      "nationality": "Cameroon",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 10,
+        "starts": 10,
+        "sub_apps": 0,
+        "minutes_approx": 900,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 3,
+        "red_cards": 0,
+        "avg_rating": 7.79,
+        "rated_matches": 8,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 6.3
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 8.4
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 8.0
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 7.6
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 8.0
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 8.2
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": 8.8
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 7.0
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Onuralp Çevikkan",
+      "shirt_number": 25,
+      "position": "GK",
+      "position_group": "Goalkeeper",
+      "age": 20,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "doubtful",
+        "reason": "Muscle injury",
+        "expected_return": "Doubtful"
+      },
+      "last10": null
+    },
+    {
+      "name": "Erol Çolak",
+      "shirt_number": 96,
+      "position": "GK",
+      "position_group": "Goalkeeper",
+      "age": 20,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": null
+    },
+    {
+      "name": "Wagner Pina",
+      "shirt_number": 20,
+      "position": "RB, RWB",
+      "position_group": "Defender",
+      "age": 23,
+      "nationality": "Cape Verde",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 10,
+        "starts": 7,
+        "sub_apps": 3,
+        "minutes_approx": 712,
+        "goals": 0,
+        "assists": 1,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "avg_rating": 6.86,
+        "rated_matches": 8,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 5.9
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 5.2
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 8.1
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 7.4
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 7.3
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 7.3
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": 7.3
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 6.4
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Samet Akaydin",
+      "shirt_number": 4,
+      "position": "CB",
+      "position_group": "Defender",
+      "age": 32,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 4,
+        "starts": 2,
+        "sub_apps": 2,
+        "minutes_approx": 213,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 2,
+        "red_cards": 0,
+        "avg_rating": 7.13,
+        "rated_matches": 3,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 6.2
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 7.3
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 7.9
+          }
+        ]
+      }
+    },
+    {
+      "name": "Okay Yokuşlu",
+      "shirt_number": 5,
+      "position": "CB",
+      "position_group": "Defender",
+      "age": 32,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "out",
+        "reason": "Injured",
+        "expected_return": "Late December 2026"
+      },
+      "last10": null
+    },
+    {
+      "name": "Stefan Savić",
+      "shirt_number": 15,
+      "position": "CB",
+      "position_group": "Defender",
+      "age": 35,
+      "nationality": "Montenegro",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 8,
+        "starts": 8,
+        "sub_apps": 0,
+        "minutes_approx": 719,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 3,
+        "red_cards": 0,
+        "avg_rating": 7.03,
+        "rated_matches": 6,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 5.8
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 6.2
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 7.7
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 7.7
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 6.9
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": 7.9
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Chibuike Nwaiwu",
+      "shirt_number": 27,
+      "position": "CB",
+      "position_group": "Defender",
+      "age": 23,
+      "nationality": "Nigeria",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 7,
+        "starts": 7,
+        "sub_apps": 0,
+        "minutes_approx": 623,
+        "goals": 1,
+        "assists": 0,
+        "yellow_cards": 2,
+        "red_cards": 0,
+        "avg_rating": 7.2,
+        "rated_matches": 5,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 6.1
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 7.8
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 7.4
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 7.3
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": 7.4
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cenk Özkacar",
+      "shirt_number": 39,
+      "position": "CB",
+      "position_group": "Defender",
+      "age": 26,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 7,
+        "starts": 3,
+        "sub_apps": 4,
+        "minutes_approx": 292,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "avg_rating": 6.63,
+        "rated_matches": 3,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 5.7
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": null
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 6.7
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": null
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 7.5
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Arseniy Batagov",
+      "shirt_number": 44,
+      "position": "CB",
+      "position_group": "Defender",
+      "age": 24,
+      "nationality": "Ukraine",
+      "availability": {
+        "status": "out",
+        "reason": "Hamstring injury",
+        "expected_return": "Mid November 2026"
+      },
+      "last10": null
+    },
+    {
+      "name": "Kuzey Akçay",
+      "shirt_number": 81,
+      "position": "Defender",
+      "position_group": "Defender",
+      "age": 16,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 1,
+        "starts": 0,
+        "sub_apps": 1,
+        "minutes_approx": 3,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "avg_rating": null,
+        "rated_matches": 0,
+        "ratings_by_match": [
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mustafa Eskihellaç",
+      "shirt_number": 19,
+      "position": "LB, LW, LWB",
+      "position_group": "Defender",
+      "age": 29,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 7,
+        "starts": 7,
+        "sub_apps": 0,
+        "minutes_approx": 538,
+        "goals": 0,
+        "assists": 2,
+        "yellow_cards": 1,
+        "red_cards": 0,
+        "avg_rating": 7.08,
+        "rated_matches": 5,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 6.3
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 6.3
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 7.5
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 7.1
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 8.2
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sidny Lopes Cabral",
+      "shirt_number": 55,
+      "position": "LB, LW, RB, RM, LM",
+      "position_group": "Defender",
+      "age": 24,
+      "nationality": "Cape Verde",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 9,
+        "starts": 4,
+        "sub_apps": 5,
+        "minutes_approx": 412,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 3,
+        "red_cards": 2,
+        "avg_rating": 6.08,
+        "rated_matches": 6,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 4.1
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 6.2
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": null
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 6.0
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 6.5
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": 7.2
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 6.5
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fabinho",
+      "shirt_number": 6,
+      "position": "DM, CM, CB",
+      "position_group": "Midfielder",
+      "age": 33,
+      "nationality": "Brazil",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 9,
+        "starts": 7,
+        "sub_apps": 2,
+        "minutes_approx": 593,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 3,
+        "red_cards": 0,
+        "avg_rating": 6.91,
+        "rated_matches": 7,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 6.2
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 7.2
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 7.2
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 8.1
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 7.2
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": 6.5
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 6.0
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Benjamin Bouchouari",
+      "shirt_number": 8,
+      "position": "DM, CM",
+      "position_group": "Midfielder",
+      "age": 24,
+      "nationality": "Morocco",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 3,
+        "starts": 2,
+        "sub_apps": 1,
+        "minutes_approx": 205,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "avg_rating": 6.87,
+        "rated_matches": 3,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 5.9
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 7.2
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 7.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ozan Tufan",
+      "shirt_number": 11,
+      "position": "DM, RB, AM, CM, CB",
+      "position_group": "Midfielder",
+      "age": 31,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 10,
+        "starts": 4,
+        "sub_apps": 6,
+        "minutes_approx": 439,
+        "goals": 1,
+        "assists": 1,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "avg_rating": 6.75,
+        "rated_matches": 8,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 5.8
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 6.9
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 6.6
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 6.3
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 7.3
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 6.7
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": 7.9
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 6.5
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tim Jabol-Folcarelli",
+      "shirt_number": 26,
+      "position": "DM, CM",
+      "position_group": "Midfielder",
+      "age": 26,
+      "nationality": "France",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 5,
+        "starts": 1,
+        "sub_apps": 4,
+        "minutes_approx": 183,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "avg_rating": 6.77,
+        "rated_matches": 3,
+        "ratings_by_match": [
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 6.1
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": 6.3
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 7.9
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Melih Kabasakal",
+      "shirt_number": 57,
+      "position": "DM, CM",
+      "position_group": "Midfielder",
+      "age": 30,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 8,
+        "starts": 7,
+        "sub_apps": 1,
+        "minutes_approx": 581,
+        "goals": 1,
+        "assists": 0,
+        "yellow_cards": 1,
+        "red_cards": 1,
+        "avg_rating": 6.85,
+        "rated_matches": 6,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 6.3
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 6.8
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 6.3
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 6.6
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 7.5
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 7.6
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Batista Mendy",
+      "shirt_number": 3,
+      "position": "CM, DM",
+      "position_group": "Midfielder",
+      "age": 26,
+      "nationality": "France",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 2,
+        "starts": 2,
+        "sub_apps": 0,
+        "minutes_approx": 142,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 1,
+        "red_cards": 0,
+        "avg_rating": 7.25,
+        "rated_matches": 2,
+        "ratings_by_match": [
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 6.7
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 7.8
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ruslan Malinovsky",
+      "shirt_number": 17,
+      "position": "CM, DM, AM",
+      "position_group": "Midfielder",
+      "age": 33,
+      "nationality": "Ukraine",
+      "availability": {
+        "status": "out",
+        "reason": "Knee injury",
+        "expected_return": "Late November 2026"
+      },
+      "last10": {
+        "matches": 1,
+        "starts": 1,
+        "sub_apps": 0,
+        "minutes_approx": 13,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 1,
+        "avg_rating": 4.5,
+        "rated_matches": 1,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Yiğithan Çubukcu",
+      "shirt_number": 82,
+      "position": "Midfielder",
+      "position_group": "Midfielder",
+      "age": 18,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": null
+    },
+    {
+      "name": "Oğuzhan Ertem",
+      "shirt_number": 90,
+      "position": "CM",
+      "position_group": "Midfielder",
+      "age": 18,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": null
+    },
+    {
+      "name": "Ernest Muçi",
+      "shirt_number": 7,
+      "position": "AM, RW, LW, CM, LM, RM",
+      "position_group": "Midfielder",
+      "age": 25,
+      "nationality": "Albania",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 9,
+        "starts": 8,
+        "sub_apps": 1,
+        "minutes_approx": 549,
+        "goals": 2,
+        "assists": 5,
+        "yellow_cards": 2,
+        "red_cards": 0,
+        "avg_rating": 7.14,
+        "rated_matches": 7,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 6.1
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 7.7
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 7.6
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 6.9
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 7.0
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 7.0
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": 7.7
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Aral Şimşir",
+      "shirt_number": 58,
+      "position": "AM, LW, ST, LM",
+      "position_group": "Midfielder",
+      "age": 24,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 10,
+        "starts": 6,
+        "sub_apps": 4,
+        "minutes_approx": 580,
+        "goals": 1,
+        "assists": 2,
+        "yellow_cards": 1,
+        "red_cards": 0,
+        "avg_rating": 6.9,
+        "rated_matches": 7,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 6.0
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 6.8
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 8.7
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 6.5
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": null
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 6.6
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": 7.6
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 6.1
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mohamed Salah",
+      "shirt_number": 10,
+      "position": "RW, ST, AM",
+      "position_group": "Forward",
+      "age": 34,
+      "nationality": "Egypt",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 10,
+        "starts": 10,
+        "sub_apps": 0,
+        "minutes_approx": 802,
+        "goals": 8,
+        "assists": 5,
+        "yellow_cards": 1,
+        "red_cards": 0,
+        "avg_rating": 8.03,
+        "rated_matches": 8,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 5.9
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 7.8
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 8.8
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 6.5
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 9.8
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 8.7
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": 8.4
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 8.3
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cihan Çanak",
+      "shirt_number": 61,
+      "position": "RW",
+      "position_group": "Forward",
+      "age": 21,
+      "nationality": "Belgium",
+      "availability": {
+        "status": "doubtful",
+        "reason": "Muscle injury",
+        "expected_return": "Doubtful"
+      },
+      "last10": null
+    },
+    {
+      "name": "Umut Beşli",
+      "shirt_number": 18,
+      "position": "Attacker",
+      "position_group": "Forward",
+      "age": null,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": null
+    },
+    {
+      "name": "Noah Saviolo",
+      "shirt_number": 70,
+      "position": "LW, RW, LM",
+      "position_group": "Forward",
+      "age": 22,
+      "nationality": "Portugal",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 8,
+        "starts": 4,
+        "sub_apps": 4,
+        "minutes_approx": 327,
+        "goals": 1,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "avg_rating": 6.75,
+        "rated_matches": 6,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 6.3
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 6.1
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 6.4
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 7.6
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 6.8
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": null
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 7.3
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Metehan Mimaroğlu",
+      "shirt_number": 77,
+      "position": "LW",
+      "position_group": "Forward",
+      "age": 32,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 2,
+        "starts": 0,
+        "sub_apps": 2,
+        "minutes_approx": 46,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "avg_rating": 6.3,
+        "rated_matches": 2,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 5.9
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 6.7
+          }
+        ]
+      }
+    },
+    {
+      "name": "Franculino",
+      "shirt_number": 9,
+      "position": "ST, AM, RW",
+      "position_group": "Forward",
+      "age": 22,
+      "nationality": "Guinea-Bissau",
+      "availability": {
+        "status": "doubtful",
+        "reason": "Muscle injury",
+        "expected_return": "Doubtful"
+      },
+      "last10": {
+        "matches": 8,
+        "starts": 5,
+        "sub_apps": 3,
+        "minutes_approx": 545,
+        "goals": 7,
+        "assists": 2,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "avg_rating": 7.75,
+        "rated_matches": 6,
+        "ratings_by_match": [
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 8.0
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 5.7
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 7.8
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 8.9
+          },
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": 7.7
+          },
+          {
+            "date": "2026-10-22",
+            "opponent": "Hearts",
+            "rating": 8.4
+          },
+          {
+            "date": "2026-10-26",
+            "opponent": "Çaykur Rizespor",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mehmet Umut Nayir",
+      "shirt_number": 14,
+      "position": "ST",
+      "position_group": "Forward",
+      "age": 33,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": {
+        "matches": 1,
+        "starts": 0,
+        "sub_apps": 1,
+        "minutes_approx": 2,
+        "goals": 0,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "avg_rating": null,
+        "rated_matches": 0,
+        "ratings_by_match": [
+          {
+            "date": "2026-10-19",
+            "opponent": "Beşiktaş",
+            "rating": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "Paul Onuachu",
+      "shirt_number": 30,
+      "position": "ST",
+      "position_group": "Forward",
+      "age": 32,
+      "nationality": "Nigeria",
+      "availability": {
+        "status": "out",
+        "reason": "Muscle injury",
+        "expected_return": "Early November 2026"
+      },
+      "last10": {
+        "matches": 7,
+        "starts": 5,
+        "sub_apps": 2,
+        "minutes_approx": 324,
+        "goals": 3,
+        "assists": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "avg_rating": 6.65,
+        "rated_matches": 6,
+        "ratings_by_match": [
+          {
+            "date": "2026-08-27",
+            "opponent": "Ferencváros",
+            "rating": 5.8
+          },
+          {
+            "date": "2026-08-31",
+            "opponent": "Amed Sportif",
+            "rating": 6.0
+          },
+          {
+            "date": "2026-09-06",
+            "opponent": "Gençlerbirliği",
+            "rating": 8.7
+          },
+          {
+            "date": "2026-09-12",
+            "opponent": "Konyaspor",
+            "rating": 6.0
+          },
+          {
+            "date": "2026-09-19",
+            "opponent": "Galatasaray",
+            "rating": 6.3
+          },
+          {
+            "date": "2026-10-10",
+            "opponent": "Samsunspor",
+            "rating": null
+          },
+          {
+            "date": "2026-10-15",
+            "opponent": "KuPS",
+            "rating": 7.1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ali Habeşoğlu",
+      "shirt_number": 99,
+      "position": "ST, AM",
+      "position_group": "Forward",
+      "age": 22,
+      "nationality": "Türkiye",
+      "availability": {
+        "status": "available",
+        "reason": null,
+        "expected_return": null
+      },
+      "last10": null
+    }
+  ],
+  "notes": [
+    "last10 stats are computed from the match lineups in results.json; null = did not appear in those matches.",
+    "minutes_approx counts 90 per full match and ignores stoppage time.",
+    "Some matches have no player ratings (aggregator sources), so rated_matches can be lower than matches.",
+    "red_cards includes second-yellow dismissals; the first yellow in that match is also counted in yellow_cards.",
+    "Players one yellow card from a suspension: not reported by any source checked."
+  ],
+  "sources": [
+    "https://www.fotmob.com/teams/9752/squad/trabzonspor",
+    "https://www.fotmob.com/teams/9752/stats/trabzonspor",
+    "https://www.fotmob.com/matches/gaziantep-fk-vs-trabzonspor/1kz0w5#5904785"
+  ]
+}

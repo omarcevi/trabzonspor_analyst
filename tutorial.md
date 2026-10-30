@@ -97,9 +97,8 @@ work. The tools are Python functions that the agent can call.
 
 ### ✏️ BLANK 1 · the whole agent
 
-**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step1_scout/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 1 · .*">BLANK 1 in steps/step1_scout/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
-
-**Copy the code.** Select the code below and press Ctrl+C (⌘C on a Mac). You can also use the copy button in the [guide](https://omarcevi.dev/workshops/match-day-agents/step-1/#blank-1).
+**Copy the code.** Click the copy button at the top right of the code below. The
+[guide](https://omarcevi.dev/workshops/match-day-agents/step-1/#blank-1) explains each line.
 
 ```python
 def build_scout(
@@ -128,7 +127,9 @@ How you work:
 root_agent = build_scout()
 ```
 
-**Paste and save.** In the editor, press Ctrl+V (⌘V) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
+**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step1_scout/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 1 · .*">BLANK 1 in steps/step1_scout/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
+
+**Paste and save.** Press Ctrl+V (⌘V on a Mac) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
 
 ### Run it
 
@@ -160,9 +161,8 @@ already there. You add the tactician and the line that connects the three agents
 
 ### ✏️ BLANK 2a · the tactician
 
-**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step2_match_prep/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 2a · .*">BLANK 2a in steps/step2_match_prep/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
-
-**Copy the code.** Select the code below and press Ctrl+C (⌘C on a Mac). You can also use the copy button in the [guide](https://omarcevi.dev/workshops/match-day-agents/step-2/#blank-2a).
+**Copy the code.** Click the copy button at the top right of the code below. The
+[guide](https://omarcevi.dev/workshops/match-day-agents/step-2/#blank-2a) explains each line.
 
 ```python
     tactician = LlmAgent(
@@ -180,19 +180,22 @@ formation, how we attack, how we defend, and what to do in each phase of the mat
     )
 ```
 
-**Paste and save.** In the editor, press Ctrl+V (⌘V) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
+**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step2_match_prep/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 2a · .*">BLANK 2a in steps/step2_match_prep/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
+
+**Paste and save.** Press Ctrl+V (⌘V on a Mac) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
 
 ### ✏️ BLANK 2b · the SequentialAgent
 
-**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step2_match_prep/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 2b · .*">BLANK 2b in steps/step2_match_prep/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
-
-**Copy the code.** Select the code below and press Ctrl+C (⌘C on a Mac). You can also use the copy button in the [guide](https://omarcevi.dev/workshops/match-day-agents/step-2/#blank-2b).
+**Copy the code.** Click the copy button at the top right of the code below. The
+[guide](https://omarcevi.dev/workshops/match-day-agents/step-2/#blank-2b) explains each line.
 
 ```python
     return SequentialAgent(name=name, description=description, sub_agents=[opponent_analyst, tactician, lineup_picker])
 ```
 
-**Paste and save.** In the editor, press Ctrl+V (⌘V) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
+**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step2_match_prep/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 2b · .*">BLANK 2b in steps/step2_match_prep/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
+
+**Paste and save.** Press Ctrl+V (⌘V on a Mac) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
 
 ### Run it
 
@@ -223,9 +226,8 @@ a report writer merges the three reports. Open
 
 ### ✏️ BLANK 3 · the report writer
 
-**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step3_scouting_dept/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 3 · .*">BLANK 3 in steps/step3_scouting_dept/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
-
-**Copy the code.** Select the code below and press Ctrl+C (⌘C on a Mac). You can also use the copy button in the [guide](https://omarcevi.dev/workshops/match-day-agents/step-3/#blank-3).
+**Copy the code.** Click the copy button at the top right of the code below. The
+[guide](https://omarcevi.dev/workshops/match-day-agents/step-3/#blank-3) explains each line.
 
 ```python
     report_writer = LlmAgent(
@@ -243,7 +245,9 @@ Use only facts from the reports; if they disagree, say so.""" + HOUSE_RULES,
     return SequentialAgent(name=name, description=description, sub_agents=[scouts, report_writer])
 ```
 
-**Paste and save.** In the editor, press Ctrl+V (⌘V) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
+**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step3_scouting_dept/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 3 · .*">BLANK 3 in steps/step3_scouting_dept/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
+
+**Paste and save.** Press Ctrl+V (⌘V on a Mac) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
 
 ### Run it
 
@@ -275,9 +279,8 @@ instruction reads `{tribun_feedback?}`. The `?` lets round one start without fee
 
 ### ✏️ BLANK 4 · the Tribün
 
-**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step4_tribun/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 4 · .*">BLANK 4 in steps/step4_tribun/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
-
-**Copy the code.** Select the code below and press Ctrl+C (⌘C on a Mac). You can also use the copy button in the [guide](https://omarcevi.dev/workshops/match-day-agents/step-4/#blank-4).
+**Copy the code.** Click the copy button at the top right of the code below. The
+[guide](https://omarcevi.dev/workshops/match-day-agents/step-4/#blank-4) explains each line.
 
 ```python
     tribun = LlmAgent(
@@ -305,7 +308,9 @@ Don't invent new demands each round: approve as soon as the checks pass.
     return LoopAgent(name=name, description=description, sub_agents=[lineup_picker, tribun], max_iterations=3)
 ```
 
-**Paste and save.** In the editor, press Ctrl+V (⌘V) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
+**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step4_tribun/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 4 · .*">BLANK 4 in steps/step4_tribun/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
+
+**Paste and save.** Press Ctrl+V (⌘V on a Mac) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
 
 ### Run it
 
@@ -337,9 +342,8 @@ an `AgentTool`. The director selects a team by its **description**. Open
 
 ### ✏️ BLANK 5a · the descriptions
 
-**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step5_technical_director/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 5a · .*">BLANK 5a in steps/step5_technical_director/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
-
-**Copy the code.** Select the code below and press Ctrl+C (⌘C on a Mac). You can also use the copy button in the [guide](https://omarcevi.dev/workshops/match-day-agents/step-5/#blank-5a).
+**Copy the code.** Click the copy button at the top right of the code below. The
+[guide](https://omarcevi.dev/workshops/match-day-agents/step-5/#blank-5a) explains each line.
 
 ```python
 # Delegation is driven by these descriptions: they are all the director knows about each team.
@@ -352,13 +356,14 @@ TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when aske
 # SCOUTING_DEPT = "Also helps with football."
 ```
 
-**Paste and save.** In the editor, press Ctrl+V (⌘V) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
+**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step5_technical_director/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 5a · .*">BLANK 5a in steps/step5_technical_director/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
+
+**Paste and save.** Press Ctrl+V (⌘V on a Mac) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
 
 ### ✏️ BLANK 5b · the teams
 
-**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step5_technical_director/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 5b · .*">BLANK 5b in steps/step5_technical_director/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
-
-**Copy the code.** Select the code below and press Ctrl+C (⌘C on a Mac). You can also use the copy button in the [guide](https://omarcevi.dev/workshops/match-day-agents/step-5/#blank-5b).
+**Copy the code.** Click the copy button at the top right of the code below. The
+[guide](https://omarcevi.dev/workshops/match-day-agents/step-5/#blank-5b) explains each line.
 
 ```python
     # Each team becomes a tool: the director calls it like a function and gets its answer back.
@@ -370,7 +375,9 @@ TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when aske
     ]
 ```
 
-**Paste and save.** In the editor, press Ctrl+V (⌘V) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
+**Select the blank.** Click <walkthrough-editor-select-regex filePath="steps/step5_technical_director/agent.py" regex="[ ]*raise NotImplementedError\(.{1,6}BLANK 5b · .*">BLANK 5b in steps/step5_technical_director/agent.py</walkthrough-editor-select-regex>. The editor opens the file and selects the BLANK line.
+
+**Paste and save.** Press Ctrl+V (⌘V on a Mac) to replace the BLANK line. Then press Ctrl+S (⌘S) to save.
 
 ### Run it
 

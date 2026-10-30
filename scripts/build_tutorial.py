@@ -54,6 +54,13 @@ def fill_blank(blank_id: str, where: str) -> str:
 """
 
 
+def ask(app: str, *prompts: str) -> str:
+    """Each prompt in its own block: the tutorial panel gives a block a copy button."""
+    what = "this question" if len(prompts) == 1 else "these three questions, one at a time"
+    blocks = "\n".join(f"```text\n{p}\n```\n" for p in prompts)
+    return f"In the dev UI, select `{app}`. Then send {what}:\n\n{blocks}"
+
+
 def late(ids: str) -> str:
     return (f"**Late?** In your second terminal tab, run this command. It pastes the code for you:\n\n"
             f"```bash\nuv run python scripts/blanks.py fill {ids}\n```\n")
@@ -108,12 +115,12 @@ Select a project that has billing. The agents call Gemini through Vertex AI in t
    ```bash
    uv run adk web --reload_agents --port 8080 --allow_origins "*" steps
    ```
-   `--reload_agents` loads a file again when you save it. `--allow_origins "*"` lets the Web
-   Preview page talk to the dev UI.
-4. Click <walkthrough-web-preview-icon></walkthrough-web-preview-icon> **Web preview**, then
-   **Preview on port 8080**. The dev UI opens in a new tab.
+   With `--reload_agents`, the dev UI loads a file again when you save it. With
+   `--allow_origins "*"`, the Web Preview page can connect to the dev UI.
+4. Click <walkthrough-web-preview-icon></walkthrough-web-preview-icon> **Web preview**. Then
+   click **Preview on port 8080**. The dev UI opens in a new tab.
 5. Click **+** in the terminal to open a second tab. Use it for all other commands. The dev UI
-   keeps running in the first tab.
+   continues to run in the first tab.
 
 ✅ **Check:** the script ends with `✅ Ready`. The dropdown at the top left of the dev UI shows six
 apps, from `bonus_live_mcp` to `step5_technical_director`. Until you fill a step, the terminal
@@ -144,10 +151,7 @@ work. The tools are Python functions that the agent can call.
 {fill_blank("1", "the whole agent")}
 ### Run it
 
-In the dev UI, select `step1_scout`. Ask:
-
-`Who's in form for us, and who can't play Sunday?`
-
+{ask("step1_scout", "Who's in form for us, and who can't play Sunday?")}
 ✅ **Check:** the events panel shows calls to `get_top_players` and `get_availability`. The answer
 gives 8 goals and 5 assists for Salah, and the players who are out or doubtful.
 
@@ -166,10 +170,7 @@ already there. You add the tactician and the line that connects the three agents
 {fill_blank("2b", "the SequentialAgent")}
 ### Run it
 
-In the dev UI, select `step2_match_prep`. Ask:
-
-`Prepare Sunday's game plan.`
-
+{ask("step2_match_prep", "Prepare Sunday's game plan.")}
 ✅ **Check:** three agents answer in order (about two minutes). The **State** tab shows
 `opponent_report`, `game_plan` and `lineup`. The XI has no player who is out or doubtful.
 
@@ -186,10 +187,7 @@ a report writer merges the three reports. Open
 {fill_blank("3", "the report writer")}
 ### Run it
 
-In the dev UI, select `step3_scouting_dept`. Ask:
-
-`Scout Gaziantep for us.`
-
+{ask("step3_scouting_dept", "Scout Gaziantep for us.")}
 ✅ **Check:** the three scouts call their tools at the same time. The brief has four sections and
 says that Gaziantep conceded 10 of 15 goals (67%) in the second half.
 
@@ -201,16 +199,13 @@ More about this step: [Step 3 · Scouting Department]({SITE}step-3/).
 A `LoopAgent` runs a lineup picker and a critic again and again. The critic is the Tribün, the home
 crowd. When it agrees with the lineup, it calls `exit_loop`. `max_iterations=3` is the safety
 limit. Open {open_file("steps/step4_tribun/agent.py")}: the lineup picker is already there. Its
-instruction reads `{{tribun_feedback?}}`. The `?` lets round one start without feedback.
+instruction reads `{{tribun_feedback?}}`. With the `?`, round one can start without feedback.
 
 {diagram("step4-tribun", "Step 4: the Tribün loop")}
 {fill_blank("4", "the Tribün")}
 ### Run it
 
-In the dev UI, select `step4_tribun`. Ask:
-
-`Pick the XI for Sunday.`
-
+{ask("step4_tribun", "Pick the XI for Sunday.")}
 ✅ **Check:** the Tribün objects in round one, with numbers from its tools. The lineup picker fixes
 the XI. Then the Tribün calls `exit_loop` and cheers. The tool `exit_loop` is in
 {open_file("matchday/tools.py", "matchday/tools.py")}.
@@ -229,14 +224,8 @@ an `AgentTool`. The director selects a team by its **description**. Open
 {fill_blank("5b", "the teams")}
 ### Run it
 
-In the dev UI, select `step5_technical_director`. Ask these three questions:
-
-`Should we rest Salah for Freiburg on Thursday?`
-
-`If we win 2-0, where do we stand?`
-
-`Bizi pazara hazırla`
-
+{ask("step5_technical_director", "Should we rest Salah for Freiburg on Thursday?",
+    "If we win 2-0, where do we stand?", "Bizi pazara hazırla")}
 ✅ **Check:** the first answer uses the scout and `get_fixtures`. The second uses only
 `project_table`: Trabzonspor go from 3rd to 1st. The third calls the scouting department and match
 prep, and answers in Turkish (about 4 minutes).

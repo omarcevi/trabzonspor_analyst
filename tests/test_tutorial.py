@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import blanks  # noqa: E402
 import build_tutorial  # noqa: E402
+import smoke  # noqa: E402
 
 TUTORIAL = (ROOT / "tutorial.md").read_text(encoding="utf-8")
 BLANKS = blanks.guide_blanks()
@@ -47,6 +48,12 @@ def test_select_link_selects_exactly_the_blank_line(path, regex, blank_id):
     line_end = main_text.find("\n", m.end())
     assert (m.start(), m.end()) == (line_start, line_end), "the selection must cover the whole line"
     assert blanks.empty(main_text[line_start:line_end + 1]) == [blank_id]
+
+
+def test_prompts_are_the_smoke_test_prompts():
+    """Participants send the same questions that scripts/smoke.py checks."""
+    prompts = re.findall(r"```text\n(.*?)\n```", TUTORIAL)
+    assert prompts == [p for app, demos in smoke.DEMOS.items() if app != "bonus_live_mcp" for p in demos]
 
 
 def test_open_in_cloud_shell_links_open_this_tutorial():

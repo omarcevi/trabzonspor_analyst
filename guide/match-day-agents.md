@@ -18,7 +18,7 @@ You will build this staff from agents. Each step adds one staff member. Each sta
 4. **Tribün:** two agents in a loop: one proposes, one criticises.
 5. **Technical Director:** an agent that delegates to all the others.
 
-Everything runs on Google's [Agent Development Kit](https://adk.dev) (ADK) for Python and a free Gemini API key. The data comes from the last ten matches of both teams. I gave this workshop at DevFest Trabzon 2026. This guide is for the people who were not in the room.
+Everything runs on Google's [Agent Development Kit](https://adk.dev) (ADK) for Python, with Gemini in your own Google Cloud project. The data comes from the last ten matches of both teams. I gave this workshop at DevFest Trabzon 2026. This guide is for the people who were not in the room.
 
 [![The whole staff: the Technical Director calls four teams as tools; every team calls plain Python tools that read the data](images/overview.svg)](images/overview.svg "Open full size")
 
@@ -26,14 +26,15 @@ Everything runs on Google's [Agent Development Kit](https://adk.dev) (ADK) for P
 
 ## Setup
 
-You need Python 3.11 or newer, [uv](https://docs.astral.sh/uv/), and a Gemini API key. You can get a free key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey). You do not need a credit card.
+You need a Google Cloud project with billing, the [gcloud CLI](https://cloud.google.com/sdk/docs/install), and Python 3.11 or newer. A new account gets [free trial credits](https://cloud.google.com/free), and they are sufficient. The agents use Gemini through Vertex AI in your project. `scripts/setup.sh` checks the project, turns on the Vertex AI API, installs the packages with [uv](https://docs.astral.sh/uv/), and writes `.env`.
 
 ```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh     # installs uv
+gcloud auth login
+gcloud auth application-default login                # credentials for the agents
+gcloud config set project YOUR_PROJECT_ID
 git clone https://github.com/omarcevi/trabzonspor_analyst
 cd trabzonspor_analyst
-cp .env.example .env                                 # paste your key into .env
-uv sync
+bash scripts/setup.sh                                # API, packages and .env
 uv run adk web --reload_agents steps
 ```
 
@@ -41,22 +42,22 @@ Open http://localhost:8000. Select a step in the dropdown and ask it a question.
 
 <!-- SCREENSHOT: adk web with the app dropdown open, showing the six step folders -->
 
-**Cloud Shell.** You can also do the workshop in your browser, with nothing to install. Click [Open in Cloud Shell](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/omarcevi/trabzonspor_analyst.git&cloudshell_git_branch=main&cloudshell_tutorial=tutorial.md&cloudshell_workspace=.&show=ide%2Cterminal). In the dialog, select **Trust repo** and click **Confirm**. Cloud Shell copies the repo and opens a tutorial panel next to the editor. The tutorial shows each step, and its links open the files and select each BLANK for you.
+**Cloud Shell.** You can also do the workshop in your browser, with nothing to install. Click [Open in Cloud Shell](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/omarcevi/trabzonspor_analyst.git&cloudshell_git_branch=main&cloudshell_tutorial=tutorial.md&cloudshell_workspace=.&show=ide%2Cterminal). In the dialog, select **Trust repo** and click **Confirm**. When Cloud Shell asks to use your credentials, click **Authorize**. Cloud Shell copies the repo and opens a tutorial panel next to the editor. The tutorial shows each step, and its links open the files and select each BLANK for you.
 
-The `.env` file holds three values: your key, `GOOGLE_GENAI_USE_VERTEXAI=FALSE` and `MODEL=gemini-3.8-flash`. The second value selects the free Gemini API, not Vertex AI. The model name is in one place only, `matchday/config.py`:
+`.env` holds four values: `GOOGLE_GENAI_USE_VERTEXAI=TRUE`, your project, `GOOGLE_CLOUD_LOCATION=global` and `MODEL=gemini-3.8-flash`. The first value selects Gemini on Vertex AI. With `global`, Google spreads the load across regions. The model name is in one place only, `matchday/config.py`:
 
 <!-- source: matchday/config.py -->
 ```python
 MODEL_NAME = os.getenv("MODEL", "gemini-3.8-flash")
 
-# Free-tier keys hit rate limits when many agents run at once: retry 429s with backoff.
+# Many agents at once can hit rate limits: retry 429s with backoff.
 MODEL = Gemini(
     model=MODEL_NAME,
     retry_options=types.HttpRetryOptions(attempts=5, initial_delay=2, max_delay=30),
 )
 ```
 
-The retries are important. One question to step 5 can cause a few dozen model calls. On a free key, this sometimes causes a `429` error. If the setup does not work on your laptop, use `notebook/match_day_agents.ipynb` in Colab. It runs the same files, with one cell for each step.
+The retries are important. One question to step 5 can cause a few dozen model calls. This sometimes causes a `429` error. If the setup does not work on your laptop, use `notebook/match_day_agents.ipynb` in Colab. It runs the same files, with one cell for each step.
 
 **How to fill a blank.** On the `main` branch, the key code of each step is missing. A one-line ✏️ BLANK marker is in its place. When the guide shows a code block with a ✏️ BLANK label, do these steps:
 
@@ -250,7 +251,7 @@ The three scouts made ten tool calls at the same time. Then the writer merged th
 
 **Do not use it when** one task needs the answer of another task. Also do not use it when the parallel agents write to the same state key.
 
-**The gotcha: an agent must merge the results.** A `ParallelAgent` gives you three answers, not one. The answers come in the order in which the agents finish. Give each parallel agent its own `output_key`. Then add a step that reads all the keys. Parallel agents also send more requests each second. On a free key, this can cause rate limit errors.
+**The gotcha: an agent must merge the results.** A `ParallelAgent` gives you three answers, not one. The answers come in the order in which the agents finish. Give each parallel agent its own `output_key`. Then add a step that reads all the keys. Parallel agents also send more requests each second. This can cause rate limit errors.
 
 ## Step 4 · Tribün
 

@@ -32,45 +32,43 @@ data from the last ten matches of both teams.
 In each step, the key code is missing. A one-line ✏️ BLANK marker is in its place. The tutorial
 selects the BLANK line for you. You paste the code over it, save, and run the step.
 
-You need a free Gemini API key. You do not need a Google Cloud project or billing. The guide has
-the full explanations and the diagrams: [omarcevi.dev/workshops/match-day-agents](https://omarcevi.dev/workshops/match-day-agents/).
+You need a Google Cloud project with billing. Free trial credits work. The agents call Gemini
+through Vertex AI in your project. The guide has the full explanations and the diagrams:
+[omarcevi.dev/workshops/match-day-agents](https://omarcevi.dev/workshops/match-day-agents/).
 
 <walkthrough-tutorial-duration duration="60"></walkthrough-tutorial-duration>
 
 ## Set up
 
-1. Install the Python packages (about 1 minute):
+Select a project that has billing. The agents call Gemini through Vertex AI in this project.
+
+<walkthrough-project-setup billing="true"></walkthrough-project-setup>
+
+1. Set this project in Cloud Shell:
    ```bash
-   uv sync
+   gcloud config set project <walkthrough-project-id/>
    ```
-   If the terminal shows `uv: command not found`, install uv first and run `uv sync` again:
+   If Cloud Shell asks you to authorize gcloud, click **Authorize**.
+2. Run the setup script (about 1 minute):
    ```bash
-   curl -LsSf https://astral.sh/uv/install.sh | sh && source $HOME/.local/bin/env
+   bash scripts/setup.sh
    ```
-2. Get a free Gemini API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
-3. Make your `.env` file:
-   ```bash
-   cp .env.example .env
-   ```
-4. Save your key in it. This command asks for the key and does not show it:
-   ```bash
-   read -s -p "Gemini API key: " KEY && sed -i "s|^GOOGLE_API_KEY=.*|GOOGLE_API_KEY=$KEY|" .env && unset KEY && echo " saved"
-   ```
-   You can also paste the key into <walkthrough-editor-open-file filePath=".env">.env</walkthrough-editor-open-file> in the editor.
-5. Start the ADK dev UI:
+   It checks the project and its billing, turns on the Vertex AI API, installs the Python
+   packages, and writes <walkthrough-editor-open-file filePath=".env">.env</walkthrough-editor-open-file>. Read the script: <walkthrough-editor-open-file filePath="scripts/setup.sh">scripts/setup.sh</walkthrough-editor-open-file>.
+3. Start the ADK dev UI:
    ```bash
    uv run adk web --reload_agents --port 8080 --allow_origins "*" steps
    ```
    `--reload_agents` loads a file again when you save it. `--allow_origins "*"` lets the Web
    Preview page talk to the dev UI.
-6. Click <walkthrough-web-preview-icon></walkthrough-web-preview-icon> **Web preview**, then
+4. Click <walkthrough-web-preview-icon></walkthrough-web-preview-icon> **Web preview**, then
    **Preview on port 8080**. The dev UI opens in a new tab.
-7. Click **+** in the terminal to open a second tab. Use it for all other commands. The dev UI
+5. Click **+** in the terminal to open a second tab. Use it for all other commands. The dev UI
    keeps running in the first tab.
 
-✅ **Check:** the dropdown at the top left of the dev UI shows six apps, from `bonus_live_mcp` to
-`step5_technical_director`. Until you fill a step, the terminal shows `✏️ BLANK ... paste its code
-over this line` when you select it.
+✅ **Check:** the script ends with `✅ Ready`. The dropdown at the top left of the dev UI shows six
+apps, from `bonus_live_mcp` to `step5_technical_director`. Until you fill a step, the terminal
+shows `✏️ BLANK ... paste its code over this line` when you select it.
 
 ## The data and the tools
 

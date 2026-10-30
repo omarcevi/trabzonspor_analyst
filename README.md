@@ -1,4 +1,4 @@
-# match-day-agents
+# Match Day Agents
 
 > **Türkçe özet:** Cumartesi gecesi. Trabzonspor pazar günü Gaziantep FK'yı ağırlıyor ve sen kulübün yeni yapay zekâ analiz ekibisin. Bu atölyede Google'ın Agent Development Kit'i (ADK) ile beş temel ajan desenini, iki takımın son 10 maçından gelen gerçek verilerle kuruyorsun: tek ajan, sıralı ekip, paralel ekip, döngü (Tribün) ve hepsini yöneten Teknik Direktör. Kurulum aşağıda üç adım. Ajanlara Türkçe yazabilirsin; onlar da Türkçe cevap verir.
 
@@ -14,7 +14,7 @@ DevFest Trabzon 2026 workshop (90 minutes). You build the five core agent patter
 2. **Get a free Gemini API key** at [aistudio.google.com/apikey](https://aistudio.google.com/apikey), then `cp .env.example .env` and paste it into `.env`.
 3. **Run it:** `uv sync && uv run adk web steps`, open http://localhost:8000 and pick a step from the dropdown.
 
-No luck on your laptop? Use the **Colab fallback**: [notebook/match_day_agents.ipynb](notebook/match_day_agents.ipynb) · [Open in Colab](https://colab.research.google.com/github/REPLACE_ME/match-day-agents/blob/main/notebook/match_day_agents.ipynb) <!-- TODO: repo URL -->
+No luck on your laptop? Use the **Colab fallback**: [notebook/match_day_agents.ipynb](notebook/match_day_agents.ipynb) · [Open in Colab](https://colab.research.google.com/github/omarcevi/trabzonspor_analyst/blob/main/notebook/match_day_agents.ipynb)
 
 ## The five steps
 

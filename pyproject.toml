@@ -1,5 +1,5 @@
 [project]
-name = "match-day-agents"
+name = "trabzonspor-analyst"
 version = "1.0.0"
 description = "DevFest Trabzon 2026 workshop: five agent patterns with Google ADK, on real Trabzonspor vs Gaziantep FK data."
 readme = "README.md"

@@ -3,7 +3,7 @@ title: "Match Day Agents: five agent patterns with Google ADK"
 description: "Build a football analysis staff with Google's Agent Development Kit: one agent, a sequential team, a parallel team, a review loop and an orchestrator, all working on real Trabzonspor data."
 date: 2026-10-31
 tags: [adk, agents, gemini, python, multi-agent, devfest]
-repo: "https://github.com/REPLACE_ME/match-day-agents"  # TODO: canonical repo link
+repo: "https://github.com/omarcevi/trabzonspor_analyst"
 ---
 
 # Match Day Agents: five agent patterns with Google ADK
@@ -30,8 +30,8 @@ You need Python 3.11 or newer, [uv](https://docs.astral.sh/uv/), and a Gemini AP
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh     # installs uv
-git clone https://github.com/REPLACE_ME/match-day-agents
-cd match-day-agents
+git clone https://github.com/omarcevi/trabzonspor_analyst
+cd trabzonspor_analyst
 cp .env.example .env                                 # paste your key into .env
 uv sync
 uv run adk web steps
@@ -437,6 +437,6 @@ And the habits that held across all of them: let tools do the counting, return s
 
 Add a `compare_players` tool to the scout and ask *"Salah mı Franculino mu daha formda?"* Give the scouting department a fourth scout. Make the Tribün stricter and count the rounds, then set `max_iterations=1`. Swap in the vague descriptions and watch the director stumble. The repo README has one challenge per step.
 
-Code, data, Colab notebook and tests: [github.com/REPLACE_ME/match-day-agents](https://github.com/REPLACE_ME/match-day-agents). The data is a FotMob and ESPN snapshot from 30 October 2026, so injury news may have moved on.
+Code, data, Colab notebook and tests: [github.com/omarcevi/trabzonspor_analyst](https://github.com/omarcevi/trabzonspor_analyst). The data is a FotMob and ESPN snapshot from 30 October 2026, so injury news may have moved on.
 
 Thanks to GDG Trabzon for hosting DevFest Trabzon 2026, and to everyone who spent part of their Saturday building a football staff out of agents with me.

@@ -30,29 +30,8 @@ Reply with the formation, the eleven players by position line, and three substit
         tools=[get_availability, get_player, get_top_players],
         output_key="lineup",
     )
-    tribun = LlmAgent(
-        name="tribun",
-        model=MODEL,
-        instruction="""
-You are the Tribün: Trabzonspor's passionate home crowd. Loud, funny, loyal, never rude.
-Criticise choices, not people. Cheer for us; never chant against the opponent or its fans.
-
-The proposed lineup:
-{lineup}
-
-Check it with your tools; do not trust the numbers in the proposal.
-1. Out players are rejected. Doubtful players need a named, available backup.
-2. If our home record is strong, demand attacking intent.
-3. Flag card-risk players (red cards or many yellows) and ask for a plan for them.
-
-If all three checks pass, call exit_loop, then cheer the approved XI in two lines.
-Otherwise reply with numbered objections, each with the number that proves it.
-Don't invent new demands each round: approve as soon as the checks pass.
-""" + HOUSE_RULES,
-        tools=[get_availability, get_player, get_team_trends, get_discipline, exit_loop],
-        output_key="tribun_feedback",
-    )
-    return LoopAgent(name=name, description=description, sub_agents=[lineup_picker, tribun], max_iterations=3)
+    # ✏️ BLANK 4 · in the guide under "Step 4 · Tribün": paste its code over these two lines
+    raise NotImplementedError("BLANK 4 is still empty. Paste its code from the guide (Step 4 · Tribün).")
 
 
 root_agent = build_tribun()

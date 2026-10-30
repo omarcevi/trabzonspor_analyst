@@ -27,19 +27,8 @@ their key players and who is missing. Write a short opponent report.
         tools=[get_match_info, get_team_trends, get_top_players, get_availability, get_matches],
         output_key="opponent_report",
     )
-    tactician = LlmAgent(
-        name="tactician",
-        model=MODEL,
-        instruction="""
-You are Trabzonspor's tactician. Opponent report from the analyst:
-{opponent_report}
-
-Check our own form with get_team_trends("Trabzonspor"), then write a game plan:
-formation, how we attack, how we defend, and what to do in each phase of the match.
-""" + HOUSE_RULES,
-        tools=[get_team_trends, get_match_info],
-        output_key="game_plan",
-    )
+    # ✏️ BLANK 2a · in the guide under "Step 2 · Match Prep": paste its code over these two lines
+    raise NotImplementedError("BLANK 2a is still empty. Paste its code from the guide (Step 2 · Match Prep).")
     lineup_picker = LlmAgent(
         name="lineup_picker",
         model=MODEL,
@@ -54,7 +43,8 @@ You pick Trabzonspor's starting XI. The game plan:
         tools=[get_availability, get_player, get_top_players],
         output_key="lineup",
     )
-    return SequentialAgent(name=name, description=description, sub_agents=[opponent_analyst, tactician, lineup_picker])
+    # ✏️ BLANK 2b · in the guide under "Step 2 · Match Prep": paste its code over these two lines
+    raise NotImplementedError("BLANK 2b is still empty. Paste its code from the guide (Step 2 · Match Prep).")
 
 
 root_agent = build_match_prep()

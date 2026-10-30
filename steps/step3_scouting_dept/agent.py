@@ -42,19 +42,8 @@ players on each side, and every red card in the last 10 matches.""" + HOUSE_RULE
         tools=[get_match_info, get_discipline],
         output_key="discipline_report",
     )
-    report_writer = LlmAgent(
-        name="report_writer",
-        model=MODEL,
-        instruction="""Merge three scouting reports into one brief for Trabzonspor's coaches.
-Attack report: {attack_report}
-Defense report: {defense_report}
-Discipline report: {discipline_report}
-Write four short sections: Threats, Weaknesses to attack, Discipline and referee, Three key takeaways.
-Use only facts from the reports; if they disagree, say so.""" + HOUSE_RULES,
-        output_key="scouting_brief",
-    )
-    scouts = ParallelAgent(name="scouts", sub_agents=[attack_scout, defense_scout, discipline_scout])
-    return SequentialAgent(name=name, description=description, sub_agents=[scouts, report_writer])
+    # ✏️ BLANK 3 · in the guide under "Step 3 · Scouting Department": paste its code over these two lines
+    raise NotImplementedError("BLANK 3 is still empty. Paste its code from the guide (Step 3 · Scouting Department).")
 
 
 root_agent = build_scouting_department()

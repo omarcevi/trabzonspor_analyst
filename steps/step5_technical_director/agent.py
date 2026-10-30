@@ -14,24 +14,13 @@ from steps.step2_match_prep.agent import build_match_prep
 from steps.step3_scouting_dept.agent import build_scouting_department
 from steps.step4_tribun.agent import build_tribun
 
-# Delegation is driven by these descriptions: they are all the director knows about each team.
-SCOUT = "Answers questions about ONE player or ONE team: form, minutes, goals, ratings, availability."
-MATCH_PREP = "Writes Sunday's game plan: opponent analysis, then tactics, then an XI of available players."
-SCOUTING_DEPT = "Full scouting report on Sunday's opponent: threats, weaknesses, cards and the referee."
-TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when asked to pick or defend the XI."
-# Try it live: uncomment these, ask the same questions again, and watch the routing go wrong.
-# SCOUT = "Helps with football."
-# SCOUTING_DEPT = "Also helps with football."
+# ✏️ BLANK 5a · in the guide under "Step 5 · Technical Director": paste its code over these two lines
+raise NotImplementedError("BLANK 5a is still empty. Paste its code from the guide (Step 5 · Technical Director).")
 
 
 def build_technical_director(name: str = "technical_director") -> LlmAgent:
-    # Each team becomes a tool: the director calls it like a function and gets its answer back.
-    teams = [
-        AgentTool(build_scout(description=SCOUT)),
-        AgentTool(build_match_prep(description=MATCH_PREP)),
-        AgentTool(build_scouting_department(description=SCOUTING_DEPT)),
-        AgentTool(build_tribun(description=TRIBUN)),
-    ]
+    # ✏️ BLANK 5b · in the guide under "Step 5 · Technical Director": paste its code over these two lines
+    raise NotImplementedError("BLANK 5b is still empty. Paste its code from the guide (Step 5 · Technical Director).")
     return LlmAgent(
         name=name,
         model=MODEL,

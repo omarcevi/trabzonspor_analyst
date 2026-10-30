@@ -41,6 +41,8 @@ Open http://localhost:8000. Select a step in the dropdown and ask it a question.
 
 <!-- SCREENSHOT: adk web with the app dropdown open, showing the six step folders -->
 
+**Cloud Shell.** You can also do the workshop in your browser, with nothing to install. Click [Open in Cloud Shell](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/omarcevi/trabzonspor_analyst.git&cloudshell_git_branch=main&cloudshell_tutorial=tutorial.md&cloudshell_workspace=.&show=ide%2Cterminal). In the dialog, select **Trust repo** and click **Confirm**. Cloud Shell copies the repo and opens a tutorial panel next to the editor. The tutorial shows each step, and its links open the files and select each BLANK for you.
+
 The `.env` file holds three values: your key, `GOOGLE_GENAI_USE_VERTEXAI=FALSE` and `MODEL=gemini-3.8-flash`. The second value selects the free Gemini API, not Vertex AI. The model name is in one place only, `matchday/config.py`:
 
 <!-- source: matchday/config.py -->
@@ -56,11 +58,11 @@ MODEL = Gemini(
 
 The retries are important. One question to step 5 can cause a few dozen model calls. On a free key, this sometimes causes a `429` error. If the setup does not work on your laptop, use `notebook/match_day_agents.ipynb` in Colab. It runs the same files, with one cell for each step.
 
-**How to fill a blank.** On the `main` branch, the key code of each step is missing. A two-line ✏️ BLANK marker is in its place. When the guide shows a code block with a ✏️ BLANK label, do these steps:
+**How to fill a blank.** On the `main` branch, the key code of each step is missing. A one-line ✏️ BLANK marker is in its place. When the guide shows a code block with a ✏️ BLANK label, do these steps:
 
 1. Copy the code block with its copy button.
-2. In the file, select the two marker lines.
-3. Paste the code over them.
+2. In the file, select the BLANK line.
+3. Paste the code over it.
 4. Save the file.
 5. Run the step.
 

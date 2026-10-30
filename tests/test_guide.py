@@ -101,5 +101,5 @@ def test_filling_the_blanks_gives_the_demo_branch_code(path):
 def test_linked_images_exist(doc):
     links = re.findall(r"\]\(([^)\s]+\.(?:svg|png))", doc.read_text(encoding="utf-8"))
     assert links
-    missing = [link for link in links if not (doc.parent / link).exists()]
+    missing = [link for link in links if not link.startswith("http") and not (doc.parent / link).exists()]
     assert not missing, missing

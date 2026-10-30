@@ -1,4 +1,4 @@
-"""The workshop's blanks. On the main branch each step's key code is missing: a two-line
+"""The workshop's blanks. On the main branch each step's key code is missing: a one-line
 ✏️ BLANK marker sits in its place, and the guide shows the code to paste over it.
 The demo branch has every blank filled.
 
@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 GUIDE = ROOT / "guide" / "match-day-agents.md"
 BLOCK = re.compile(r"<!-- source: (?P<path>\S+) blank: (?P<id>\w+) -->\n```\w*\n(?P<code>.*?)\n```", re.S)
-MARKER = re.compile(r"^(?P<indent>[ ]*)# ✏️ BLANK (?P<id>\w+) · .*\n(?P=indent)raise NotImplementedError\(.*\)\n", re.M)
+MARKER = re.compile(r'^(?P<indent>[ ]*)raise NotImplementedError\("✏️ BLANK (?P<id>\w+) · .*"\)\n', re.M)
 
 
 def guide_blanks(guide: str | None = None) -> dict[str, dict]:
@@ -34,9 +34,12 @@ def guide_blanks(guide: str | None = None) -> dict[str, dict]:
 
 def marker(blank_id: str, blank: dict) -> str:
     indent = re.match(r"[ ]*", blank["code"]).group()
-    step = blank["section"]
-    return (f"{indent}# ✏️ BLANK {blank_id} · in the guide under \"{step}\": paste its code over these two lines\n"
-            f'{indent}raise NotImplementedError("BLANK {blank_id} is still empty. Paste its code from the guide ({step}).")\n')
+    return f'{indent}raise NotImplementedError("✏️ BLANK {blank_id} · {blank["section"]} in the guide: paste its code over this line")\n'
+
+
+def select_regex(blank_id: str) -> str:
+    """For Cloud Shell's walkthrough-editor-select-regex: the whole BLANK line, from its indentation to its end."""
+    return rf"[ ]*raise NotImplementedError\(.{{1,6}}BLANK {blank_id} · .*"
 
 
 def fill(text: str, blanks: dict[str, dict], ids: set[str] | None = None) -> str:

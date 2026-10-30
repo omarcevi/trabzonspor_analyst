@@ -448,7 +448,7 @@ def step5() -> Diagram:
 
 
 def overview() -> Diagram:
-    d = Diagram("overview", 1320, 870, "Match Day Agents · the whole staff",
+    d = Diagram("overview", 1320, 870, "Building Trabzonspor's AI Analysis Room · the whole staff",
                 "The Technical Director (step 5) delegates to the teams from steps 1–4. Every box with the ADK logo is an agent.")
     d.person(100, 160, "You", "analysis staff")
     director = d.card(230, 100, 830, 110, "technical_director", "LlmAgent · step 5 · delegates through AgentTool", top=True)

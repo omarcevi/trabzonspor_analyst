@@ -1,4 +1,6 @@
-# Match Day Agents
+# Building Trabzonspor's AI Analysis Room
+
+Agent recipes with Google's Agent Development Kit.
 
 > **Türkçe özet:** Cumartesi gecesi. Trabzonspor pazar günü Gaziantep FK'yı ağırlıyor ve sen kulübün yeni yapay zekâ analiz ekibisin. Bu atölyede Google'ın Agent Development Kit'i (ADK) ile beş temel ajan desenini, iki takımın son 10 maçından gelen gerçek verilerle kuruyorsun: tek ajan, sıralı ekip, paralel ekip, döngü (Tribün) ve hepsini yöneten Teknik Direktör. Kurulum aşağıda üç adım. Ajanlara Türkçe yazabilirsin; onlar da Türkçe cevap verir.
 

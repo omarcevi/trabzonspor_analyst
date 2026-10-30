@@ -1,12 +1,12 @@
 ---
-title: "Match Day Agents: five agent patterns with Google ADK"
-description: "Build a football analysis staff with Google's Agent Development Kit: one agent, a sequential team, a parallel team, a review loop and an orchestrator, all working on real Trabzonspor data."
+title: "Building Trabzonspor's AI Analysis Room"
+description: "Agent recipes with Google's Agent Development Kit. Build a football analysis staff out of one agent, a sequential team, a parallel team, a review loop and an orchestrator, all working on real Trabzonspor data."
 date: 2026-10-31
 tags: [adk, agents, gemini, python, multi-agent, devfest]
 repo: "https://github.com/omarcevi/trabzonspor_analyst"
 ---
 
-# Match Day Agents: five agent patterns with Google ADK
+# Building Trabzonspor's AI Analysis Room
 
 It's Saturday night. Trabzonspor host Gaziantep FK tomorrow, Sunday 1 November 2026, 16:00 Istanbul time, in Round 10 of the Süper Lig. You're the club's new analysis staff, and the coaches want a briefing by morning: who the opponent is, how we play them, who starts, and what could go wrong.
 

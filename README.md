@@ -14,9 +14,16 @@ DevFest Trabzon 2026 workshop (90 minutes). You build the five core agent patter
 
 1. **Install uv:** `curl -LsSf https://astral.sh/uv/install.sh | sh` (Windows: `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`).
 2. **Get a free Gemini API key** at [aistudio.google.com/apikey](https://aistudio.google.com/apikey), then `cp .env.example .env` and paste it into `.env`.
-3. **Run it:** `uv sync && uv run adk web steps`, open http://localhost:8000 and pick a step from the dropdown.
+3. **Run it:** `uv sync && uv run adk web --reload_agents steps`, open http://localhost:8000 and pick a step from the dropdown.
 
 No luck on your laptop? Use the **Colab fallback**: [notebook/match_day_agents.ipynb](notebook/match_day_agents.ipynb) · [Open in Colab](https://colab.research.google.com/github/omarcevi/trabzonspor_analyst/blob/main/notebook/match_day_agents.ipynb)
+
+## Two branches
+
+- **`main`** (you start here): each step's key code is a ✏️ BLANK. The [guide](guide/match-day-agents.md) shows the code for every blank: select the two BLANK lines in the file, paste the code over them, save, and run the step. `adk web --reload_agents` picks up the change; no restart needed.
+- **`demo`**: the finished agent team, every blank filled. `git switch demo` to see where you're heading.
+
+Fell behind? `uv run python scripts/blanks.py fill 3` pastes BLANK 3 for you (`list` shows what's still empty, `fill all` does everything).
 
 ## The five steps
 

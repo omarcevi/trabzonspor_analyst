@@ -75,9 +75,12 @@ async def run_prompt(runner: InMemoryRunner, app: str, prompt: str, log: list[st
 
 
 async def run_step(app: str) -> str:
-    agent = importlib.import_module(f"steps.{app}.agent").root_agent
-    runner = InMemoryRunner(agent=agent, app_name=app)
     log = [f"## {app} · model {MODEL_NAME}"]
+    try:   # on the main branch a step with an empty ✏️ BLANK raises here, with the blank's name
+        agent = importlib.import_module(f"steps.{app}.agent").root_agent
+    except NotImplementedError as exc:
+        return "\n".join(log + [f"\n**FAILED:** {exc}\n"])
+    runner = InMemoryRunner(agent=agent, app_name=app)
     try:
         for prompt in DEMOS[app]:
             await run_prompt(runner, app, prompt, log)

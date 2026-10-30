@@ -34,10 +34,10 @@ git clone https://github.com/omarcevi/trabzonspor_analyst
 cd trabzonspor_analyst
 cp .env.example .env                                 # paste your key into .env
 uv sync
-uv run adk web steps
+uv run adk web --reload_agents steps
 ```
 
-Open http://localhost:8000, pick a step from the dropdown and ask it something. The events panel shows every tool call and hand-off.
+Open http://localhost:8000, pick a step from the dropdown and ask it something. The events panel shows every tool call and hand-off, and `--reload_agents` picks up a file as soon as you save it.
 
 <!-- SCREENSHOT: adk web with the app dropdown open, showing the six step folders -->
 
@@ -56,6 +56,8 @@ MODEL = Gemini(
 
 The retries matter more than they look: one question to step 5 can mean a few dozen model calls, and on a free key that hits a `429` now and then. If your laptop won't cooperate, `notebook/match_day_agents.ipynb` runs the same files in Colab, one cell per step.
 
+**How the blanks work.** On the repo's `main` branch, each step's key code is missing. In its place is a two-line ✏️ BLANK marker. When this guide shows a code block labelled ✏️ BLANK, select both marker lines in that file, paste the block over them, save, and run the step. Fell behind? `uv run python scripts/blanks.py fill 2a` pastes a blank for you, and the `demo` branch (`git switch demo`) has the whole team finished.
+
 ## The data
 
 The `data/` folder is a snapshot I took on 30 October 2026 from FotMob, ESPN and Turkish match reports: the fixture and the referee (`match.json`), both squads with each player's availability for Sunday and last-ten-match stats (`squad.json`, `opponent.json`), every match with goals, cards and xG (`results.json`), and the league table and next fixtures.
@@ -72,9 +74,9 @@ Two rules shape every tool. **First, `null` means "not shown on the source", nev
 
 *One agent, five tools. Gemini decides which tool to call; Python does the work. Tap to open full size.*
 
-Here's the whole agent:
+Here's the whole agent. ✏️ **BLANK 1** · paste it into `steps/step1_scout/agent.py`:
 
-<!-- source: steps/step1_scout/agent.py -->
+<!-- source: steps/step1_scout/agent.py blank: 1 -->
 ```python
 def build_scout(
     name: str = "scout",
@@ -120,9 +122,9 @@ ADK turns each tool's type hints and docstring into the schema the model sees, s
 
 Name matching ignores Turkish and Polish letters (`simsir` finds Aral Şimşir), and bad input returns an error with suggestions instead of raising.
 
-I asked: *"Who's in form for us, and who can't play Sunday?"*
+**Run it:** save, pick `step1_scout` in the dev UI and ask *"Who's in form for us, and who can't play Sunday?"*
 
-The scout called `get_availability` once and `get_top_players` three times (goals, assists, avg_rating), then answered in 12 seconds. Trimmed:
+In my run, the scout called `get_availability` once and `get_top_players` three times (goals, assists, avg_rating), then answered in 12 seconds. Trimmed:
 
 > **In Form (Last 10 Matches)**
 > - **Mohamed Salah** (Available): 8 goals, 5 assists, and an 8.03 average rating in 10 matches (802 minutes).
@@ -145,9 +147,9 @@ The scout called `get_availability` once and `get_top_players` three times (goal
 
 *Three agents in a row. Each saves its answer with output_key; the next reads it with a placeholder. Tap to open full size.*
 
-The opponent analyst studies Gaziantep and writes a report. The tactician turns the report into a game plan. The lineup picker turns the plan into an XI. Here's the middle one, and the line that chains them:
+The opponent analyst studies Gaziantep and writes a report. The tactician turns the report into a game plan. The lineup picker turns the plan into an XI. You write the middle one, and the line that chains them. ✏️ **BLANK 2a** · `steps/step2_match_prep/agent.py`:
 
-<!-- source: steps/step2_match_prep/agent.py -->
+<!-- source: steps/step2_match_prep/agent.py blank: 2a -->
 ```python
     tactician = LlmAgent(
         name="tactician",
@@ -164,14 +166,16 @@ formation, how we attack, how we defend, and what to do in each phase of the mat
     )
 ```
 
-<!-- source: steps/step2_match_prep/agent.py -->
+✏️ **BLANK 2b** · same file, at the end of `build_match_prep`:
+
+<!-- source: steps/step2_match_prep/agent.py blank: 2b -->
 ```python
     return SequentialAgent(name=name, description=description, sub_agents=[opponent_analyst, tactician, lineup_picker])
 ```
 
 `output_key="opponent_report"` saves the analyst's final answer in session state. `{opponent_report}` in the tactician's instruction pastes it in before the tactician's model call. No glue code.
 
-I asked: *"Prepare Sunday's game plan."*
+**Run it:** pick `step2_match_prep` and ask *"Prepare Sunday's game plan."*
 
 Three agents in a row, about two minutes. The tactician, using the analyst's report:
 
@@ -199,9 +203,9 @@ In an earlier run the lineup picker tried two names from its own memory that are
 
 *Three scouts at once, one writer after. Tap to open full size.*
 
-One scout covers Gaziantep's attack, one their defence, one cards and the referee. None needs the others' work, so there's no reason to wait:
+One scout covers Gaziantep's attack, one their defence, one cards and the referee. None needs the others' work, so there's no reason to wait. The scouts are already in the file; you add the writer and wire them up. ✏️ **BLANK 3** · `steps/step3_scouting_dept/agent.py`:
 
-<!-- source: steps/step3_scouting_dept/agent.py -->
+<!-- source: steps/step3_scouting_dept/agent.py blank: 3 -->
 ```python
     report_writer = LlmAgent(
         name="report_writer",
@@ -220,7 +224,7 @@ Use only facts from the reports; if they disagree, say so.""" + HOUSE_RULES,
 
 The scouts' instructions don't name the opponent; each starts with `get_match_info` to find out. No instruction in this repo hardcodes a fact from the data, so a new fixture is just new JSON.
 
-I asked: *"Scout Gaziantep for us."*
+**Run it:** pick `step3_scouting_dept` and ask *"Scout Gaziantep for us."*
 
 The three scouts made ten tool calls between them, all at once, and the writer merged their reports in 43 seconds. From the brief, trimmed:
 
@@ -246,9 +250,9 @@ The three scouts made ten tool calls between them, all at once, and the writer m
 
 *Propose, criticise, repeat. exit_loop ends it; max_iterations=3 is the safety net. Tap to open full size.*
 
-In Turkish football the *tribün* is the stand, and the people in it, who have opinions about your team sheet. So the critic here is the home crowd:
+In Turkish football the *tribün* is the stand, and the people in it, who have opinions about your team sheet. So the critic here is the home crowd. ✏️ **BLANK 4** · `steps/step4_tribun/agent.py`:
 
-<!-- source: steps/step4_tribun/agent.py -->
+<!-- source: steps/step4_tribun/agent.py blank: 4 -->
 ```python
     tribun = LlmAgent(
         name="tribun",
@@ -293,7 +297,7 @@ The Tribün's last verdict (empty on the first round): {tribun_feedback?}
 If it lists objections, fix every one and say in one line what you changed.
 ```
 
-I asked: *"Pick the XI for Sunday."*
+**Run it:** pick `step4_tribun` and ask *"Pick the XI for Sunday."*
 
 Round one: the picker proposed a 4-2-3-1 with Melih Kabasakal in midfield. The crowd checked it with `get_team_trends` and `get_discipline` and answered (trimmed):
 
@@ -325,9 +329,9 @@ Then the crowd called `exit_loop` and signed off:
 
 *The director chooses a team by its description, calls it like a function and gets its answer back. Tap to open full size.*
 
-The director's tools are the teams from steps 1 to 4, each wrapped in an `AgentTool`, plus three data tools:
+The director's tools are the teams from steps 1 to 4, each wrapped in an `AgentTool`, plus three data tools. ✏️ **BLANK 5a** · the descriptions, in `steps/step5_technical_director/agent.py`:
 
-<!-- source: steps/step5_technical_director/agent.py -->
+<!-- source: steps/step5_technical_director/agent.py blank: 5a -->
 ```python
 # Delegation is driven by these descriptions: they are all the director knows about each team.
 SCOUT = "Answers questions about ONE player or ONE team: form, minutes, goals, ratings, availability."
@@ -339,7 +343,9 @@ TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when aske
 # SCOUTING_DEPT = "Also helps with football."
 ```
 
-<!-- source: steps/step5_technical_director/agent.py -->
+✏️ **BLANK 5b** · same file, at the top of `build_technical_director`:
+
+<!-- source: steps/step5_technical_director/agent.py blank: 5b -->
 ```python
     # Each team becomes a tool: the director calls it like a function and gets its answer back.
     teams = [
@@ -350,7 +356,7 @@ TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when aske
     ]
 ```
 
-Three questions show the range. First: *"Should we rest Salah for Freiburg on Thursday?"*
+**Run it:** pick `step5_technical_director` and try three questions that show the range. First: *"Should we rest Salah for Freiburg on Thursday?"*
 
 The director called the scout and `get_fixtures`, then wrote (trimmed):
 

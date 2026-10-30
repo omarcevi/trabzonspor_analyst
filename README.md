@@ -13,8 +13,8 @@ DevFest Trabzon 2026 workshop (90 minutes). You build the five core agent patter
 ## Setup (3 steps)
 
 1. **Install uv:** `curl -LsSf https://astral.sh/uv/install.sh | sh` (Windows: `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`).
-2. **Use a Google Cloud project with billing** ([free trial credits](https://cloud.google.com/free) work): `gcloud auth login`, `gcloud auth application-default login`, `gcloud config set project YOUR_PROJECT_ID`, then `bash scripts/setup.sh`. It turns on the Vertex AI API, installs the packages and writes `.env`.
-3. **Run it:** `uv run adk web --reload_agents steps`, open http://localhost:8000 and pick a step from the dropdown.
+2. **Get a free Gemini API key** at [aistudio.google.com/apikey](https://aistudio.google.com/apikey), then `cp .env.example .env` and paste it into `.env`.
+3. **Run it:** `uv sync && uv run adk web --reload_agents steps`, open http://localhost:8000 and pick a step from the dropdown.
 
 **Or use Cloud Shell, with nothing to install.** It copies the repo and opens a tutorial panel next to the editor. Its links open each file and select each BLANK for you. In the dialog, select **Trust repo**, then **Confirm**:
 
@@ -66,7 +66,7 @@ All data tools live in [`matchday/tools.py`](matchday/tools.py), and the model i
 
 ```bash
 uv run pytest                                   # tool tests, no LLM calls
-uv run python scripts/smoke.py                  # each step once with its demo prompt (calls Gemini in your project)
+uv run python scripts/smoke.py                  # each step once with its demo prompt (needs the key)
 uv run python scripts/build_diagrams.py         # regenerate guide/images/*.svg
 uv run --with playwright python scripts/render_diagrams.py   # render the diagrams and check the layout
 ```

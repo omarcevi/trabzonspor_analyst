@@ -10,7 +10,7 @@ load_dotenv()  # finds the .env in the repo root
 
 MODEL_NAME = os.getenv("MODEL", "gemini-3.8-flash")
 
-# Many agents at once can hit rate limits: retry 429s with backoff.
+# Free-tier keys hit rate limits when many agents run at once: retry 429s with backoff.
 MODEL = Gemini(
     model=MODEL_NAME,
     retry_options=types.HttpRetryOptions(attempts=5, initial_delay=2, max_delay=30),

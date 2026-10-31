@@ -30,6 +30,7 @@ Reply with the formation, the eleven players by position line, and three substit
         tools=[get_availability, get_player, get_top_players],
         output_key="lineup",
     )
+    
     raise NotImplementedError("✏️ BLANK 4 · Step 4 · Tribün in the guide: paste its code over this line")
 
 

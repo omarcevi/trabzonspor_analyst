@@ -42,6 +42,7 @@ players on each side, and every red card in the last 10 matches.""" + HOUSE_RULE
         tools=[get_match_info, get_discipline],
         output_key="discipline_report",
     )
+    
     raise NotImplementedError("✏️ BLANK 3 · Step 3 · Scouting Department in the guide: paste its code over this line")
 
 

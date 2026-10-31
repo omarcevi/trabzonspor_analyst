@@ -18,7 +18,9 @@ raise NotImplementedError("✏️ BLANK 5a · Step 5 · Technical Director in th
 
 
 def build_technical_director(name: str = "technical_director") -> LlmAgent:
+    
     raise NotImplementedError("✏️ BLANK 5b · Step 5 · Technical Director in the guide: paste its code over this line")
+    
     return LlmAgent(
         name=name,
         model=MODEL,

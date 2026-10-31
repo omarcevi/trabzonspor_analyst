@@ -27,7 +27,9 @@ their key players and who is missing. Write a short opponent report.
         tools=[get_match_info, get_team_trends, get_top_players, get_availability, get_matches],
         output_key="opponent_report",
     )
+
     raise NotImplementedError("✏️ BLANK 2a · Step 2 · Match Prep in the guide: paste its code over this line")
+    
     lineup_picker = LlmAgent(
         name="lineup_picker",
         model=MODEL,
@@ -42,6 +44,7 @@ You pick Trabzonspor's starting XI. The game plan:
         tools=[get_availability, get_player, get_top_players],
         output_key="lineup",
     )
+    
     raise NotImplementedError("✏️ BLANK 2b · Step 2 · Match Prep in the guide: paste its code over this line")
 
 

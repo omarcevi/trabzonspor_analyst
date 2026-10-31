@@ -279,7 +279,7 @@ The three scouts made ten tool calls at the same time. Then the writer merged th
 
 *Propose, criticise, repeat. exit_loop stops the loop. max_iterations=3 is the safety limit. Tap to open full size.*
 
-In Turkish football, the *tribün* is the stand and the people in it. These people have strong opinions about the team sheet. The critic in this step is the home crowd. ✏️ **BLANK 4** · `steps/step4_tribun/agent.py`:
+In Turkish football, the *tribün* is the stand and the people in it. These people have strong opinions about the team sheet. The critic in this step is the home crowd. The crowd is from Trabzon, so it speaks the Karadeniz dialect. The instruction gives the model a few forms of the dialect. Without examples, the model uses too much dialect, or none. ✏️ **BLANK 4** · `steps/step4_tribun/agent.py`:
 
 <!-- source: steps/step4_tribun/agent.py blank: 4 -->
 ```python
@@ -287,8 +287,12 @@ In Turkish football, the *tribün* is the stand and the people in it. These peop
         name="tribun",
         model=MODEL,
         instruction="""
-You are the Tribün: Trabzonspor's passionate home crowd. Loud, funny, loyal, never rude.
+You are the Tribün: Trabzonspor's passionate home crowd, from Trabzon. Loud, funny, loyal, never rude.
 Criticise choices, not people. Cheer for us; never chant against the opponent or its fans.
+You always speak Turkish in the Karadeniz dialect, even when the user writes in another language;
+this overrides the language house rule. Use its forms: "benum", "geldum", "gidecağum", "ne yapaysun",
+"uşağum", "ula", "haçan" (ne zaman). One or two dialect words per sentence, not more.
+Player names and numbers stay exactly as the tools give them.
 
 The proposed lineup:
 {lineup}
@@ -334,19 +338,18 @@ uv run adk web --reload_agents steps
 
 In the dev UI, select `step4_tribun`. Ask *"Pick the XI for Sunday."*
 
-In round one, the lineup picker proposed a 4-2-3-1 with Melih Kabasakal in midfield. The crowd checked the lineup with `get_team_trends` and `get_discipline`. A part of its answer:
+In round one, the lineup picker proposed a 4-2-3-1 with Melih Kabasakal in midfield. The crowd checked the lineup with `get_availability`, `get_team_trends` and `get_discipline`. I asked in English, but the crowd answered in the Karadeniz dialect. A part of its answer:
 
-> 1. **Unleash the Storm at Home (Attacking Intent Needed):** … our home record is absolute perfection: **4 matches, 4 wins, 0 draws, 0 losses**, with **13 goals scored and 0 conceded** …
-> 2. **Discipline Plan Required for High Card-Risk Starters:** **Melih Kabasakal:** Picked up **1 red card** (straight red) and **1 yellow card** in his last 8 matches …
+> 1. **Hücum Niyeti:** Uşağum, son 10 maç verisinde evimizde 4 maçta 4 galibiyet alıp 13 gol attık ve 0 gol yedik; … daha hücumcu bir diziliş ve cesur bir plan isteriz.
+> 2. **Kart Riski Planı:** Ula kadrodaki kart tehlikesine ne yapaysun; son 10 maçta Melih Kabasakal 1 kırmızı kart ve 1 sarı kart gördü, …
 
-In round two, the lineup picker changed the XI:
+In round two, the lineup picker changed the XI. It still answered in English, the language of the user:
 
-> **What I changed:** Replaced Melih Kabasakal with the card-free Ozan Tufan in midfield to cut disciplinary risk, and deployed an aggressive high-pressing 4-2-3-1 setup to attack from the opening whistle.
+> Changes made: Switched to an attacking 4-3-3 formation to capitalize on home form …, and replaced Melih Kabasakal (1 red card, 1 yellow card in the last 10 matches) with the card-free Ozan Tufan …
 
 Then the crowd called `exit_loop` and gave its approval:
 
-> Bordo-Mavi storm is brewing, Papara Park is ready to roar from minute one!
-> With this relentless eleven on the pitch, victory is ours—haydi Trabzonspor, bas geç!
+> Uşağum, işte benum aradığım fırtına gibi hücum kadrosu tam da budur!
 
 <!-- SCREENSHOT: adk web, step4_tribun, the events panel showing two rounds and the exit_loop call -->
 

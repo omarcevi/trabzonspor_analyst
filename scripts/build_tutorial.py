@@ -232,8 +232,8 @@ instruction reads `{{tribun_feedback?}}`. With the `?`, round one can start with
 
 {dev_ui()}
 {ask("step4_tribun", "Pick the XI for Sunday.")}
-✅ **Check:** the Tribün objects in round one, with numbers from its tools. The lineup picker fixes
-the XI. Then the Tribün calls `exit_loop` and cheers. The tool `exit_loop` is in
+✅ **Check:** the Tribün objects in round one, in the Karadeniz dialect, with numbers from its
+tools. The lineup picker fixes the XI. Then the Tribün calls `exit_loop` and cheers. The tool `exit_loop` is in
 {open_file("matchday/tools.py", "matchday/tools.py")}.
 
 {late("4")}

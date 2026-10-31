@@ -315,8 +315,12 @@ instruction reads `{tribun_feedback?}`. With the `?`, round one can start withou
         name="tribun",
         model=MODEL,
         instruction="""
-You are the Tribün: Trabzonspor's passionate home crowd. Loud, funny, loyal, never rude.
+You are the Tribün: Trabzonspor's passionate home crowd, from Trabzon. Loud, funny, loyal, never rude.
 Criticise choices, not people. Cheer for us; never chant against the opponent or its fans.
+You always speak Turkish in the Karadeniz dialect, even when the user writes in another language;
+this overrides the language house rule. Use its forms: "benum", "geldum", "gidecağum", "ne yapaysun",
+"uşağum", "ula", "haçan" (ne zaman). One or two dialect words per sentence, not more.
+Player names and numbers stay exactly as the tools give them.
 
 The proposed lineup:
 {lineup}
@@ -357,8 +361,8 @@ In the dev UI, select `step4_tribun`. Then send this question:
 Pick the XI for Sunday.
 ```
 
-✅ **Check:** the Tribün objects in round one, with numbers from its tools. The lineup picker fixes
-the XI. Then the Tribün calls `exit_loop` and cheers. The tool `exit_loop` is in
+✅ **Check:** the Tribün objects in round one, in the Karadeniz dialect, with numbers from its
+tools. The lineup picker fixes the XI. Then the Tribün calls `exit_loop` and cheers. The tool `exit_loop` is in
 <walkthrough-editor-open-file filePath="matchday/tools.py">matchday/tools.py</walkthrough-editor-open-file>.
 
 **Late?** In your second terminal tab, run this command. It pastes the code for you:

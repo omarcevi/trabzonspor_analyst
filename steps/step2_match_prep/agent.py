@@ -27,6 +27,7 @@ their key players and who is missing. Write a short opponent report.
         tools=[get_match_info, get_team_trends, get_top_players, get_availability, get_matches],
         output_key="opponent_report",
     )
+
     tactician = LlmAgent(
         name="tactician",
         model=MODEL,
@@ -40,6 +41,7 @@ formation, how we attack, how we defend, and what to do in each phase of the mat
         tools=[get_team_trends, get_match_info],
         output_key="game_plan",
     )
+    
     lineup_picker = LlmAgent(
         name="lineup_picker",
         model=MODEL,
@@ -54,6 +56,7 @@ You pick Trabzonspor's starting XI. The game plan:
         tools=[get_availability, get_player, get_top_players],
         output_key="lineup",
     )
+    
     return SequentialAgent(name=name, description=description, sub_agents=[opponent_analyst, tactician, lineup_picker])
 
 

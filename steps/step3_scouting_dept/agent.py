@@ -18,6 +18,7 @@ def build_scouting_department(
     name: str = "scouting_department",
     description: str = "Scouts Sunday's opponent: threats, weaknesses, discipline and referee risks.",
 ) -> SequentialAgent:
+    
     attack_scout = LlmAgent(
         name="attack_scout",
         model=MODEL,
@@ -26,6 +27,7 @@ which of them are available, and in which 15-minute windows they score most.""" 
         tools=[get_match_info, get_top_players, get_team_trends, get_matches],
         output_key="attack_report",
     )
+    
     defense_scout = LlmAgent(
         name="defense_scout",
         model=MODEL,
@@ -34,6 +36,7 @@ home vs away record, and which defenders or goalkeepers are suspended, injured o
         tools=[get_match_info, get_team_trends, get_availability, get_player],
         output_key="defense_report",
     )
+    
     discipline_scout = LlmAgent(
         name="discipline_scout",
         model=MODEL,
@@ -42,6 +45,7 @@ players on each side, and every red card in the last 10 matches.""" + HOUSE_RULE
         tools=[get_match_info, get_discipline],
         output_key="discipline_report",
     )
+    
     report_writer = LlmAgent(
         name="report_writer",
         model=MODEL,

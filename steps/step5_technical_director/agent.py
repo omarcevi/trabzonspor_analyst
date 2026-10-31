@@ -25,6 +25,7 @@ TRIBUN = "Picks a final XI and has the home crowd stress-test it. Only when aske
 
 
 def build_technical_director(name: str = "technical_director") -> LlmAgent:
+    
     # Each team becomes a tool: the director calls it like a function and gets its answer back.
     teams = [
         AgentTool(build_scout(description=SCOUT)),
@@ -32,6 +33,7 @@ def build_technical_director(name: str = "technical_director") -> LlmAgent:
         AgentTool(build_scouting_department(description=SCOUTING_DEPT)),
         AgentTool(build_tribun(description=TRIBUN)),
     ]
+    
     return LlmAgent(
         name=name,
         model=MODEL,

@@ -14,6 +14,7 @@ def build_tribun(
     name: str = "tribun_review",
     description: str = "Picks Trabzonspor's XI and has the home crowd challenge it until it is approved.",
 ) -> LoopAgent:
+    
     lineup_picker = LlmAgent(
         name="lineup_picker",
         model=MODEL,
